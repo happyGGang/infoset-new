@@ -107,7 +107,7 @@ const BookDetail = () => {
 
           <CustomSwiperX
             slidesPerView={5}
-            spaceBetween={30}
+            spaceBetween={160}
             loop
             direction={'vertical'}
           >
