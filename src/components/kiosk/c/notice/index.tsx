@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import {
   Container,
+  SelectedImage,
   SmallSwiper,
   SmallSwiperSlide,
-  SelectedImage,
+  ContainerX,
+  CustomSwiper,
+  CustomSlide,
 } from './index.styled';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { notice_list } from '../../../../constants/notice.constants';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
@@ -33,7 +37,28 @@ const Notice = () => {
   return (
     <>
       {isLandscape ? (
-        <div>공지사항 가로 모드</div>
+        <ContainerX>
+          <div className={'swiper_container'}>
+            <button className={'swiper-button-prev'}>Prev</button>
+            <button className={'swiper-button-next'}>Next</button>
+            <CustomSwiper
+              slidesPerView={3}
+              slidesPerGroup={3}
+              navigation={{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }}
+              modules={[Navigation]}
+              loop
+            >
+              {notice_list?.map((item, index) => (
+                <CustomSlide key={index}>
+                  <img src={item.img} alt={`Slide ${index}`} />
+                </CustomSlide>
+              ))}
+            </CustomSwiper>
+          </div>
+        </ContainerX>
       ) : (
         <Container>
           <SelectedImage

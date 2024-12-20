@@ -1,6 +1,8 @@
 import { styled } from '@mui/material';
 import background from '../../../../assets/img/kiosk_c_y_notice_bg.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import backgroundX from '../../../../assets/img/kiosk_c_x_notice_bg.svg';
+import arrow from '../../../../assets/icon/swiper-arrow.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
@@ -76,4 +78,98 @@ const SmallSwiperSlide = styled(SwiperSlide)(() => ({
   },
 }));
 
-export { Container, SelectedImage, SmallSwiper, SmallSwiperSlide };
+const ContainerX = styled('div')(() => ({
+  width: '75rem',
+  height: '42.1875rem',
+  background: `url(${backgroundX}) center center no-repeat`,
+  backgroundSize: 'cover',
+  '@keyframes float-up': {
+    '0%': {
+      opacity: 0,
+    },
+    '100%': {
+      opacity: 1,
+    },
+  },
+  opacity: 0,
+  animation: 'fadeIn 1s ease-out forwards',
+  '@keyframes fadeIn': {
+    '0%': {
+      opacity: 0,
+    },
+    '100%': {
+      opacity: 1,
+    },
+  },
+  '.swiper_container': {
+    width: '68.75rem',
+    position: 'relative',
+    margin: '5.84rem 0 0 6.25rem',
+    '.swiper-button-prev': {
+      background: `url(${arrow}) center center no-repeat`,
+      backgroundSize: 'cover',
+      width: '3.125rem',
+      height: '3.125rem',
+      zIndex: 10,
+      transform: 'rotate(180deg)',
+      fontSize: 0,
+      border: 'none',
+      '&::after': {
+        display: 'none',
+      },
+    },
+    '.swiper-button-next': {
+      background: `url(${arrow}) center center no-repeat`,
+      backgroundSize: 'cover',
+      width: '3.125rem',
+      height: '3.125rem',
+      zIndex: 10,
+      fontSize: 0,
+      border: 'none',
+      '&::after': {
+        display: 'none',
+      },
+    },
+  },
+}));
+
+const CustomSwiper = styled(Swiper)(() => ({
+  height: '30.34375rem',
+  width: '60.59375rem',
+  paddingTop: '2rem',
+  paddingLeft: '1rem',
+  '.swiper-pagination': {
+    bottom: '0.88rem',
+  },
+  '.swiper-pagination-bullet': {
+    opacity: '1',
+    width: '0.46875rem',
+    height: '0.46875rem',
+    background: '#ADB5BD',
+    borderRadius: '50%',
+    transition: 'background-color 0.3s ease, transform 0.3s ease',
+  },
+  '.swiper-pagination-bullet-active': {
+    background: '#191F28',
+  },
+}));
+
+const CustomSlide = styled(SwiperSlide)(() => ({
+  '& img': {
+    borderRadius: '0.78125rem',
+    width: '18.75rem',
+    height: '26.52344rem',
+    boxShadow: '5px 5px 5px 5px rgba(0, 0, 0, 0.20)',
+    cursor: 'pointer',
+  },
+}));
+
+export {
+  Container,
+  SelectedImage,
+  SmallSwiper,
+  SmallSwiperSlide,
+  ContainerX,
+  CustomSwiper,
+  CustomSlide,
+};

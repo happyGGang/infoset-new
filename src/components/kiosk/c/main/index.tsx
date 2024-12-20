@@ -1,10 +1,19 @@
 import React from 'react';
-import { Container, Time, Date, Message, Caption, Arrow } from './index.styled';
 import {
-  getCurrentDate,
-  getCurrentTime,
-  getFullCurrentDate,
-} from '../../../../util/date-time';
+  Container,
+  Time,
+  Date,
+  Message,
+  Caption,
+  Arrow,
+  ContainerX,
+  TimeX,
+  DateX,
+  MessageX,
+  CaptionX,
+  ArrowX,
+} from './index.styled';
+import { getCurrentTime, getFullCurrentDate } from '../../../../util/date-time';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
 const Main = () => {
@@ -13,7 +22,17 @@ const Main = () => {
   return (
     <>
       {isLandscape ? (
-        <div>메인 가로 모드</div>
+        <ContainerX>
+          <TimeX>{getCurrentTime()}</TimeX>
+          <DateX>{getFullCurrentDate()}</DateX>
+          <MessageX>
+            <span>인포셋도서관</span>
+            <br />
+            방문을 환영합니다
+          </MessageX>
+          <CaptionX>welcome to infoset library</CaptionX>
+          <ArrowX />
+        </ContainerX>
       ) : (
         <Container>
           <Time>{getCurrentTime()}</Time>
