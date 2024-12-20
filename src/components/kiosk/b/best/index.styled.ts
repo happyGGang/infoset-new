@@ -1,6 +1,7 @@
 import { styled } from '@mui/material';
 import background from '../../../../assets/img/kiosk_b_y_best_bg.svg';
 import { Swiper } from 'swiper/react';
+import backgroundX from '../../../../assets/img/kiosk_b_x_best_bg.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
@@ -167,4 +168,110 @@ const SlideItem = styled('div')(() => ({
   },
 }));
 
-export { Container, CustomSwiper, Grid, SlideItem };
+const ContainerX = styled('div')(() => ({
+  width: '75rem',
+  height: '42.1875rem',
+  background: `url(${backgroundX}) center center no-repeat`,
+  backgroundSize: 'cover',
+  position: 'relative',
+  opacity: 0,
+  animation: 'fadeIn 1s ease-out forwards',
+  '@keyframes fadeIn': {
+    '0%': {
+      opacity: 0,
+    },
+    '100%': {
+      opacity: 1,
+    },
+  },
+}));
+
+const CustomSwiperX = styled(Swiper)(() => ({
+  width: '63.71875rem',
+  height: '25rem',
+  margin: '8.21rem 0 0 9.77rem',
+  '.swiper-pagination': {
+    bottom: '0',
+    left: '-1rem',
+  },
+  '.swiper-pagination-bullet': {
+    opacity: '1',
+    width: '0.46875rem',
+    height: '0.46875rem',
+    background: '#ADB5BD',
+    borderRadius: '50%',
+    transition: 'background-color 0.3s ease, transform 0.3s ease',
+  },
+  '.swiper-pagination-bullet-active': {
+    background: '#191F28',
+  },
+}));
+
+const GridX = styled('div')(() => ({
+  display: 'flex',
+  gap: '2.49rem',
+  paddingTop: '1.56rem',
+}));
+
+const SlideItemX = styled('div')(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  position: 'relative',
+  cursor: 'pointer',
+  '& img': {
+    width: '10.35156rem',
+    height: '16.01563rem',
+    borderRadius: ' 0.58594rem',
+    boxShadow: '6.25px 9.375px 18.75px 0px rgba(0, 0, 0, 0.15)',
+    marginBottom: '1.15em',
+    objectFit: 'cover',
+  },
+  '& .title': {
+    color: '#191F28',
+    fontFamily: 'Pretendard',
+    fontWeight: 500,
+    fontSize: '1.17188rem',
+    marginBottom: '0.47rem',
+    width: '10.35156rem',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+  '& .writer': {
+    color: '#4E5968',
+    fontFamily: 'Pretendard',
+    fontWeight: 400,
+    fontSize: '0.97656rem',
+    width: '10.35156rem',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+  '& .badge': {
+    width: '3.125rem',
+    height: '3.125rem',
+    borderRadius: '50%',
+    backgroundColor: '#000000',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: '#FFFFFF',
+    fontSize: '1.17188rem',
+    fontWeight: 700,
+    fontFamily: 'Century Gothic',
+    top: '-1.56rem',
+    left: '3.61rem',
+    position: 'absolute',
+  },
+}));
+
+export {
+  Container,
+  CustomSwiper,
+  Grid,
+  SlideItem,
+  ContainerX,
+  CustomSwiperX,
+  GridX,
+  SlideItemX,
+};

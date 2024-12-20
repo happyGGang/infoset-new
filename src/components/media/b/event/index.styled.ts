@@ -41,8 +41,8 @@ const CustomSwiper = styled(Swiper)(() => ({
     left: '-16.5rem',
   },
   '.swiper-pagination-bullet': {
-    width: '0.46875',
-    height: '0.46875',
+    width: '0.46875rem',
+    height: '0.46875rem',
     background: '#FFFFFF',
     opacity: '1',
     borderRadius: '50%',

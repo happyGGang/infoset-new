@@ -1,5 +1,14 @@
 import React from 'react';
-import { Container, CustomSwiper, Grid, SlideItem } from './index.styled';
+import {
+  Container,
+  CustomSwiper,
+  Grid,
+  SlideItem,
+  ContainerX,
+  CustomSwiperX,
+  GridX,
+  SlideItemX,
+} from './index.styled';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
@@ -15,7 +24,45 @@ const Best = () => {
   return (
     <>
       {isLandscape ? (
-        <div>대출베스트 가로 모드</div>
+        <ContainerX>
+          <CustomSwiperX
+            slidesPerView={1}
+            slidesPerGroup={1}
+            pagination
+            spaceBetween={5}
+            modules={[Pagination]}
+            loop
+          >
+            <SwiperSlide>
+              <GridX>
+                {book_list?.slice(0, 5).map((item, index) => (
+                  <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                    <div className={'badge'}>
+                      {(index + 1).toString().padStart(2, '0')}
+                    </div>
+                    <img src={item.img} alt="" />
+                    <div className={'title'}>{item.title}</div>
+                    <div className={'writer'}>{item.writer}</div>
+                  </SlideItemX>
+                ))}
+              </GridX>
+            </SwiperSlide>
+            <SwiperSlide>
+              <GridX>
+                {book_list?.slice(6, 11).map((item, index) => (
+                  <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                    <div className={'badge'}>
+                      {(index + 6).toString().padStart(2, '0')}
+                    </div>
+                    <img src={item.img} alt="" />
+                    <div className={'title'}>{item.title}</div>
+                    <div className={'writer'}>{item.writer}</div>
+                  </SlideItemX>
+                ))}
+              </GridX>
+            </SwiperSlide>
+          </CustomSwiperX>
+        </ContainerX>
       ) : (
         <Container>
           <CustomSwiper

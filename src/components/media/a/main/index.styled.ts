@@ -94,6 +94,7 @@ const Ticker = styled('div')(() => ({
   position: 'absolute',
   bottom: 0,
   left: 0,
+  display: 'flex',
   background: '#000',
   width: '72.3rem',
   overflow: 'hidden',

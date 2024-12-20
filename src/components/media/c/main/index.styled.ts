@@ -121,6 +121,7 @@ const Ticker = styled('div')(() => ({
   width: '72.3rem',
   overflow: 'hidden',
   padding: '0.78125rem 1.36719rem',
+  display: 'flex',
 }));
 
 const TickerMessage = styled('div')(() => ({
