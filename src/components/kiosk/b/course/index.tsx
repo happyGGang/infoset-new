@@ -1,11 +1,17 @@
 import React from 'react';
 import {
   Column,
+  ColumnX,
   Container,
+  ContainerX,
   CustomSwiper,
+  CustomSwiperX,
   ItemWrapper,
+  ItemWrapperX,
   SlideItem,
+  SlideItemX,
   Wrapper,
+  WrapperX,
 } from './index.styled';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -22,7 +28,106 @@ const Course = () => {
   return (
     <>
       {isLandscape ? (
-        <div>강좌안내 가로 모드</div>
+        <ContainerX>
+          <CustomSwiperX
+            slidesPerView={1}
+            pagination
+            slidesPerGroup={1}
+            modules={[Pagination]}
+            spaceBetween={5}
+            loop
+          >
+            <SwiperSlide>
+              <ItemWrapperX>
+                {course_list?.slice(0, 5).map((item, index) => (
+                  <SlideItemX key={index} onClick={() => toggleSelectedItem(8)}>
+                    <WrapperX>
+                      <div className={`${'badge'} ${item.className}`}>
+                        {item.status}
+                      </div>
+                      <div>
+                        <div className={'title'}>{item.title}</div>
+                        <WrapperX>
+                          <WrapperX>
+                            <div className={'label'}>접수기간</div>
+                            <div className={'value'}>{item.date}</div>
+                          </WrapperX>
+                          <WrapperX>
+                            <div className={'label'}>수강대상</div>
+                            <div className={'value'}>{item.user}</div>
+                          </WrapperX>
+                        </WrapperX>
+                      </div>
+                    </WrapperX>
+                    <WrapperX>
+                      <ColumnX className={'recruit'}>
+                        <div className={'count_label'}>모집인원</div>
+                        <div className={'count'}>
+                          <span className={'highlight'}>{item.recruited}</span>
+                          <span className={'dash'}>/</span>
+                          {item.recruit}
+                        </div>
+                      </ColumnX>
+                      <ColumnX className={'candidate'}>
+                        <div className={'count_label'}>후보인원</div>
+                        <div className={'count'}>
+                          <span className={'highlight'}>{item.became}</span>
+                          <span className={'dash'}>/</span>
+                          {item.candidate}
+                        </div>
+                      </ColumnX>
+                    </WrapperX>
+                  </SlideItemX>
+                ))}
+              </ItemWrapperX>
+            </SwiperSlide>
+            <SwiperSlide>
+              <ItemWrapperX>
+                {course_list?.slice(5, 10).map((item, index) => (
+                  <SlideItemX key={index} onClick={() => toggleSelectedItem(8)}>
+                    <WrapperX>
+                      <div className={`${'badge'} ${item.className}`}>
+                        {item.status}
+                      </div>
+                      <div>
+                        <div className={'title'}>{item.title}</div>
+                        <WrapperX>
+                          <WrapperX>
+                            <div className={'label'}>접수기간</div>
+                            <div className={'value'}>{item.date}</div>
+                          </WrapperX>
+                          <WrapperX>
+                            <div className={'label'}>수강대상</div>
+                            <div className={'value'}>{item.user}</div>
+                          </WrapperX>
+                        </WrapperX>
+                      </div>
+                    </WrapperX>
+
+                    <WrapperX>
+                      <ColumnX className={'recruit'}>
+                        <div className={'count_label'}>모집인원</div>
+                        <div className={'count'}>
+                          <span className={'highlight'}>{item.recruited}</span>
+                          <span className={'dash'}>/</span>
+                          {item.recruit}
+                        </div>
+                      </ColumnX>
+                      <ColumnX className={'candidate'}>
+                        <div className={'count_label'}>후보인원</div>
+                        <div className={'count'}>
+                          <span className={'highlight'}>{item.became}</span>
+                          <span className={'dash'}>/</span>
+                          {item.candidate}
+                        </div>
+                      </ColumnX>
+                    </WrapperX>
+                  </SlideItemX>
+                ))}
+              </ItemWrapperX>
+            </SwiperSlide>
+          </CustomSwiperX>
+        </ContainerX>
       ) : (
         <Container>
           <CustomSwiper

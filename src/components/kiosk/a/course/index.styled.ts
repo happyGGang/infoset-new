@@ -268,6 +268,7 @@ const ColumnX = styled('div')(() => ({
 
 const SlideItemX = styled('div')(() => ({
   display: 'flex',
+  justifyContent: 'space-between',
   borderRadius: '1.17188rem',
   backgroundColor: '#FFFFFF',
   height: '5.46875rem',
