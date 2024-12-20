@@ -36,7 +36,7 @@ import LocationPopup from '../../../location-popup';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
 const BookDetail = () => {
-  const [selectedItem, setSelectedItem] = useState(book_list[0]);
+  const [selectedItem, setSelectedItem] = useState(book_list[1]);
   const [isOpen, setIsOpen] = useState(false);
   const [animate, setAnimate] = useState(false);
   const { isLandscape } = useOrientationStore();
@@ -55,73 +55,83 @@ const BookDetail = () => {
   return (
     <>
       {isLandscape ? (
-        <Container>
-          <ContentWrapper>
-            <Row>
-              <SelectedBook>
+        <ContainerX>
+          <ContentWrapperX>
+            <RowX>
+              <SelectedBookX>
                 <img
                   src={selectedItem.img}
                   alt={selectedItem.title}
                   className={`${animate ? 'animate' : ''}`}
+                  style={{
+                    borderColor: selectedItem ? '#000000' : 'transparent',
+                  }}
                 />
                 <div className={'badge'}>
                   대출
                   <br />
                   가능
                 </div>
-              </SelectedBook>
-              <div>
-                <Title>{selectedItem.title}</Title>
-                <Writer>
-                  {selectedItem.writer} / {selectedItem.publisher}
-                </Writer>
-                <Detail>
-                  <Wrapper>
-                    <Label>발행년도</Label>
-                    <Value>{selectedItem.date}</Value>
-                  </Wrapper>
-                  <Wrapper>
-                    <Label>ISBN</Label>
-                    <Value>9791162543726</Value>
-                  </Wrapper>
-                  <Wrapper>
-                    <Label>서가위치</Label>
-                    <Value>2F 종합자료실</Value>
-                  </Wrapper>
-                  <Wrapper>
-                    <Label>청구기호</Label>
-                    <Value>490-99-밀233ㅁ=2</Value>
-                  </Wrapper>
-                </Detail>
-                <Trigger onClick={() => setIsOpen(true)}>
-                  소장도서 서가위치보기
-                </Trigger>
-              </div>
-            </Row>
-            <SummaryTitle>책소개</SummaryTitle>
-            <Summary>{selectedItem.summary}</Summary>
-          </ContentWrapper>
+              </SelectedBookX>
 
-          <CustomSwiper
-            slidesPerView={6}
-            slidesPerGroup={6}
+              <DetailX>
+                <TitleX>{selectedItem.title}</TitleX>
+                <WriterX>
+                  {selectedItem.writer} / {selectedItem.publisher} /{' '}
+                  {selectedItem.date}
+                </WriterX>
+                <WrapperX>
+                  <LabelX>발행년도</LabelX>
+                  <ValueX>{selectedItem.date}</ValueX>
+                </WrapperX>
+                <WrapperX>
+                  <LabelX>ISBN</LabelX>
+                  <ValueX>9791162543726</ValueX>
+                </WrapperX>
+                <WrapperX>
+                  <LabelX>서가위치</LabelX>
+                  <ValueX>2F 종합자료실</ValueX>
+                </WrapperX>
+                <WrapperX>
+                  <LabelX>청구기호</LabelX>
+                  <ValueX>490-99-밀233ㅁ=2</ValueX>
+                </WrapperX>
+                <SummaryTitleX>책소개</SummaryTitleX>
+                <SummaryX>{selectedItem.summary}</SummaryX>
+              </DetailX>
+              <TriggerX onClick={() => setIsOpen(true)}>
+                소장도서 서가위치보기
+              </TriggerX>
+            </RowX>
+          </ContentWrapperX>
+
+          <CustomSwiperX
+            slidesPerView={5}
             spaceBetween={30}
             loop
+            direction={'vertical'}
           >
             {newBookList?.map((item, index) => (
-              <CustomSlide key={index} onClick={() => setSelectedItem(item)}>
-                <img src={item.img} alt={`Slide ${index}`} />
+              <CustomSlideX key={index} onClick={() => setSelectedItem(item)}>
+                <img
+                  src={item.img}
+                  alt={`Slide ${index}`}
+                  style={{
+                    borderColor:
+                      item === selectedItem ? '#000000' : 'transparent',
+                  }}
+                />
                 <div className={'title'}>{item.title}</div>
                 <div className={'writer'}>{item.writer}</div>
-              </CustomSlide>
+              </CustomSlideX>
             ))}
-          </CustomSwiper>
+          </CustomSwiperX>
           <LocationPopup
             isOpen={isOpen}
             onClose={() => setIsOpen(false)}
             landscape
           />
-        </Container>
+        </ContainerX>
       ) : (
         <Container>
           <ContentWrapper>
@@ -178,7 +188,14 @@ const BookDetail = () => {
           >
             {newBookList?.map((item, index) => (
               <CustomSlide key={index} onClick={() => setSelectedItem(item)}>
-                <img src={item.img} alt={`Slide ${index}`} />
+                <img
+                  src={item.img}
+                  alt={`Slide ${index}`}
+                  style={{
+                    borderColor:
+                      item === selectedItem ? '#000000' : 'transparent',
+                  }}
+                />
                 <div className={'title'}>{item.title}</div>
                 <div className={'writer'}>{item.writer}</div>
               </CustomSlide>
