@@ -1,11 +1,26 @@
 import React from 'react';
-import { Container } from './index.styled';
+import { Container, ContainerX, Content, Scroll } from './index.styled';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
+import dummy from '../../../../assets/img/kiosk_c_x_content.svg';
 
 const Information = () => {
   const { isLandscape } = useOrientationStore();
 
-  return <>{isLandscape ? <div>이용안내 가로 모드</div> : <Container />}</>;
+  return (
+    <>
+      {isLandscape ? (
+        <ContainerX>
+          <Content>
+            <Scroll>
+              <img src={dummy} alt="" />
+            </Scroll>
+          </Content>
+        </ContainerX>
+      ) : (
+        <Container />
+      )}
+    </>
+  );
 };
 
 export default Information;
