@@ -134,9 +134,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
         <Wrapper>
           <Zoom onClick={() => toggleZoomMode(true)} />
-          {!pathname.startsWith(`/media/`) && (
-            <Tilt onClick={() => toggleLandscape()} />
-          )}
+          {!pathname.startsWith(`/media/`) &&
+            !pathname.startsWith(`/library/`) && (
+              <Tilt onClick={() => toggleLandscape()} />
+            )}
         </Wrapper>
         <ArrowRight
           src={arrowRight}
