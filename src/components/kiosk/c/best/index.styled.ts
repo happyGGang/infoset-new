@@ -1,6 +1,8 @@
 import { styled } from '@mui/material';
 import background from '../../../../assets/img/kiosk_c_y_best_bg.svg';
 import { Swiper } from 'swiper/react';
+import backgroundX from '../../../../assets/img/kiosk_c_x_best_bg.svg';
+import arrow from '../../../../assets/icon/swiper-arrow.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
@@ -55,9 +57,9 @@ const SlideItem = styled('div')(() => ({
   gap: '0.66rem',
   cursor: 'pointer',
   '& img': {
-    width: '3.13963rem',
+    width: '3.4rem',
     height: '4.943rem',
-    borderRadius: '0.32956rem',
+    borderRadius: '0.2125rem',
     boxShadow: '0px 1.757px 5.273px 0px rgba(25, 33, 61, 0.20)',
     marginBottom: '0.55rem',
     objectFit: 'cover',
@@ -119,9 +121,101 @@ const SlideItem = styled('div')(() => ({
     fontWeight: 700,
     fontFamily: 'Century Gothic',
     top: '1.36rem',
-    left: '-0.95rem',
+    left: '-0.8rem',
     position: 'absolute',
   },
 }));
 
-export { Container, CustomSwiper, Grid, SlideItem };
+const ContainerX = styled('div')(() => ({
+  width: '75rem',
+  height: '42.1875rem',
+  background: `url(${backgroundX}) center center no-repeat`,
+  backgroundSize: 'cover',
+  opacity: 0,
+  animation: 'fadeIn 1s ease-out forwards',
+  '@keyframes fadeIn': {
+    '0%': {
+      opacity: 0,
+    },
+    '100%': {
+      opacity: 1,
+    },
+  },
+}));
+
+const GridX = styled('div')(() => ({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(5, 1fr)',
+  gridRowGap: '1.17rem',
+  marginTop: '6' + '.25rem',
+  marginLeft: '11.33rem',
+}));
+
+const SlideItemX = styled('div')(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  cursor: 'pointer',
+  position: 'relative',
+  '& img': {
+    width: '7.8125rem',
+    height: '11.30863rem',
+    borderRadius: '0.46875rem',
+    boxShadow: '0px 3.125px 9.375px 0px rgba(25, 33, 61, 0.20)',
+    marginBottom: '0.78rem',
+  },
+  '& .title': {
+    color: '#191F28',
+    fontFamily: 'Pretendard',
+    fontWeight: 500,
+    lineHeight: '140%',
+    letterSpacing: '-0.02344rem',
+    fontSize: '0.9375rem',
+    marginBottom: '0.16rem',
+    padding: '0 0.16rem 0 0.16rem',
+    width: '7.30469rem',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+  '& .writer': {
+    color: '#4E5968',
+    fontFamily: 'Pretendard',
+    fontWeight: 400,
+    letterSpacing: '-0.0195rem',
+    fontSize: '0.70313rem',
+    marginBottom: '0.09rem',
+    padding: '0 0.09rem 0 0.09rem',
+    width: '7.30469rem',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+  '& .badge': {
+    width: '2.73438rem',
+    height: '2.73438rem',
+    borderRadius: '50%',
+    backgroundColor: '#E71D36',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: '#FFFFFF',
+    lineHeight: 'normal',
+    fontSize: '0.97656rem',
+    letterSpacing: '-0.02444rem',
+    fontWeight: 700,
+    fontFamily: 'Century Gothic',
+    top: '2.36rem',
+    left: '-1.3rem',
+    position: 'absolute',
+  },
+}));
+
+export {
+  Container,
+  CustomSwiper,
+  Grid,
+  SlideItem,
+  ContainerX,
+  GridX,
+  SlideItemX,
+};

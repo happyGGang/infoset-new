@@ -1,8 +1,16 @@
 import React from 'react';
-import { Container, CustomSwiper, Grid, SlideItem } from './index.styled';
+import {
+  Container,
+  CustomSwiper,
+  Grid,
+  SlideItem,
+  ContainerX,
+  GridX,
+  SlideItemX,
+} from './index.styled';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { SwiperSlide } from 'swiper/react';
 import { book_list } from '../../../../constants/book.constants';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
@@ -15,7 +23,19 @@ const Best = () => {
   return (
     <>
       {isLandscape ? (
-        <div>베스트도서 가로 모드</div>
+        <ContainerX>
+          <GridX>
+            {book_list?.slice(0, 10).map((item, index) => (
+              <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                <img src={item.img} alt="" />
+                <div className={'badge'}>{index + 1}위</div>
+                <div className={'title'}>{item.title}</div>
+                <div className={'writer'}>{item.writer}</div>
+                <div className={'writer'}>{item.date}</div>
+              </SlideItemX>
+            ))}
+          </GridX>
+        </ContainerX>
       ) : (
         <Container>
           <CustomSwiper
@@ -53,13 +73,20 @@ const Best = () => {
               <Grid>
                 {book_list?.slice(6, 11).map((item, index) => (
                   <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
-                    <div className={'badge'}>
-                      {(index + 6).toString().padStart(2, '0')}
-                    </div>
+                    <div className={'badge'}>{index + 6}위</div>
                     <img src={item.img} alt="" />
                     <div>
                       <div className={'title'}>{item.title}</div>
                       <div className={'writer'}>{item.writer}</div>
+                      <div className={'publisher'}>
+                        {item.publisher}ㆍ{item.date}
+                      </div>
+                      <div className={'detail'}>
+                        <span>소창위치</span>2F 종합자료실
+                      </div>
+                      <div className={'detail'}>
+                        <span>청구기호</span>2F 종합자료실
+                      </div>
                     </div>
                   </SlideItem>
                 ))}

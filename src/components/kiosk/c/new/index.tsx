@@ -1,6 +1,15 @@
 import React from 'react';
-import { Container, CustomSwiper, Grid, SlideItem } from './index.styled';
-import { Pagination } from 'swiper/modules';
+import {
+  Container,
+  CustomSwiper,
+  Grid,
+  SlideItem,
+  ContainerX,
+  CustomSwiperX,
+  GridX,
+  SlideItemX,
+} from './index.styled';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { SwiperSlide } from 'swiper/react';
@@ -15,7 +24,44 @@ const New = () => {
   return (
     <>
       {isLandscape ? (
-        <div>신착도서 가로 모드</div>
+        <ContainerX>
+          <button className={'swiper-button-prev'}>Prev</button>
+          <button className={'swiper-button-next'}>Next</button>
+          <CustomSwiperX
+            slidesPerView={1}
+            slidesPerGroup={1}
+            spaceBetween={5}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            modules={[Navigation]}
+            loop
+          >
+            <SwiperSlide>
+              <GridX>
+                {book_list?.slice(0, 10).map((item, index) => (
+                  <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                    <img src={item.img} alt="" />
+                    <div className={'title'}>{item.title}</div>
+                    <div className={'writer'}>{item.writer}</div>
+                  </SlideItemX>
+                ))}
+              </GridX>
+            </SwiperSlide>
+            <SwiperSlide>
+              <GridX>
+                {book_list?.slice(11, 21).map((item, index) => (
+                  <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                    <img src={item.img} alt="" />
+                    <div className={'title'}>{item.title}</div>
+                    <div className={'writer'}>{item.writer}</div>
+                  </SlideItemX>
+                ))}
+              </GridX>
+            </SwiperSlide>
+          </CustomSwiperX>
+        </ContainerX>
       ) : (
         <Container>
           <CustomSwiper
