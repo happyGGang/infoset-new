@@ -7,6 +7,13 @@ import {
   Grid,
   FilteringList,
   Filter,
+  ContainerX,
+  MapX,
+  CustomSwiperX,
+  SlideItemX,
+  GridX,
+  FilteringListX,
+  FilterX,
 } from './index.styled';
 import map1 from '../../../../assets/img/map01_dark.svg';
 import map2 from '../../../../assets/img/map02_dark.svg';
@@ -76,10 +83,88 @@ const Facility = () => {
       ));
   };
 
+  const renderFacilitiesX = (startIndex: number, endIndex: number) => {
+    return getFacilitiesForFloor()
+      .slice(startIndex, endIndex)
+      .map((item: any, index: number) => (
+        <SlideItemX
+          key={index}
+          onClick={() => {
+            setSelectedFacility({ ...item, index: startIndex + index });
+            setIsOpen(true);
+          }}
+        >
+          <div className={'header'}>
+            <div className={'index'}>
+              {(startIndex + index + 1).toString().padStart(2, '0')}
+            </div>
+            <div>
+              <div className={'title'}>{item.title}</div>
+              <div className={'title_en'}>{item.title_en}</div>
+            </div>
+          </div>
+          <img src={item.img} alt="" />
+        </SlideItemX>
+      ));
+  };
+
   return (
     <>
       {isLandscape ? (
-        <div>시설안내 가로 모드</div>
+        <ContainerX>
+          <div className={'wrapper_x'}>
+            <MapX>
+              <img
+                src={floorData[selectedFloor]?.map}
+                alt={`map${selectedFloor}`}
+                className={`${animate ? 'animate' : ''}`}
+              />
+              <div className={`${animate ? 'animate' : ''}`}>
+                {selectedFloor}F
+              </div>
+            </MapX>
+            <FilteringListX>
+              {[1, 2, 3].map((floor) => (
+                <FilterX
+                  key={floor}
+                  onClick={() => handleFilterClick(floor)}
+                  selected={selectedFloor === floor}
+                >
+                  {floor}F
+                </FilterX>
+              ))}
+            </FilteringListX>
+          </div>
+
+          <CustomSwiperX
+            slidesPerView={1}
+            slidesPerGroup={1}
+            navigation
+            spaceBetween={6}
+            modules={[Navigation]}
+            loop
+          >
+            <SwiperSlide>
+              <GridX>{renderFacilitiesX(0, 6)}</GridX>
+            </SwiperSlide>
+            {selectedFloor === 2 && (
+              <SwiperSlide>
+                <GridX>{renderFacilitiesX(6, 12)}</GridX>
+              </SwiperSlide>
+            )}
+          </CustomSwiperX>
+
+          <FacilityPopup
+            bg={'#8B95A1'}
+            caption={'#FFFFFF'}
+            title={'#FFFFFF'}
+            index={selectedFacility?.index}
+            isOpen={isOpen}
+            onClose={() => setIsOpen(false)}
+            data={selectedFacility}
+            landscape
+          />
+        </ContainerX>
       ) : (
         <Container>
           <Map>
