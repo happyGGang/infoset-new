@@ -96,7 +96,6 @@ const Arrow = styled('div')(() => ({
   backgroundSize: 'cover',
   marginLeft: '10.11rem',
   animation: 'bounce 1s ease-in-out infinite',
-  cursor: 'pointer',
   '@keyframes bounce': {
     '0%, 100%': {
       transform: 'translateX(0)',
