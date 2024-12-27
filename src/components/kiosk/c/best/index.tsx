@@ -62,7 +62,7 @@ const Best = () => {
                         <span>소창위치</span>2F 종합자료실
                       </div>
                       <div className={'detail'}>
-                        <span>청구기호</span>2F 종합자료실
+                        <span>청구기호</span>유아813.8 신211o
                       </div>
                     </div>
                   </SlideItem>
@@ -85,7 +85,7 @@ const Best = () => {
                         <span>소창위치</span>2F 종합자료실
                       </div>
                       <div className={'detail'}>
-                        <span>청구기호</span>2F 종합자료실
+                        <span>청구기호</span>유아813.8 신211o
                       </div>
                     </div>
                   </SlideItem>

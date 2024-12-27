@@ -9,7 +9,6 @@ const Main = () => {
       <Date>{getCurrentDate()}</Date>
       <Message>welcome</Message>
       <Caption>INFOSET LIBRARY</Caption>
-      <Arrow />
     </Container>
   );
 };

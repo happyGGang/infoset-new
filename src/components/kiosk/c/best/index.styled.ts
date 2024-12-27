@@ -2,7 +2,6 @@ import { styled } from '@mui/material';
 import background from '../../../../assets/img/kiosk_c_y_best_bg.svg';
 import { Swiper } from 'swiper/react';
 import backgroundX from '../../../../assets/img/kiosk_c_x_best_bg.svg';
-import arrow from '../../../../assets/icon/swiper-arrow.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
