@@ -17,9 +17,6 @@ const Notice = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
 
-  const handleSlideClick = (index: React.SetStateAction<number>) =>
-    setSelectedIndex(index);
-
   useEffect(() => {
     setAnimate(true);
 
@@ -60,7 +57,7 @@ const Notice = () => {
         autoplay={{ delay: 25000 }}
       >
         {notice_list?.map((item, index) => (
-          <SmallSwiperSlide key={index} onClick={() => handleSlideClick(index)}>
+          <SmallSwiperSlide key={index}>
             <img
               src={item.img}
               alt={`Slide ${index}`}

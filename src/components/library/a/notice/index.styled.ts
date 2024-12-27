@@ -50,12 +50,12 @@ const SelectedImage = styled('img')(() => ({
 
 const SmallSwiper = styled(Swiper)(() => ({
   width: '20.11381rem',
-  height: '6.12rem',
+  height: '7rem',
   paddingLeft: '0.05rem',
   margin: '0.88rem 0 0 2.28rem',
   '.swiper-pagination': {
     left: '-0.4rem',
-    bottom: '0.88rem',
+    bottom: '0',
   },
   '.swiper-pagination-bullet': {
     opacity: '1',
@@ -76,7 +76,6 @@ const SmallSwiperSlide = styled(SwiperSlide)(() => ({
     height: '3.85575rem',
     boxShadow: '3.515px 3.515px 7.03px 0px rgba(0, 0, 0, 0.10)',
     border: '1.5px solid transparent',
-    cursor: 'pointer',
   },
 }));
 
