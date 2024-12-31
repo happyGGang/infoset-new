@@ -128,4 +128,4 @@ const Container = styled('div')(() => ({
     },
   }));
 
-  export {Container,Date,Time, CustomSwiper, Grid, .SlideItem}
+  export {Container,Date,Time, CustomSwiper, Grid, SlideItem}
