@@ -158,6 +158,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               key={idx}
               src={item}
               alt=""
+              loading="lazy"
               selected={idx === selectedItem}
               onClick={() => {
                 setCurrentIndex(idx);
