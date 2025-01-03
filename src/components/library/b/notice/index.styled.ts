@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/library_a_notice_bg.svg';
+import background from '../../../../assets/img/library_b_notice_bg.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Container = styled('div')(() => ({
@@ -46,6 +46,7 @@ const SelectedImage = styled('img')(() => ({
   width: '19.12481rem',
   height: '27.045rem',
   boxShadow: '3.515px 3.515px 7.03px 0px rgba(0, 0, 0, 0.10)',
+  borderRadius: '0.65925rem',
 }));
 
 const SmallSwiper = styled(Swiper)(() => ({
@@ -61,12 +62,12 @@ const SmallSwiper = styled(Swiper)(() => ({
     opacity: '1',
     width: '0.26363rem',
     height: '0.26363rem',
-    background: '#8B95A1',
+    background: '#ADB5BD',
     borderRadius: '50%',
     transition: 'background-color 0.3s ease, transform 0.3s ease',
   },
   '.swiper-pagination-bullet-active': {
-    background: '#FFFFFF',
+    background: '#191F28',
   },
 }));
 
@@ -76,6 +77,7 @@ const SmallSwiperSlide = styled(SwiperSlide)(() => ({
     height: '3.85575rem',
     boxShadow: '3.515px 3.515px 7.03px 0px rgba(0, 0, 0, 0.10)',
     border: '1.5px solid transparent',
+    borderRadius: '0.21975rem',
   },
 }));
 
@@ -109,24 +111,6 @@ const TickerMessage = styled('div')(() => ({
   },
 }));
 
-const Time = styled('div')(() => ({
-  color: '#191F28',
-  fontFamily: 'Century Gothic',
-  fontSize: '0.83506rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-const Date = styled('div')(() => ({
-  color: '#191F28',
-  fontFamily: 'Pretendard',
-  fontSize: '0.30763rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
 export {
   Container,
   SelectedImage,
@@ -134,6 +118,4 @@ export {
   SmallSwiperSlide,
   Ticker,
   TickerMessage,
-  Date,
-  Time,
 };
