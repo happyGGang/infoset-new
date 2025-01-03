@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/library_a_facility_bg.svg';
+import background from '../../../../assets/img/library_b_facility_bg.svg';
 import { Swiper } from 'swiper/react';
 
 const Container = styled('div')(() => ({
@@ -18,22 +18,14 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '.time_date_wrapper': {
-    zIndex: 1,
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'column',
-    top: '1.32rem',
-    right: '2.2rem',
-  },
 }));
 
 const Map = styled('div')(() => ({
   position: 'relative',
-  width: '19.82788rem',
-  height: '13.94006rem',
-  marginTop: '4.39rem',
-  marginLeft: '1.96rem',
+  width: '20.32688rem',
+  height: '14.77819rem',
+  marginTop: '4.5rem',
+  marginLeft: '1.7rem',
   '& img': {
     width: '19.82788rem',
     height: '13.94006rem',
@@ -41,9 +33,9 @@ const Map = styled('div')(() => ({
   '& div': {
     color: '#FFFFFF',
     position: 'absolute',
-    bottom: '-1.79rem',
-    left: '0.33rem',
-    fontWeight: 200,
+    top: '0',
+    right: '0.27rem',
+    fontWeight: 500,
     fontFamily: 'Pretendard',
     fontSize: '3.73575rem',
   },
@@ -61,10 +53,9 @@ const Map = styled('div')(() => ({
 }));
 
 const CustomSwiper = styled(Swiper)(() => ({
-  width: '19.77294rem',
-  height: '13.9603rem',
-  paddingLeft: '0.05rem',
-  margin: '3rem 0 0 1.98rem',
+  width: '19.775rem',
+  height: '12.97638rem',
+  margin: '1.08rem 0 0 2.02rem',
   '.swiper-pagination': {
     bottom: '0',
   },
@@ -72,12 +63,12 @@ const CustomSwiper = styled(Swiper)(() => ({
     opacity: '1',
     width: '0.26363rem',
     height: '0.26363rem',
-    background: '#8B95A1',
+    background: '#ADB5BD',
     borderRadius: '50%',
     transition: 'background-color 0.3s ease, transform 0.3s ease',
   },
   '.swiper-pagination-bullet-active': {
-    background: '#FFFFFF',
+    background: '#191F28',
   },
 }));
 
@@ -89,7 +80,7 @@ const SlideItem = styled('div')(() => ({
   borderRadius: '0.26363rem',
   '& .title': {
     textAlign: 'left',
-    color: '#FFF',
+    color: '#191F28',
     fontFamily: 'Pretendard',
     fontSize: '1.3185rem',
     fontWeight: 600,
@@ -97,12 +88,12 @@ const SlideItem = styled('div')(() => ({
   },
   '.caption': {
     padding: '0.65925rem 0.879rem',
-    color: '#EFF1F3',
+    color: '#191F28',
     fontSize: '0.57138rem',
     fontWeight: 500,
     lineHeight: '150%',
     borderRadius: '0.52738rem',
-    background: 'rgba(0, 0, 0, 0.30)',
+    background: '#E5DDD8',
     marginTop: '0.52rem',
   },
   '.list': {
@@ -115,7 +106,7 @@ const SlideItem = styled('div')(() => ({
       height: '0.74713rem',
     },
     '& div': {
-      color: '#FFF',
+      color: '#191F28',
       fontSize: '0.65925rem',
       fontWeight: 500,
       lineHeight: '140%',
@@ -126,46 +117,24 @@ const SlideItem = styled('div')(() => ({
 
 const FilteringList = styled('div')(() => ({
   display: 'flex',
-  gap: '3.4502rem',
-  marginLeft: '7.07rem',
-  marginTop: '1.97rem',
+  gap: '0.88rem',
+  marginLeft: '5.5rem',
+  marginTop: '3.83rem',
 }));
 
 const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
-  height: '1.22906rem',
+  height: '1.9415rem',
   textAlign: 'center',
-  color: selected ? '#FEC962' : '#ADB5BD',
+  color: selected ? '#FFF' : '#8B95A1',
+  width: '3.6995rem',
+  backgroundColor: selected ? '#191F28' : 'none',
   fontSize: '0.87881rem',
   fontWeight: 600,
   fontFamily: 'Pretendard',
-  borderBottom: selected ? '2px solid #FEC962' : '2px solid #ADB5BD',
+  borderRadius: '5.49375rem',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 }));
 
-const Time = styled('div')(() => ({
-  color: '#FFF',
-  fontFamily: 'Century Gothic',
-  fontSize: '0.83506rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-const Date = styled('div')(() => ({
-  color: '#FFF',
-  fontFamily: 'Pretendard',
-  fontSize: '0.30763rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-export {
-  Container,
-  Map,
-  CustomSwiper,
-  SlideItem,
-  FilteringList,
-  Filter,
-  Time,
-  Date,
-};
+export { Container, Map, CustomSwiper, SlideItem, FilteringList, Filter };

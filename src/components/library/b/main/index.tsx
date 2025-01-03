@@ -12,7 +12,7 @@ const Main = () => {
         <br />
         오신 것을 환영합니다.
       </Message>
-      <Caption>Welcome to Infoset Library</Caption>
+      <Caption>WELCOME TO INFOSET LIBRARY</Caption>
     </Container>
   );
 };

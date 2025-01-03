@@ -6,8 +6,6 @@ import {
   SlideItem,
   FilteringList,
   Filter,
-  Date,
-  Time,
 } from './index.styled';
 import map1 from '../../../../assets/img/map01.svg';
 import map2 from '../../../../assets/img/map02.svg';
@@ -21,7 +19,6 @@ import {
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { SwiperSlide } from 'swiper/react';
-import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 import check from '../../../../assets/icon/check.svg';
 
 const Facility = () => {
@@ -73,10 +70,6 @@ const Facility = () => {
 
   return (
     <Container>
-      <div className={'time_date_wrapper'}>
-        <Time>{getCurrentTime()}</Time>
-        <Date>{getCurrentDate()}</Date>
-      </div>
       <Map>
         <img
           src={floorData[selectedFloor]?.map}
@@ -85,6 +78,13 @@ const Facility = () => {
         />
         <div className={`${animate ? 'animate' : ''}`}>{selectedFloor}F</div>
       </Map>
+      <FilteringList>
+        {[1, 2, 3].map((floor) => (
+          <Filter key={floor} selected={selectedFloor === floor}>
+            {floor}F
+          </Filter>
+        ))}
+      </FilteringList>
       <CustomSwiper
         slidesPerView={1}
         slidesPerGroup={1}
@@ -119,13 +119,6 @@ const Facility = () => {
           </SwiperSlide>
         ))}
       </CustomSwiper>
-      <FilteringList>
-        {[1, 2, 3].map((floor) => (
-          <Filter key={floor} selected={selectedFloor === floor}>
-            {floor}F
-          </Filter>
-        ))}
-      </FilteringList>
     </Container>
   );
 };
