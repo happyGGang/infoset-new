@@ -1,7 +1,5 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/kiosk_a_y_main_bg.svg';
-import backgroundX from '../../../../assets/img/kiosk_a_x_main_bg.svg';
-import arrow from '../../../../assets/icon/kiosk_a_main_arrow.svg';
+import background from '../../../../assets/img/library_a_main_bg.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
@@ -27,31 +25,31 @@ const Container = styled('div')(() => ({
 const Time = styled('div')(() => ({
   color: '#FFFFFF',
   fontFamily: 'Century Gothic',
-  fontSize: '2.63638rem',
+  fontSize: '2.637rem',
   fontWeight: 400,
   lineHeight: 'normal',
   marginBottom: '0.26rem',
   textAlign: 'center',
-  marginTop: '6.43rem',
+  marginTop: '5.49rem',
 }));
 
 const Date = styled('div')(() => ({
   color: '#FFFFFF',
   fontFamily: 'Pretendard',
-  fontSize: '0.79094rem',
+  fontSize: '0.79113rem',
   fontWeight: 400,
   lineHeight: 'normal',
-  marginBottom: '1.72rem',
+  marginBottom: '24.09rem',
   textAlign: 'center',
 }));
 
 const Message = styled('div')(() => ({
-  color: '#FFFFFF',
+  color: '#191F28',
   fontFamily: 'Pretendard',
-  fontSize: '2.63638rem',
+  fontSize: '1.3185rem',
   fontWeight: 500,
-  lineHeight: 'normal',
-  marginBottom: '0.44rem',
+  lineHeight: '140%',
+  marginBottom: '0.66rem',
   textAlign: 'center',
   animation: 'float-up 1.5s ease-out forwards',
 
@@ -68,12 +66,11 @@ const Message = styled('div')(() => ({
 }));
 
 const Caption = styled('div')(() => ({
-  color: '#FFFFFF',
+  color: '#8B95A1',
   fontFamily: 'Pretendard',
-  fontSize: '0.65913rem',
-  fontWeight: 600,
-  lineHeight: 'normal',
-  marginBottom: '18.17rem',
+  fontSize: '0.57138rem',
+  fontWeight: 400,
+  lineHeight: '150%',
   textAlign: 'center',
   animation: 'float-up 1.5s ease-out forwards',
 
@@ -89,21 +86,4 @@ const Caption = styled('div')(() => ({
   },
 }));
 
-const Arrow = styled('div')(() => ({
-  width: '3.51519rem',
-  height: '3.51519rem',
-  background: `url(${arrow}) center center no-repeat`,
-  backgroundSize: 'cover',
-  marginLeft: '10.11rem',
-  animation: 'bounce 1s ease-in-out infinite',
-  '@keyframes bounce': {
-    '0%, 100%': {
-      transform: 'translateX(0)',
-    },
-    '50%': {
-      transform: 'translateX(0.5rem)',
-    },
-  },
-}));
-
-export { Container, Time, Date, Message, Caption, Arrow };
+export { Container, Time, Date, Message, Caption };

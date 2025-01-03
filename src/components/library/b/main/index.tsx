@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Time, Date, Message, Caption, Arrow } from './index.styled';
+import { Container, Time, Date, Message, Caption } from './index.styled';
 import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 
 const Main = () => {
@@ -7,8 +7,12 @@ const Main = () => {
     <Container>
       <Time>{getCurrentTime()}</Time>
       <Date>{getCurrentDate()}</Date>
-      <Message>welcome</Message>
-      <Caption>INFOSET LIBRARY</Caption>
+      <Message>
+        인포셋도서관에
+        <br />
+        오신 것을 환영합니다.
+      </Message>
+      <Caption>Welcome to Infoset Library</Caption>
     </Container>
   );
 };
