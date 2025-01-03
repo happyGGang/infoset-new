@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/library_a_event_bg.svg';
+import background from '../../../../assets/img/library_b_event_bg.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Container = styled('div')(() => ({
@@ -7,7 +7,6 @@ const Container = styled('div')(() => ({
   height: '42.18225rem',
   background: `url(${background}) center center no-repeat`,
   backgroundSize: 'cover',
-  position: 'relative',
   opacity: 0,
   animation: 'fadeIn 1s ease-out forwards',
   '@keyframes fadeIn': {
@@ -18,40 +17,24 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '.time_date_wrapper': {
-    zIndex: 1,
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'column',
-    top: '1.32rem',
-    right: '2.2rem',
+  '.caption': {
+    color: '#B87045',
+    fontSize: '0.57138rem',
+    fontWeight: 700,
+    lineHeight: '100%',
+    letterSpacing: '0.11425rem',
+    marginTop: '7.91rem',
+    marginLeft: '2.42rem',
+    marginBottom: '0.67rem',
   },
 }));
 
-const Time = styled('div')(() => ({
-  color: '#FFF',
-  fontFamily: 'Century Gothic',
-  fontSize: '0.83506rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-const Date = styled('div')(() => ({
-  color: '#FFF',
-  fontFamily: 'Pretendard',
-  fontSize: '0.30763rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
 const CustomSwiper = styled(Swiper)(() => ({
-  width: '20rem',
-  height: '24.029rem',
-  marginTop: '15.44rem',
+  width: '19.8985rem',
+  height: '18.2rem',
   '.swiper-pagination': {
     bottom: '0',
+    left: '-8.4rem',
   },
   '.swiper-pagination-bullet': {
     opacity: '1',
@@ -69,50 +52,45 @@ const CustomSwiper = styled(Swiper)(() => ({
 const CustomSwiperSlide = styled(SwiperSlide)(() => ({
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
   '& .box': {
     width: '19.338rem',
     height: '3.559rem',
     display: 'flex',
-    border: '0.527px solid rgba(229, 232, 235, 0.50)',
     flexDirection: 'column',
-    alignItems: 'center',
     justifyContent: 'center',
     borderRadius: '2.1975rem',
     gap: '0.22rem',
-    marginBottom: '0.88rem',
   },
   '& .label': {
-    color: '#8B95A1',
+    color: '#B87045',
     fontSize: '0.65925rem',
     fontWeight: 600,
     lineHeight: 'normal',
-    textAlign: 'center',
     letterSpacing: '0.06594rem',
   },
   '& .value': {
-    color: '#FFF',
+    color: '#191F28',
     fontSize: '1.01088rem',
     fontWeight: 600,
     lineHeight: 'normal',
-    textAlign: 'center',
     letterSpacing: '0.10106rem',
   },
   '& .title': {
-    color: '#FFF',
-    width: '16.8rem',
-    fontSize: '2.637rem',
+    height: 'calc(1.2em * 3)',
+    color: '#191F28',
+    width: '15.5rem',
+    fontSize: '2.1975rem',
     fontWeight: 600,
-    letterSpacing: '-0.06594rem',
-    lineHeight: 'normal',
-    textAlign: 'center',
+    letterSpacing: '-0.05494rem',
+    lineHeight: '130%',
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     WebkitBoxOrient: 'vertical',
     WebkitLineClamp: '3',
     display: '-webkit-box',
-    marginTop: '0.88rem',
+    marginTop: '0.67rem',
+    marginBottom: '1.26rem',
   },
 }));
 
-export { Container, Time, Date, CustomSwiperSlide, CustomSwiper };
+export { Container, CustomSwiperSlide, CustomSwiper };
