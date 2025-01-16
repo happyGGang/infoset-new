@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/library_a_best_bg.svg';
+import background from '../../../../assets/img/library_b_best_bg.svg';
 import { Swiper } from 'swiper/react';
 
 const Container = styled('div')(() => ({
@@ -18,136 +18,153 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '.time_date_wrapper': {
-    zIndex: 1,
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'column',
-    top: '1.32rem',
-    right: '2.2rem',
-  },
 }));
 
 const CustomSwiper = styled(Swiper)(() => ({
-  width: '19.338rem',
-  height: '34.76rem',
+  width: '20.73997rem',
+  height: '31.85rem',
   paddingLeft: '0.05rem',
-  margin: '4.83rem 0 0 1.25rem',
+  margin: '4.94rem 0 0 2.01rem',
   '.swiper-pagination': {
-    bottom: '0',
-    left: '0.8rem',
+    bottom: '0.3rem',
+    left: '-0.5rem',
   },
   '.swiper-pagination-bullet': {
     opacity: '1',
     width: '0.26363rem',
     height: '0.26363rem',
-    background: '#8B95A1',
+    background: '#ADB5BD',
     borderRadius: '50%',
     transition: 'background-color 0.3s ease, transform 0.3s ease',
   },
   '.swiper-pagination-bullet-active': {
-    background: '#FFF',
+    background: '#191F28',
   },
 }));
 
 const Grid = styled('div')(() => ({
   display: 'flex',
-  flexDirection: 'column',
-  gap: '1.33rem',
-  paddingLeft: '0.9rem',
+  flexWrap: 'wrap',
+  rowGap: '1.79rem',
+  paddingTop: '1.1rem',
 }));
 
 const SlideItem = styled('div')(() => ({
   display: 'flex',
+  flexDirection: 'column',
   position: 'relative',
-  gap: '1.32rem',
   cursor: 'pointer',
-  alignItems: 'center',
+  '&:first-of-type': {
+    marginRight: '1.72rem',
+    '& img': {
+      width: '9.00769rem',
+      height: '13.84106rem',
+      borderRadius: '0.43938rem',
+      boxShadow: '3.515px 3.515px 12.303px 0.879px rgba(0, 0, 0, 0.20)',
+    },
+    '& .title': {
+      width: '9.00769rem',
+    },
+    '& .writer': {
+      width: '9.00769rem',
+    },
+    '& .badge': {
+      width: '2.197rem',
+      height: '2.197rem',
+      borderRadius: '50%',
+      backgroundColor: '#000000',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: '#FFFFFF',
+      fontSize: '0.79094rem',
+      fontWeight: 700,
+      fontFamily: 'Century Gothic',
+      top: '-1.1rem',
+      left: '3.41rem',
+      position: 'absolute',
+    },
+  },
+  '&:nth-of-type(2)': {
+    marginRight: 0,
+    '& img': {
+      width: '9.00769rem',
+      height: '13.84106rem',
+      borderRadius: '0.43938rem',
+      boxShadow: '3.515px 3.515px 12.303px 0.879px rgba(0, 0, 0, 0.20)',
+    },
+    '& .title': {
+      width: '9.00769rem',
+    },
+    '& .writer': {
+      width: '9.00769rem',
+    },
+    '& .badge': {
+      width: '2.197rem',
+      height: '2.197rem',
+      borderRadius: '50%',
+      backgroundColor: '#000000',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: '#FFFFFF',
+      fontSize: '0.79094rem',
+      fontWeight: 700,
+      fontFamily: 'Century Gothic',
+      top: '-1.1rem',
+      left: '3.41rem',
+      position: 'absolute',
+    },
+  },
+  '&:last-child': {
+    marginRight: '0',
+  },
+  marginRight: '1.42rem',
   '& img': {
-    width: '3.77969rem',
-    height: '5.44981rem',
-    borderRadius: '0.26369rem',
-    boxShadow: '5.063px 5.063px 20.252px 2.025px rgba(0, 0, 0, 0.20)',
+    width: '5.63531rem',
+    height: '8.65169rem',
+    borderRadius: '0.32956rem',
+    boxShadow: '3.515px 3.515px 12.303px 0.879px rgba(0, 0, 0, 0.20)',
+    marginBottom: '0.55rem',
     objectFit: 'cover',
   },
   '& .title': {
     color: '#191F28',
     fontFamily: 'Pretendard',
     fontWeight: 500,
-    fontSize: '0.879rem',
-    marginBottom: '0.31rem',
-    width: '13.84425rem',
+    fontSize: '0.65913rem',
+    marginBottom: '0.22rem',
+    width: '5.63531rem',
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
   },
   '& .writer': {
-    color: '#191F28',
+    color: '#4E5968',
     fontFamily: 'Pretendard',
-    fontWeight: 500,
-    fontSize: '0.65925rem',
-    letterSpacing: '-0.0165rem',
-    width: '13.84425rem',
-    marginBottom: '0.31rem',
+    fontWeight: 400,
+    fontSize: '0.54925rem',
+    width: '5.63531rem',
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
   },
-  '& .publisher': {
-    color: '#4E5968',
-    fontFamily: 'Pretendard',
-    fontWeight: 500,
-    fontSize: '0.65925rem',
-    marginBottom: '0.44rem',
-  },
-  '& .detail': {
-    color: '#191F28',
-    fontWeight: 500,
-    fontSize: '0.52738rem',
-    marginBottom: '0.22rem',
-    letterSpacing: '-0.01319rem',
-    '& span': {
-      color: '#6B7684',
-      fontWeight: 400,
-      fontSize: '0.52738rem',
-      marginRight: '0.22rem',
-    },
-  },
   '& .badge': {
-    width: '1.53825rem',
-    height: '1.53825rem',
+    width: '1.75763rem',
+    height: '1.75763rem',
     borderRadius: '50%',
-    backgroundColor: '#E71D36',
+    backgroundColor: '#000000',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     color: '#FFFFFF',
-    lineHeight: 'normal',
-    fontSize: '0.52738rem',
+    fontSize: '0.65913rem',
     fontWeight: 700,
     fontFamily: 'Century Gothic',
-    top: '0',
-    right: '14.2rem',
+    top: '-0.88rem',
+    left: '1.94rem',
     position: 'absolute',
   },
 }));
 
-const Time = styled('div')(() => ({
-  color: '#FFF',
-  fontFamily: 'Century Gothic',
-  fontSize: '0.83506rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-const Date = styled('div')(() => ({
-  color: '#FFF',
-  fontFamily: 'Pretendard',
-  fontSize: '0.30763rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-export { Container, CustomSwiper, Grid, SlideItem, Time, Date };
+export { Container, CustomSwiper, Grid, SlideItem };
