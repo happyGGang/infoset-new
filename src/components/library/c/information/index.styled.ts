@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/library_a_information_bg.svg';
+import background from '../../../../assets/img/library_c_information_bg.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
@@ -40,22 +40,4 @@ const Container = styled('div')(() => ({
   },
 }));
 
-const Time = styled('div')(() => ({
-  color: '#191F28',
-  fontFamily: 'Century Gothic',
-  fontSize: '0.83506rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-const Date = styled('div')(() => ({
-  color: '#191F28',
-  fontFamily: 'Pretendard',
-  fontSize: '0.30763rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-export { Container, Date, Time };
+export { Container };

@@ -6,12 +6,9 @@ import {
   SmallSwiperSlide,
   Ticker,
   TickerMessage,
-  Date,
-  Time,
 } from './index.styled';
 import { notice_list } from '../../../../constants/notice.constants';
 import { Autoplay, Pagination } from 'swiper/modules';
-import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 
 const Notice = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -37,10 +34,6 @@ const Notice = () => {
 
   return (
     <Container>
-      <div className={'time_date_wrapper'}>
-        <Time>{getCurrentTime()}</Time>
-        <Date>{getCurrentDate()}</Date>
-      </div>
       <SelectedImage
         src={notice_list[selectedIndex]?.img}
         alt={`Selected Slide ${selectedIndex}`}

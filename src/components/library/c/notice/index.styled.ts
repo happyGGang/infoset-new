@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/library_a_notice_bg.svg';
+import background from '../../../../assets/img/library_c_notice_bg.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Container = styled('div')(() => ({
@@ -31,14 +31,6 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '.time_date_wrapper': {
-    zIndex: 1,
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'column',
-    top: '1.32rem',
-    right: '2.2rem',
-  },
 }));
 
 const SelectedImage = styled('img')(() => ({
@@ -46,6 +38,7 @@ const SelectedImage = styled('img')(() => ({
   width: '19.12481rem',
   height: '27.045rem',
   boxShadow: '3.515px 3.515px 7.03px 0px rgba(0, 0, 0, 0.10)',
+  borderRadius: '0.26369rem',
 }));
 
 const SmallSwiper = styled(Swiper)(() => ({
@@ -61,17 +54,18 @@ const SmallSwiper = styled(Swiper)(() => ({
     opacity: '1',
     width: '0.26363rem',
     height: '0.26363rem',
-    background: '#8B95A1',
+    background: '#ADB5BD',
     borderRadius: '50%',
     transition: 'background-color 0.3s ease, transform 0.3s ease',
   },
   '.swiper-pagination-bullet-active': {
-    background: '#FFFFFF',
+    background: '#333D4B',
   },
 }));
 
 const SmallSwiperSlide = styled(SwiperSlide)(() => ({
   '& img': {
+    borderRadius: '0.26369rem',
     width: '2.72425rem',
     height: '3.85575rem',
     boxShadow: '3.515px 3.515px 7.03px 0px rgba(0, 0, 0, 0.10)',
@@ -109,24 +103,6 @@ const TickerMessage = styled('div')(() => ({
   },
 }));
 
-const Time = styled('div')(() => ({
-  color: '#191F28',
-  fontFamily: 'Century Gothic',
-  fontSize: '0.83506rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-const Date = styled('div')(() => ({
-  color: '#191F28',
-  fontFamily: 'Pretendard',
-  fontSize: '0.30763rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
 export {
   Container,
   SelectedImage,
@@ -134,6 +110,4 @@ export {
   SmallSwiperSlide,
   Ticker,
   TickerMessage,
-  Date,
-  Time,
 };
