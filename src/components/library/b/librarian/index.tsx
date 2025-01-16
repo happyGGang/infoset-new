@@ -1,60 +1,43 @@
 import React from 'react';
-import {
-  Container,
-  Date,
-  Time,
-  CustomSwiper,
-  Grid,
-  SlideItem,
-} from './index.styled';
-import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Container, CustomSwiper, Grid, SlideItem } from './index.styled';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import { SwiperSlide } from 'swiper/react';
 import { book_list } from '../../../../constants/book.constants';
+import { useSelectedItemStore } from '../../../../store/selected-item.store';
 
-const Librarian = () => {
+const New = () => {
+  const { toggleSelectedItem } = useSelectedItemStore();
+
   return (
     <Container>
-      <div className={'time_date_wrapper'}>
-        <Time>{getCurrentTime()}</Time>
-        <Date>{getCurrentDate()}</Date>
-      </div>
       <CustomSwiper
         slidesPerView={1}
         slidesPerGroup={1}
         pagination
         spaceBetween={5}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         loop
-        autoplay={{ delay: 10000 }}
-        allowTouchMove={false}
       >
         <SwiperSlide>
           <Grid>
-            {book_list?.slice(0, 4).map((item, index) => (
-              <SlideItem key={index}>
+            {book_list?.slice(0, 9).map((item, index) => (
+              <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
                 <img src={item.img} alt="" />
-                <div>
-                  <div className={'title'}>{item.title}</div>
-                  <div className={'writer'}>{item.writer}</div>
-                  <div className={'writer'}>{item.publisher}</div>
-                  <div className={'writer'}>{item.date}</div>
-                </div>
+                <div className={'title'}>{item.title}</div>
+                <div className={'writer'}>{item.writer}</div>
               </SlideItem>
             ))}
           </Grid>
         </SwiperSlide>
         <SwiperSlide>
           <Grid>
-            {book_list?.slice(5, 9).map((item, index) => (
-              <SlideItem key={index}>
+            {book_list?.slice(9, 18).map((item, index) => (
+              <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
                 <img src={item.img} alt="" />
-                <div>
-                  <div className={'title'}>{item.title}</div>
-                  <div className={'writer'}>{item.writer}</div>
-                  <div className={'writer'}>{item.publisher}</div>
-                  <div className={'writer'}>{item.date}</div>
-                </div>
+                <div className={'title'}>{item.title}</div>
+                <div className={'writer'}>{item.writer}</div>
               </SlideItem>
             ))}
           </Grid>
@@ -64,4 +47,4 @@ const Librarian = () => {
   );
 };
 
-export default Librarian;
+export default New;
