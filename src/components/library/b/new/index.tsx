@@ -1,84 +1,76 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Container,
   CustomSwiper,
   CustomSwiperSlide,
-  Date,
-  Time,
-  Row,
-  VerticalSwiper,
-  VerticalSwiperSlide,
+  SmallSwiper,
+  SmallSwiperSlide,
 } from './index.styled';
-import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 import { book_list } from '../../../../constants/book.constants';
-import { Autoplay, EffectFade } from 'swiper/modules';
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
+import 'swiper/css/pagination';
 
 const New = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
   const rearrangedBookList = [...book_list.slice(1), book_list[0]];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSelectedIndex((prevIndex) => (prevIndex + 1) % book_list.length);
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <Container
-      style={{
-        background: `#FFFFFF url(${book_list[selectedIndex].img}) center top / 100% 65% no-repeat`,
-      }}
-    >
-      <div className={'blur'} />
-      <div className={'title_wrapper'}>
-        <div className={'title_en'}>LIBRARY NEW BOOK</div>
-        <div className={'title_kr'}>신착도서</div>
-      </div>
-      <div className={'time_date_wrapper'}>
-        <Time>{getCurrentTime()}</Time>
-        <Date>{getCurrentDate()}</Date>
-      </div>
-      <Row>
-        <CustomSwiper
-          autoplay={{ delay: 10000 }}
-          slidesPerView={1}
-          effect={'fade'}
-          loop
-          fadeEffect={{ crossFade: true }}
-          modules={[Autoplay, EffectFade]}
-          allowTouchMove={false}
-        >
-          {book_list.map((book, index) => (
-            <CustomSwiperSlide key={index}>
-              <img src={book.img} alt={book.title} />
-              <div className={'writer'}>
-                {book.writer} ㆍ <span>{book.publisher}</span>
+    <Container>
+      <CustomSwiper
+        autoplay={{ delay: 10000 }}
+        slidesPerView={1}
+        effect={'fade'}
+        loop
+        fadeEffect={{ crossFade: true }}
+        modules={[Autoplay, EffectFade]}
+        allowTouchMove={false}
+      >
+        {book_list.map((book, index) => (
+          <CustomSwiperSlide key={index}>
+            <img src={book.img} alt={book.title} />
+            <div className={'book_title'}>{book.title}</div>
+            <div className={'detail_box'}>
+              <div className={'left'}>
+                <div className={'wrapper'}>
+                  <div className={'label'}>저자명</div>
+                  <div className={'value'}>{book.writer}</div>
+                </div>
+                <div className={'wrapper'}>
+                  <div className={'label'}>출판사</div>
+                  <div className={'value'}>{book.publisher}</div>
+                </div>
               </div>
-              <div className={'title'}>{book.title}</div>
-              <div className={'summary'}>{book.summary}</div>
-            </CustomSwiperSlide>
-          ))}
-        </CustomSwiper>
-        <VerticalSwiper
-          autoplay={{ delay: 10000 }}
-          slidesPerView={6}
-          modules={[Autoplay]}
-          direction={'vertical'}
-          spaceBetween={13}
-          loop
-          allowTouchMove={false}
-        >
-          {rearrangedBookList.map((book, index) => (
-            <VerticalSwiperSlide key={index}>
-              <img src={book.img} alt={book.title} />
-            </VerticalSwiperSlide>
-          ))}
-        </VerticalSwiper>
-      </Row>
+              <div className={'right'}>
+                <div className={'wrapper'}>
+                  <div className={'label'}>발행년도</div>
+                  <div className={'value'}>{book.date}</div>
+                </div>
+                <div className={'wrapper'}>
+                  <div className={'label'}>소장위치</div>
+                  <div className={'value'}>2F 종합자료실</div>
+                </div>
+              </div>
+            </div>
+            <div className={'summary'}>{book.summary}</div>
+          </CustomSwiperSlide>
+        ))}
+      </CustomSwiper>
+      <SmallSwiper
+        autoplay={{ delay: 10000 }}
+        slidesPerView={5}
+        modules={[Autoplay, Pagination]}
+        pagination
+        loop
+        spaceBetween={10}
+        allowTouchMove={false}
+      >
+        {rearrangedBookList.map((book, index) => (
+          <SmallSwiperSlide key={index}>
+            <img src={book.img} alt={book.title} />
+          </SmallSwiperSlide>
+        ))}
+      </SmallSwiper>
     </Container>
   );
 };
