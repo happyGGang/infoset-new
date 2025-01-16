@@ -22,7 +22,7 @@ const Container = styled('div')(() => ({
 
 const CustomSwiper = styled(Swiper)(() => ({
   width: '20.73997rem',
-  height: '31.85rem',
+  height: '33.85rem',
   paddingLeft: '0.05rem',
   margin: '4.94rem 0 0 2.01rem',
   '.swiper-pagination': {
@@ -67,6 +67,7 @@ const SlideItem = styled('div')(() => ({
     },
     '& .writer': {
       width: '9.00769rem',
+      marginBottom: '0.13rem',
     },
     '& .badge': {
       width: '2.197rem',
@@ -97,6 +98,7 @@ const SlideItem = styled('div')(() => ({
       width: '9.00769rem',
     },
     '& .writer': {
+      marginBottom: '0.13rem',
       width: '9.00769rem',
     },
     '& .badge': {
@@ -140,6 +142,7 @@ const SlideItem = styled('div')(() => ({
     whiteSpace: 'nowrap',
   },
   '& .writer': {
+    marginBottom: '0.13rem',
     color: '#4E5968',
     fontFamily: 'Pretendard',
     fontWeight: 400,

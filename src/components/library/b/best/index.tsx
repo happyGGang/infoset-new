@@ -30,6 +30,7 @@ const Best = () => {
                 <img src={item.img} alt="" />
                 <div className={'title'}>{item.title}</div>
                 <div className={'writer'}>{item.writer}</div>
+                <div className={'writer'}>{item.publisher}</div>
               </SlideItem>
             ))}
           </Grid>
@@ -44,6 +45,7 @@ const Best = () => {
                 <img src={item.img} alt="" />
                 <div className={'title'}>{item.title}</div>
                 <div className={'writer'}>{item.writer}</div>
+                <div className={'writer'}>{item.publisher}</div>
               </SlideItem>
             ))}
           </Grid>

@@ -22,7 +22,7 @@ const Container = styled('div')(() => ({
 
 const CustomSwiper = styled(Swiper)(() => ({
   width: '19.89414rem',
-  height: '32.39502rem',
+  height: '33.39502rem',
   paddingLeft: '0.05rem',
   margin: '4.39rem 0 0 2.42rem',
   '.swiper-pagination': {
@@ -45,7 +45,7 @@ const CustomSwiper = styled(Swiper)(() => ({
 const Grid = styled('div')(() => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(3, 1fr)',
-  gridRowGap: '1.35rem',
+  gridRowGap: '1.4rem',
   gridColumnGap: '0.5rem',
 }));
 
