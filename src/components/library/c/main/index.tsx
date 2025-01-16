@@ -1,14 +1,18 @@
 import React from 'react';
-import { Container, Time, Date, Message, Caption, Arrow } from './index.styled';
-import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
+import { Container, Time, Date, Message, Caption } from './index.styled';
+import { getCurrentTime, getFullCurrentDate } from '../../../../util/date-time';
 
 const Main = () => {
   return (
     <Container>
       <Time>{getCurrentTime()}</Time>
-      <Date>{getCurrentDate()}</Date>
-      <Message>welcome</Message>
-      <Caption>INFOSET LIBRARY</Caption>
+      <Date>{getFullCurrentDate()}</Date>
+      <Message>
+        <span>인포셋도서관</span>
+        <br />
+        방문을 환영합니다
+      </Message>
+      <Caption>welcome to infoset library</Caption>
     </Container>
   );
 };

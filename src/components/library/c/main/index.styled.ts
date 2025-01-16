@@ -1,19 +1,17 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/kiosk_a_y_main_bg.svg';
-import backgroundX from '../../../../assets/img/kiosk_a_x_main_bg.svg';
-import arrow from '../../../../assets/icon/kiosk_a_main_arrow.svg';
+import background from '../../../../assets/img/kiosk_c_y_main_bg.svg';
+import backgroundX from '../../../../assets/img/kiosk_c_x_main_bg.svg';
+import arrow from '../../../../assets/icon/kiosk_c_main_arrow.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
   height: '42.18225rem',
   background: `url(${background}) center center no-repeat`,
   backgroundSize: 'cover',
-  alignItems: 'center',
   flexDirection: 'column',
   position: 'relative',
   opacity: 0,
   animation: 'fadeIn 1s ease-out forwards',
-
   '@keyframes fadeIn': {
     '0%': {
       opacity: 0,
@@ -26,35 +24,37 @@ const Container = styled('div')(() => ({
 
 const Time = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Century Gothic',
-  fontSize: '2.63638rem',
-  fontWeight: 400,
+  fontFamily: 'Spoqa Han Sans Neo',
+  fontSize: '1.49388rem',
+  fontWeight: 300,
   lineHeight: 'normal',
-  marginBottom: '0.26rem',
-  textAlign: 'center',
-  marginTop: '6.43rem',
+  marginTop: '2.84rem',
+  marginLeft: '3.02rem',
 }));
 
 const Date = styled('div')(() => ({
   color: '#FFFFFF',
   fontFamily: 'Pretendard',
-  fontSize: '0.79094rem',
+  fontSize: '0.43938rem',
   fontWeight: 400,
   lineHeight: 'normal',
-  marginBottom: '1.72rem',
-  textAlign: 'center',
+  marginLeft: '3.03rem',
+  marginBottom: '3.7rem',
 }));
 
 const Message = styled('div')(() => ({
-  color: '#FFFFFF',
+  color: '#191F28',
   fontFamily: 'Pretendard',
-  fontSize: '2.63638rem',
-  fontWeight: 500,
+  fontSize: '1.7575rem',
+  fontWeight: 300,
+  letterSpacing: '-0.0439rem',
   lineHeight: 'normal',
-  marginBottom: '0.44rem',
-  textAlign: 'center',
+  marginBottom: '0.61rem',
+  marginLeft: '2.94rem',
   animation: 'float-up 1.5s ease-out forwards',
-
+  '& span': {
+    fontWeight: 500,
+  },
   '@keyframes float-up': {
     '0%': {
       opacity: 0,
@@ -69,14 +69,15 @@ const Message = styled('div')(() => ({
 
 const Caption = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
-  fontSize: '0.65913rem',
-  fontWeight: 600,
-  lineHeight: 'normal',
-  marginBottom: '18.17rem',
-  textAlign: 'center',
+  fontFamily: 'Roboto',
+  fontSize: '0.43938rem',
+  fontWeight: 500,
+  lineHeight: '120%',
+  letterSpacing: '0.04394rem',
+  textTransform: 'uppercase',
+  marginBottom: '11.41rem',
+  marginLeft: '3.05rem',
   animation: 'float-up 1.5s ease-out forwards',
-
   '@keyframes float-up': {
     '0%': {
       opacity: 0,
@@ -89,21 +90,4 @@ const Caption = styled('div')(() => ({
   },
 }));
 
-const Arrow = styled('div')(() => ({
-  width: '3.51519rem',
-  height: '3.51519rem',
-  background: `url(${arrow}) center center no-repeat`,
-  backgroundSize: 'cover',
-  marginLeft: '10.11rem',
-  animation: 'bounce 1s ease-in-out infinite',
-  '@keyframes bounce': {
-    '0%, 100%': {
-      transform: 'translateX(0)',
-    },
-    '50%': {
-      transform: 'translateX(0.5rem)',
-    },
-  },
-}));
-
-export { Container, Time, Date, Message, Caption, Arrow };
+export { Container, Time, Date, Message, Caption };
