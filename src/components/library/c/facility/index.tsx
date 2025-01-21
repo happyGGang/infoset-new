@@ -6,12 +6,10 @@ import {
   SlideItem,
   FilteringList,
   Filter,
-  Date,
-  Time,
 } from './index.styled';
-import map1 from '../../../../assets/img/map01.svg';
-import map2 from '../../../../assets/img/map02.svg';
-import map3 from '../../../../assets/img/map03.svg';
+import map1 from '../../../../assets/img/map01_dark.svg';
+import map2 from '../../../../assets/img/map02_dark.svg';
+import map3 from '../../../../assets/img/map03_dark.svg';
 import { Autoplay, Pagination } from 'swiper/modules';
 import {
   secondFloor,
@@ -21,7 +19,6 @@ import {
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { SwiperSlide } from 'swiper/react';
-import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 import check from '../../../../assets/icon/check.svg';
 
 const Facility = () => {
@@ -73,10 +70,6 @@ const Facility = () => {
 
   return (
     <Container>
-      <div className={'time_date_wrapper'}>
-        <Time>{getCurrentTime()}</Time>
-        <Date>{getCurrentDate()}</Date>
-      </div>
       <Map>
         <img
           src={floorData[selectedFloor]?.map}
@@ -85,6 +78,13 @@ const Facility = () => {
         />
         <div className={`${animate ? 'animate' : ''}`}>{selectedFloor}F</div>
       </Map>
+      <FilteringList>
+        {[1, 2, 3].map((floor) => (
+          <Filter key={floor} selected={selectedFloor === floor}>
+            {floor}F
+          </Filter>
+        ))}
+      </FilteringList>
       <CustomSwiper
         slidesPerView={1}
         slidesPerGroup={1}
@@ -98,9 +98,16 @@ const Facility = () => {
         {getFacilitiesForFloor().map((facility: any, index: number) => (
           <SwiperSlide key={facility.index}>
             <SlideItem onClick={() => setSelectedFacility(facility)}>
-              <div className={'title'}>
-                {index + 1} {facility.title}
+              <div className={'title_wrapper'}>
+                <div className={'index'}>
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <div>
+                  <div className={'title'}>{facility.title}</div>
+                  <div className={'title_en'}>{facility.title_en}</div>
+                </div>
               </div>
+              <img className={'facility_img'} src={facility.img} alt="" />
               <div className={'list'}>
                 <img src={check} alt="" />
                 <div>이용대상 : {facility.user}</div>
@@ -119,13 +126,6 @@ const Facility = () => {
           </SwiperSlide>
         ))}
       </CustomSwiper>
-      <FilteringList>
-        {[1, 2, 3].map((floor) => (
-          <Filter key={floor} selected={selectedFloor === floor}>
-            {floor}F
-          </Filter>
-        ))}
-      </FilteringList>
     </Container>
   );
 };
