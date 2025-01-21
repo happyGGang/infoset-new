@@ -1,11 +1,14 @@
 import { styled } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import background from '../../../../assets/img/library_c_new_bg.svg';
 
 const Container = styled('div')(() => ({
-  position: 'relative',
-  opacity: 0,
   width: '23.7275rem',
   height: '42.18225rem',
+  background: `url(${background}) center center no-repeat`,
+  backgroundSize: 'cover',
+  position: 'relative',
+  opacity: 0,
   animation: 'fadeIn 1s ease-out forwards',
   '@keyframes fadeIn': {
     '0%': {
@@ -15,15 +18,6 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '& .blur': {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    background: 'rgba(0, 0, 0, 0.15)',
-    width: '23.7275rem',
-    height: '42.18225rem',
-    backdropFilter: 'blur(24.61199951171875px)',
-  },
   '.time_date_wrapper': {
     zIndex: 1,
     position: 'absolute',
@@ -32,46 +26,6 @@ const Container = styled('div')(() => ({
     top: '1.32rem',
     right: '2.2rem',
   },
-  '.title_wrapper': {
-    zIndex: 1,
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.18rem',
-    top: '1.32rem',
-    left: '2.2rem',
-    '.title_kr': {
-      color: '#FFF',
-      fontSize: '0.35163rem',
-      fontWeight: 500,
-      lineHeight: 'normal',
-    },
-    '.title_en': {
-      color: '#8B95A1',
-      fontSize: '0.35163rem',
-      fontWeight: 800,
-      lineHeight: 'normal',
-      letterSpacing: '0.07031rem',
-    },
-  },
-}));
-
-const Time = styled('div')(() => ({
-  color: '#FFF',
-  fontFamily: 'Century Gothic',
-  fontSize: '0.83506rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
-}));
-
-const Date = styled('div')(() => ({
-  color: '#FFF',
-  fontFamily: 'Pretendard',
-  fontSize: '0.30763rem',
-  fontWeight: 400,
-  lineHeight: 'normal',
-  textAlign: 'center',
 }));
 
 const Row = styled('div')(() => ({
@@ -91,12 +45,12 @@ const CustomSwiper = styled(Swiper)(() => ({
     opacity: '1',
     width: '0.26363rem',
     height: '0.26363rem',
-    background: '#8B95A1',
+    background: '#ADB5BD',
     borderRadius: '50%',
     transition: 'background-color 0.3s ease, transform 0.3s ease',
   },
   '.swiper-pagination-bullet-active': {
-    background: '#FFFFFF',
+    background: '#333D4B',
   },
 }));
 
@@ -168,8 +122,6 @@ const VerticalSwiperSlide = styled(SwiperSlide)(() => ({
 
 export {
   Container,
-  Time,
-  Date,
   CustomSwiperSlide,
   CustomSwiper,
   Row,

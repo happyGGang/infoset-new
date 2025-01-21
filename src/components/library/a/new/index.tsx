@@ -11,9 +11,10 @@ import {
 } from './index.styled';
 import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 import { book_list } from '../../../../constants/book.constants';
-import { Autoplay, EffectFade } from 'swiper/modules';
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
+import 'swiper/css/pagination';
 
 const New = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -48,11 +49,12 @@ const New = () => {
           slidesPerView={1}
           effect={'fade'}
           loop
+          pagination
           fadeEffect={{ crossFade: true }}
-          modules={[Autoplay, EffectFade]}
+          modules={[Autoplay, EffectFade, Pagination]}
           allowTouchMove={false}
         >
-          {book_list.map((book, index) => (
+          {book_list.slice(0, 10).map((book, index) => (
             <CustomSwiperSlide key={index}>
               <img src={book.img} alt={book.title} />
               <div className={'writer'}>
@@ -72,7 +74,7 @@ const New = () => {
           loop
           allowTouchMove={false}
         >
-          {rearrangedBookList.map((book, index) => (
+          {rearrangedBookList.slice(0, 10).map((book, index) => (
             <VerticalSwiperSlide key={index}>
               <img src={book.img} alt={book.title} />
             </VerticalSwiperSlide>
