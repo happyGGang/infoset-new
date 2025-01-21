@@ -133,7 +133,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         />
         {children}
         <Wrapper>
-          <Zoom onClick={() => toggleZoomMode(true)} />
+          {/*<Zoom onClick={() => toggleZoomMode(true)} />*/}
           {!pathname.startsWith(`/media/`) &&
             !pathname.startsWith(`/library/`) && (
               <Tilt onClick={() => toggleLandscape()} />
