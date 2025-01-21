@@ -1,22 +1,11 @@
 import React from 'react';
-import {
-  Container,
-  CustomSwiper,
-  CustomSwiperSlide,
-  Date,
-  Time,
-} from './index.styled';
-import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
+import { Container, CustomSwiper, CustomSwiperSlide } from './index.styled';
 import { event_list } from '../../../../constants/event.constants';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 const Event = () => {
   return (
     <Container>
-      <div className={'time_date_wrapper'}>
-        <Time>{getCurrentTime()}</Time>
-        <Date>{getCurrentDate()}</Date>
-      </div>
       <CustomSwiper
         slidesPerView={1}
         pagination
