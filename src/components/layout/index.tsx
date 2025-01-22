@@ -109,18 +109,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </Navigation>
       <Content>
         <TabPanel>
-          {['a', 'b', 'c'].map((tab) => (
-            <Tab
-              key={tab}
-              onClick={() => {
-                handleTabClick(tab);
-                toggleLandscape(false);
-              }}
-              selected={pathname.endsWith(`/${tab}`)}
-            >
-              Type {tab.toUpperCase()}
-            </Tab>
-          ))}
+          {(pathname.startsWith('/smart') ? ['a', 'b'] : ['a', 'b', 'c']).map(
+            (tab) => (
+              <Tab
+                key={tab}
+                onClick={() => {
+                  handleTabClick(tab);
+                  toggleLandscape(false);
+                }}
+                selected={pathname.endsWith(`/${tab}`)}
+              >
+                Type {tab.toUpperCase()}
+              </Tab>
+            )
+          )}
         </TabPanel>
         <MenuTitle />
         <ArrowLeft
