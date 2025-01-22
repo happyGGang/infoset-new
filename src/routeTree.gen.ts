@@ -12,7 +12,6 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
-import { Route as SmartCImport } from './routes/smart.c'
 import { Route as SmartBImport } from './routes/smart.b'
 import { Route as SmartAImport } from './routes/smart.a'
 import { Route as MediaCImport } from './routes/media.c'
@@ -30,12 +29,6 @@ import { Route as KioskAImport } from './routes/kiosk.a'
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const SmartCRoute = SmartCImport.update({
-  id: '/smart/c',
-  path: '/smart/c',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -193,13 +186,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SmartBImport
       parentRoute: typeof rootRoute
     }
-    '/smart/c': {
-      id: '/smart/c'
-      path: '/smart/c'
-      fullPath: '/smart/c'
-      preLoaderRoute: typeof SmartCImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -218,7 +204,6 @@ export interface FileRoutesByFullPath {
   '/media/c': typeof MediaCRoute
   '/smart/a': typeof SmartARoute
   '/smart/b': typeof SmartBRoute
-  '/smart/c': typeof SmartCRoute
 }
 
 export interface FileRoutesByTo {
@@ -234,7 +219,6 @@ export interface FileRoutesByTo {
   '/media/c': typeof MediaCRoute
   '/smart/a': typeof SmartARoute
   '/smart/b': typeof SmartBRoute
-  '/smart/c': typeof SmartCRoute
 }
 
 export interface FileRoutesById {
@@ -251,7 +235,6 @@ export interface FileRoutesById {
   '/media/c': typeof MediaCRoute
   '/smart/a': typeof SmartARoute
   '/smart/b': typeof SmartBRoute
-  '/smart/c': typeof SmartCRoute
 }
 
 export interface FileRouteTypes {
@@ -269,7 +252,6 @@ export interface FileRouteTypes {
     | '/media/c'
     | '/smart/a'
     | '/smart/b'
-    | '/smart/c'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -284,7 +266,6 @@ export interface FileRouteTypes {
     | '/media/c'
     | '/smart/a'
     | '/smart/b'
-    | '/smart/c'
   id:
     | '__root__'
     | '/'
@@ -299,7 +280,6 @@ export interface FileRouteTypes {
     | '/media/c'
     | '/smart/a'
     | '/smart/b'
-    | '/smart/c'
   fileRoutesById: FileRoutesById
 }
 
@@ -316,7 +296,6 @@ export interface RootRouteChildren {
   MediaCRoute: typeof MediaCRoute
   SmartARoute: typeof SmartARoute
   SmartBRoute: typeof SmartBRoute
-  SmartCRoute: typeof SmartCRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -332,7 +311,6 @@ const rootRouteChildren: RootRouteChildren = {
   MediaCRoute: MediaCRoute,
   SmartARoute: SmartARoute,
   SmartBRoute: SmartBRoute,
-  SmartCRoute: SmartCRoute,
 }
 
 export const routeTree = rootRoute
@@ -356,8 +334,7 @@ export const routeTree = rootRoute
         "/media/b",
         "/media/c",
         "/smart/a",
-        "/smart/b",
-        "/smart/c"
+        "/smart/b"
       ]
     },
     "/": {
@@ -395,9 +372,6 @@ export const routeTree = rootRoute
     },
     "/smart/b": {
       "filePath": "smart.b.tsx"
-    },
-    "/smart/c": {
-      "filePath": "smart.c.tsx"
     }
   }
 }
