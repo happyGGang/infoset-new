@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import background from '../../../../assets/img/smart_a_y_chart_bg.svg';
 import arrow from '../../../../assets/icon/smart-arrow-dark.svg';
-import backgroundX from '../../../../assets/img/smart_a_x_main.svg';
+import backgroundX from '../../../../assets/img/smart_a_x_chart_bg.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
