@@ -12,7 +12,6 @@ import {
   Summary,
   CustomSwiper,
   CustomSlide,
-  SummaryTitle,
   Row,
   ContainerX,
   SelectedBookX,
@@ -106,7 +105,6 @@ const Detail = () => {
             <TriggerX onClick={() => setIsOpen(true)}>
               소장도서 서가위치보기
             </TriggerX>
-            <div className={'summary_title'}>책소개</div>
             <SummaryX>{selectedItem.summary}</SummaryX>
 
             <div className={'swiper-container'}>
@@ -117,20 +115,19 @@ const Detail = () => {
                 slidesPerGroup={5}
                 modules={[Navigation]}
                 loop
-                spaceBetween={20}
+                spaceBetween={30}
                 navigation={{
                   nextEl: '.swiper-button-next',
                   prevEl: '.swiper-button-prev',
                 }}
               >
-                {newBookList?.map((item, index) => (
+                {newBookList?.slice(0, 10)?.map((item, index) => (
                   <CustomSlideX
                     key={index}
                     onClick={() => setSelectedItem(item)}
                   >
                     <img src={item.img} alt={`Slide ${index}`} />
                     <div className={'title'}>{item.title}</div>
-                    <div className={'writer'}>{item.writer}</div>
                   </CustomSlideX>
                 ))}
               </CustomSwiperX>

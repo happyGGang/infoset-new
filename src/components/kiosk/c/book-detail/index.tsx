@@ -130,7 +130,6 @@ const BookDetail = () => {
                   >
                     <img src={item.img} alt={`Slide ${index}`} />
                     <div className={'title'}>{item.title}</div>
-                    <div className={'writer'}>{item.writer}</div>
                   </CustomSlideX>
                 ))}
               </CustomSwiperX>

@@ -247,7 +247,7 @@ const ContainerX = styled('div')(() => ({
   background: `url(${backgroundX}) center center no-repeat`,
   backgroundSize: 'cover',
   display: 'flex',
-  gap: '4.37rem',
+  gap: '3.4rem',
   position: 'relative',
   opacity: 0,
   animation: 'fadeIn 1s ease-out forwards',
@@ -259,14 +259,6 @@ const ContainerX = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '.summary_title': {
-    color: '#4E5968',
-    fontSize: '0.9375rem',
-    fontWeight: 400,
-    letterSpacing: '-0.02344rem',
-    lineHeight: 'normal',
-    marginBottom: '0.39rem',
-  },
   '.swiper-container': {
     position: 'relative',
     width: '35.9375rem',
@@ -276,7 +268,7 @@ const ContainerX = styled('div')(() => ({
       width: '1.875rem',
       height: '1.875rem',
       zIndex: 10,
-      left: '0',
+      left: '-2rem',
       transform: 'rotate(180deg)',
       fontSize: 0,
       border: 'none',
@@ -289,7 +281,7 @@ const ContainerX = styled('div')(() => ({
       backgroundSize: 'cover',
       width: '1.875rem',
       height: '1.875rem',
-      right: '0',
+      right: '-2rem',
       zIndex: 10,
       fontSize: 0,
       border: 'none',
@@ -305,8 +297,8 @@ const SelectedBookX = styled('div')(() => ({
   height: '19.76563rem',
   borderRadius: '50%',
   position: 'relative',
-  marginTop: '7.25rem',
-  marginLeft: '10.23rem',
+  marginTop: '9rem',
+  marginLeft: '11.33rem',
   '& img': {
     width: '14.84375rem',
     height: '21.48438rem',
@@ -349,15 +341,15 @@ const SelectedBookX = styled('div')(() => ({
 
 const TitleX = styled('div')(() => ({
   marginTop: '2.15rem',
-  color: '#191F28',
+  color: '#FFF',
   textAlign: 'center',
   fontFamily: 'Pretendard',
   fontSize: '1.60156rem',
   letterSpacing: '-0.04006rem',
   lineHeight: '140%',
-  width: '19.76563rem',
+  width: '15.625rem',
   fontWeight: 500,
-  marginLeft: '10.23rem',
+  marginLeft: '13.4rem',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
   WebkitBoxOrient: 'vertical',
@@ -367,8 +359,8 @@ const TitleX = styled('div')(() => ({
 
 const DetailX = styled('div')(() => ({
   display: 'flex',
-  gap: '1.45rem',
-  marginTop: '6.25rem',
+  gap: '4rem',
+  marginTop: '7.81rem',
 }));
 
 const WrapperX = styled('div')(() => ({
@@ -378,29 +370,29 @@ const WrapperX = styled('div')(() => ({
 }));
 
 const LeftLabelX = styled('div')(() => ({
-  color: '#4E5968',
+  color: '#8B95A1',
   fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   letterSpacing: '-0.01319rem',
-  width: '2.96875rem',
+  width: '2.75rem',
   fontWeight: 400,
 }));
 
 const RightLabelX = styled('div')(() => ({
-  color: '#4E5968',
+  color: '#8B95A1',
   fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   letterSpacing: '-0.02344rem',
-  width: '3.59375rem',
+  width: '3.5rem',
   fontWeight: 400,
 }));
 
 const ValueX = styled('div')(() => ({
-  width: '14.14063rem',
+  width: '11.71875rem',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
   whiteSpace: 'nowrap',
-  color: '#191F28',
+  color: '#FFFFFF',
   fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   letterSpacing: '-0.02344rem',
@@ -409,7 +401,7 @@ const ValueX = styled('div')(() => ({
 
 const TriggerX = styled('div')(() => ({
   width: '35.9375rem',
-  color: '#FFFFFF',
+  color: '#419BD7',
   padding: '0.55rem 0rem',
   fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
@@ -417,18 +409,18 @@ const TriggerX = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'center',
   fontWeight: 600,
-  marginTop: '1.78rem',
+  marginTop: '1.55rem',
   cursor: 'pointer',
-  marginBottom: '2.1rem',
-  backgroundColor: '#ADB5BD',
+  marginBottom: '3.27rem',
+  border: '1.25px solid #419BD7',
   borderRadius: '0.19531rem',
 }));
 
 const SummaryX = styled('div')(() => ({
-  color: '#252525',
-  height: '7.5625rem',
+  color: '#FFF',
+  height: '6rem',
   fontFamily: 'Pretendard',
-  fontSize: '1.01563rem',
+  fontSize: '0.9375rem',
   fontWeight: 400,
   lineHeight: ' 1.5625rem',
   width: '35.9375rem',
@@ -437,28 +429,13 @@ const SummaryX = styled('div')(() => ({
   WebkitBoxOrient: 'vertical',
   WebkitLineClamp: '5',
   display: '-webkit-box',
-  marginBottom: '2.02rem',
+  marginBottom: '4.94rem',
 }));
 
 const CustomSwiperX = styled(Swiper)(() => ({
-  width: '32.625rem',
-  height: '10.74219rem',
-  paddingTop: '1.5rem',
-  paddingLeft: '1rem',
-  '.swiper-pagination': {
-    bottom: '0',
-  },
-  '.swiper-pagination-bullet': {
-    opacity: '1',
-    width: '0.46875rem',
-    height: '0.46875rem',
-    background: '#8B95A1',
-    borderRadius: '50%',
-    transition: 'background-color 0.3s ease, transform 0.3s ease',
-  },
-  '.swiper-pagination-bullet-active': {
-    background: '#FFFFFF',
-  },
+  width: '37.20313rem',
+  height: '8.82232rem',
+  marginLeft: '-0.1rem',
 }));
 
 const CustomSlideX = styled(SwiperSlide)(() => ({
@@ -477,7 +454,7 @@ const CustomSlideX = styled(SwiperSlide)(() => ({
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
     fontFamily: 'Pretendard',
-    color: '#191F28',
+    color: '#ADB5BD',
     fontWeight: 400,
     lineHeight: '140%',
     letterSpacing: '-0.01369rem',
@@ -513,7 +490,6 @@ export {
   Summary,
   CustomSwiper,
   CustomSlide,
-  SummaryTitle,
   Row,
   ContainerX,
   SelectedBookX,
