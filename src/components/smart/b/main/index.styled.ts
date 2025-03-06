@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/smart_b_y_main_bg.svg';
+import background from '../../../../assets/img/smart_a_y_main.svg';
 import backgroundX from '../../../../assets/img/smart_a_x_main.svg';
 
 const Container = styled('div')(() => ({
