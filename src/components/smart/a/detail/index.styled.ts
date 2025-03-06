@@ -194,6 +194,7 @@ const CustomSwiper = styled(Swiper)(() => ({
 }));
 
 const CustomSlide = styled('div')(() => ({
+  position: 'relative',
   '& img': {
     width: '2.63894rem',
     height: '3.8155rem',
@@ -217,6 +218,20 @@ const CustomSlide = styled('div')(() => ({
     WebkitBoxOrient: 'vertical',
     WebkitLineClamp: '2',
     display: '-webkit-box',
+  },
+  '& .badge': {
+    width: '0.87963rem',
+    height: '0.87963rem',
+    borderRadius: '50%',
+    position: 'absolute',
+    bottom: '1.5rem',
+    right: '-0.4rem',
+    color: '#FFFFFF',
+    backgroundColor: '#E71D36',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '0.30788rem',
   },
 }));
 

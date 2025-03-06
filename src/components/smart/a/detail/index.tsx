@@ -205,6 +205,7 @@ const Detail = () => {
                     key={index}
                     onClick={() => setSelectedItem(item)}
                   >
+                    <div className={'badge'}>{index + 1}위</div>
                     <img src={item.img} alt={`Slide ${index}`} />
                     <div className={'title'}>{item.title}</div>
                   </CustomSlide>
@@ -218,6 +219,7 @@ const Detail = () => {
                     key={index}
                     onClick={() => setSelectedItem(item)}
                   >
+                    <div className={'badge'}>{index + 6}위</div>
                     <img src={item.img} alt={`Slide ${index}`} />
                     <div className={'title'}>{item.title}</div>
                   </CustomSlide>
