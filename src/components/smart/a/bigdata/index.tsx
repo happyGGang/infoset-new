@@ -8,6 +8,11 @@ import {
   CustomSwiper,
   Grid,
   SlideItem,
+  TabsX,
+  TabItemX,
+  CustomSwiperX,
+  GridX,
+  SlideItemX,
 } from './index.styled';
 import { Navigation } from 'swiper/modules';
 import { SwiperSlide } from 'swiper/react';
@@ -19,13 +24,67 @@ const Bigdata = () => {
   const { toggleSelectedItem } = useSelectedItemStore();
   const [activeIndex, setActiveIndex] = useState(1);
   const totalSlides = Math.ceil(book_list.length / 6);
+  const totalSlidesX = Math.ceil(book_list.length / 5);
   const [selectedTab, setSelectedTab] = React.useState(0);
   const tabs = ['아동', '청소년', '20~30대', '40~50대', '60대 이상'];
 
   return (
     <>
       {isLandscape ? (
-        <ContainerX></ContainerX>
+        <ContainerX>
+          <TabsX>
+            {tabs.map((tab, index) => (
+              <TabItemX
+                key={index}
+                onClick={() => setSelectedTab(index)}
+                style={{
+                  backgroundColor:
+                    selectedTab === index ? '#3537AC' : '#4E5968',
+                  color: selectedTab === index ? '#FFFFFF' : '#ADB5BD',
+                }}
+              >
+                {tab}
+              </TabItemX>
+            ))}
+          </TabsX>
+          <div className={'swiper-button-prev'}></div>
+          <div className={'swiper-button-next'}></div>
+          <CustomSwiperX
+            slidesPerView={1}
+            slidesPerGroup={1}
+            spaceBetween={5}
+            loop
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            modules={[Navigation]}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex + 1)}
+          >
+            {[...Array(totalSlidesX)].map((_, pageIndex) => (
+              <SwiperSlide key={pageIndex}>
+                <GridX>
+                  {book_list
+                    .slice(pageIndex * 5, (pageIndex + 1) * 5)
+                    .map((item, index) => (
+                      <SlideItemX
+                        key={index}
+                        onClick={() => toggleSelectedItem(6)}
+                      >
+                        <img src={item.img} alt="" />
+                        <div className={'title'}>{item.title}</div>
+                        <div className={'writer'}>{item.writer}</div>
+                        <div className={'writer'}>{item.publisher}</div>
+                      </SlideItemX>
+                    ))}
+                </GridX>
+              </SwiperSlide>
+            ))}
+          </CustomSwiperX>
+          <div className={'pagination'}>
+            <span>{activeIndex}</span> / {totalSlidesX}
+          </div>
+        </ContainerX>
       ) : (
         <Container>
           <Tabs>

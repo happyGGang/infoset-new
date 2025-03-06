@@ -158,6 +158,134 @@ const ContainerX = styled('div')(() => ({
       opacity: 1,
     },
   },
+  '& .pagination': {
+    position: 'absolute',
+    bottom: '3.66rem',
+    right: '33.52rem',
+    color: '#666',
+    fontFamily: 'Pretendard',
+    fontWeight: 500,
+    letterSpacing: '-0.0195rem',
+    fontSize: ' 0.78125rem',
+    '& span': {
+      color: '#FFF',
+    },
+  },
+  '.swiper-button-prev': {
+    background: `url(${arrow}) center center no-repeat`,
+    backgroundSize: 'cover',
+    width: '3.125rem',
+    height: '3.125rem',
+    zIndex: 10,
+    transform: 'rotate(180deg)',
+    top: '25.16rem',
+    left: '7.7rem',
+    position: 'absolute',
+    '&::after': {
+      display: 'none',
+    },
+  },
+  '.swiper-button-next': {
+    background: `url(${arrow}) center center no-repeat`,
+    backgroundSize: 'cover',
+    width: '3.125rem',
+    height: '3.125rem',
+    top: '25.16rem',
+    right: '2rem',
+    position: 'absolute',
+    zIndex: 10,
+    '&::after': {
+      display: 'none',
+    },
+  },
 }));
 
-export { Container, ContainerX, Tabs, TabItem, CustomSwiper, Grid, SlideItem };
+const TabsX = styled('div')(() => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  width: '33.20313rem',
+  marginTop: '14.36rem',
+  marginLeft: '24.02rem',
+}));
+
+const TabItemX = styled('div')(() => ({
+  borderRadius: '1.95313rem',
+  height: '3.125rem',
+  width: '6.25rem',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontSize: '0.97656rem',
+  lineHeight: 'normal',
+  fontWeight: 600,
+  cursor: 'pointer',
+  transition: 'background-color 0.3s ease, color 0.3s ease',
+}));
+
+const CustomSwiperX = styled(Swiper)(() => ({
+  width: '58.59375rem',
+  height: '16.472rem',
+  margin: '2.08rem 0 0 11.33rem',
+}));
+
+const GridX = styled('div')(() => ({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(5, 1fr)',
+  gridColumnGap: '3rem',
+}));
+
+const SlideItemX = styled('div')(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  cursor: 'pointer',
+  '& img': {
+    width: '8.59375rem',
+    height: '12.44144rem',
+    borderRadius: ' 0.46875rem',
+    boxShadow: '3.25px 3.25px 5px 1.5px rgba(0, 0, 0, 0.20)',
+    marginBottom: '0.78rem',
+  },
+  '& .title': {
+    color: '#95CACF',
+    fontFamily: 'Pretendard',
+    fontWeight: 500,
+    lineHeight: '140%',
+    letterSpacing: ' -0.02344rem',
+    fontSize: '0.9375rem',
+    marginBottom: '0.16rem',
+    padding: '0 0.16rem 0 0.16rem',
+    width: '8.59375rem',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+  '& .writer': {
+    color: '#8B95A1',
+    fontFamily: 'Pretendard',
+    fontWeight: 400,
+    marginBottom: '0.16rem',
+    letterSpacing: '-0.011rem',
+    fontSize: '0.70313rem',
+    padding: '0 0.16rem 0 0.16rem',
+    width: '6.64rem',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+  },
+}));
+
+export {
+  Container,
+  ContainerX,
+  Tabs,
+  TabItem,
+  CustomSwiper,
+  Grid,
+  SlideItem,
+  TabsX,
+  TabItemX,
+  CustomSwiperX,
+  GridX,
+  SlideItemX,
+};
