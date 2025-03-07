@@ -1,4 +1,4 @@
-import { styled } from '@mui/material';
+import { styled, Tab, Tabs } from '@mui/material';
 import background from '../../../../assets/img/smart_b_y_chart_bg.svg';
 import arrow from '../../../../assets/icon/smart-arrow-dark.svg';
 import backgroundX from '../../../../assets/img/smart_b_x_chart_bg.svg';
@@ -23,14 +23,53 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
+
+  '& .tabpanel': {
+    width: '19.1783rem',
+    height: '100%',
+    marginLeft: '2.29rem',
+    marginTop: '1.48rem',
+  },
 }));
 
-const ChartWrapper = styled('div')(() => ({
-  width: '17.20056rem',
-  height: '13.6745rem',
-  position: 'relative',
-  marginTop: '9.23rem',
-  marginLeft: '1.7rem',
+const CustomTabs = styled(Tabs)(() => ({
+  marginTop: '4.3rem',
+  marginLeft: '1.98rem',
+  width: '19.75725rem',
+  borderBottom: '1px solid #191F28',
+  minHeight: '1.49rem',
+  '& .MuiTabs-indicator': {
+    backgroundColor: '#7B3AD8',
+    maxHeight: '0.05rem',
+  },
+}));
+
+const CustomTab = styled(Tab)(() => ({
+  fontSize: '0.54881rem',
+  color: '#242424',
+  fontWeight: '600',
+  width: '6.5rem',
+  padding: '0 16px 0 12px',
+  minHeight: '39px',
+}));
+
+const Title = styled('div')(() => ({
+  fontSize: '1.3195rem',
+  color: '#242424',
+  fontWeight: 600,
+  letterSpacing: '-0.033rem',
+  lineHeight: '130%',
+  textAlign: 'center',
+  marginBottom: '0.32rem',
+}));
+
+const Caption = styled('div')(() => ({
+  marginBottom: '1.18rem',
+  fontWeight: '500',
+  color: '#6B7684',
+  fontSize: '0.65875rem',
+  letterSpacing: '-0.0165rem',
+  textAlign: 'center',
 }));
 
 const Refresh = styled('div')(() => ({
@@ -38,17 +77,17 @@ const Refresh = styled('div')(() => ({
   alignItems: 'center',
   width: '100%',
   justifyContent: 'center',
-  marginTop: '2.62rem',
-  marginBottom: '1.18rem',
+  marginTop: '1.1rem',
+  marginBottom: '1.1rem',
   cursor: 'pointer',
   gap: '0.09rem',
   '& img': {
-    width: '0.79169rem',
-    height: '0.79169rem',
+    width: '0.81694rem',
+    height: '0.81694rem',
   },
   '& div': {
-    fontSize: '0.52781rem',
-    color: '#333D4B',
+    fontSize: '0.57175rem',
+    color: '#6B7684',
     fontWeight: 500,
     lineHeight: 'normal',
     letterSpacing: '-0.013919',
@@ -60,8 +99,8 @@ const List = styled('div')(() => ({
   alignItems: 'center',
   width: '100%',
   justifyContent: 'center',
-  marginBottom: '1.32rem',
-  gap: '0.26rem',
+  marginBottom: '1.1rem',
+  gap: '0.44rem',
   height: '1.5rem',
 }));
 
@@ -70,14 +109,14 @@ const ListItem = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'center',
   height: '1.5rem',
-  background: 'rgba(255, 255, 255, 0.10)',
+  background: '#fff',
   borderRadius: '1.3195rem',
-  border: '1px solid rgba(255, 255, 255, 0.50)',
+  border: '0.704px solid #1773EB',
   gap: '0.44rem',
   padding: '0 0.6rem 0 0.88rem',
   cursor: 'pointer',
   '& div': {
-    color: '#FFF',
+    color: '#1773EB',
     fontSize: '0.52751rem',
     fontWeight: 500,
     lineHeight: 'normal',
@@ -93,14 +132,14 @@ const Wrapper = styled('div')(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '0.26rem',
+  gap: '0.44rem',
 }));
 
 const SelectBoxWrapper = styled('div')(() => ({
   position: 'relative',
   '& label': {
     fontSize: '0.65975rem',
-    color: '#333D4B',
+    color: '#6B7684',
     fontWeight: 500,
     lineHeight: 'normal',
     position: 'absolute',
@@ -108,18 +147,18 @@ const SelectBoxWrapper = styled('div')(() => ({
     left: '0.88rem',
   },
   '& select': {
+    border: '1px solid #FFF',
     cursor: 'pointer',
     fontSize: '0.65975rem',
     fontWeight: 600,
     lineHeight: 'normal',
-    width: '7.477rem',
-    height: '1.97919rem',
+    width: '7.7rem',
+    height: '1.91325rem',
     padding: '0  1.17rem 0 2.5rem',
     color: '#191F28',
-    border: '0.352px solid #272A49',
     borderRadius: '1.3195rem',
     appearance: 'none',
-    background: `url(${arrow}) no-repeat right 0.3rem center`,
+    background: `#fff url(${arrow}) no-repeat right 0.3rem center`,
     backgroundSize: '1.05556rem',
     '&:focus': {
       outline: 'none',
@@ -130,18 +169,18 @@ const SelectBoxWrapper = styled('div')(() => ({
 const Submit = styled('div')(() => ({
   display: 'flex',
   alignItems: 'center',
-  width: '15.2rem',
+  width: '17.10919rem',
   justifyContent: 'center',
-  height: '2.4rem',
-  background: '#3537AC',
+  height: '2.63894rem',
+  background: '#191F28',
   borderRadius: '2.19913rem',
   color: '#FFF',
   fontSize: '0.65975rem',
   fontWeight: 600,
   lineHeight: '140%',
   letterSpacing: '-0.0165rem',
-  marginTop: '0.88rem',
-  marginLeft: '4.27rem',
+  marginTop: '0.66rem',
+  marginLeft: '1.2rem',
   cursor: 'pointer',
 }));
 
@@ -249,7 +288,6 @@ const SelectBoxWrapperX = styled('div')(() => ({
     height: '3.51563rem',
     padding: '0  1.17rem 0 3.5rem',
     color: '#191F28',
-    border: '0.625px solid #272A49',
     borderRadius: '2.34375rem',
     appearance: 'none',
     background: `url(${arrow}) no-repeat right 1.17rem center`,
@@ -279,7 +317,9 @@ const SubmitX = styled('div')(() => ({
 
 export {
   Container,
-  ChartWrapper,
+  CustomTabs,
+  CustomTab,
+  Title,
   Refresh,
   List,
   ListItem,
@@ -293,4 +333,5 @@ export {
   WrapperX,
   SelectBoxWrapperX,
   SubmitX,
+  Caption,
 };
