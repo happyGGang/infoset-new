@@ -152,7 +152,7 @@ const SelectBoxWrapper = styled('div')(() => ({
     fontSize: '0.65975rem',
     fontWeight: 600,
     lineHeight: 'normal',
-    width: '7.7rem',
+    width: '8.2rem',
     height: '1.91325rem',
     padding: '0  1.17rem 0 2.5rem',
     color: '#191F28',
