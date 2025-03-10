@@ -1,6 +1,6 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/smart_a_y_custom_bg.svg';
-import backgroundX from '../../../../assets/img/smart_a_x_custom_bg.svg';
+import background from '../../../../assets/img/smart_b_y_custom_bg.svg';
+import backgroundX from '../../../../assets/img/smart_b_x_custom_bg.svg';
 import { Swiper } from 'swiper/react';
 import arrow from '../../../../assets/icon/swiper-arrow.svg';
 
@@ -23,51 +23,28 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '& .pagination': {
-    position: 'absolute',
-    bottom: '5.8rem',
-    right: '11.42rem',
-    color: '#666',
-    fontFamily: 'Pretendard',
-    fontWeight: 500,
-    letterSpacing: '-0.011rem',
-    fontSize: '0.43981rem',
-    '& span': {
-      color: '#191F28',
-    },
-  },
-  '.swiper-button-prev': {
-    background: `url(${arrow}) center center no-repeat`,
-    backgroundSize: 'cover',
-    width: '1.75931rem',
-    height: '1.75931rem',
-    zIndex: 10,
-    transform: 'rotate(180deg)',
-    top: '23.16rem',
-    position: 'absolute',
-    '&::after': {
-      display: 'none',
-    },
-  },
-  '.swiper-button-next': {
-    background: `url(${arrow}) center center no-repeat`,
-    backgroundSize: 'cover',
-    width: '1.75931rem',
-    height: '1.75931rem',
-    top: '23.16rem',
-    position: 'absolute',
-    zIndex: 10,
-    '&::after': {
-      display: 'none',
-    },
-  },
 }));
 
 const CustomSwiper = styled(Swiper)(() => ({
   width: '18.69256rem',
   height: '32.39502rem',
-  margin: '7.83rem 0 0 2.53rem',
+  margin: '9.8rem 0 0 2.53rem',
   paddingTop: '1rem',
+  '.swiper-pagination': {
+    left: '-0.4rem',
+    bottom: '5.5rem',
+  },
+  '.swiper-pagination-bullet': {
+    opacity: '1',
+    width: '0.26363rem',
+    height: '0.26363rem',
+    background: '#ADB5BD',
+    borderRadius: '50%',
+    transition: 'background-color 0.3s ease, transform 0.3s ease',
+  },
+  '.swiper-pagination-bullet-active': {
+    background: '#191F28',
+  },
 }));
 
 const Grid = styled('div')(() => ({
@@ -82,14 +59,14 @@ const SlideItem = styled('div')(() => ({
   flexDirection: 'column',
   cursor: 'pointer',
   '& img': {
-    width: '3.91444rem',
-    height: '5.66275rem',
+    width: '3.95844rem',
+    height: '5.93763rem',
     borderRadius: ' 0.26388rem',
     boxShadow: '1px 1px 3px 1px rgba(0, 0, 0, 0.20)',
     marginBottom: '0.44rem',
   },
   '& .title': {
-    color: '#3C8F97',
+    color: '#191F28',
     fontFamily: 'Pretendard',
     fontWeight: 500,
     lineHeight: '140%',
@@ -102,7 +79,7 @@ const SlideItem = styled('div')(() => ({
     whiteSpace: 'nowrap',
   },
   '& .writer': {
-    color: '#8B95A1',
+    color: '#6B7684',
     fontFamily: 'Pretendard',
     fontWeight: 400,
     letterSpacing: '-0.011rem',
@@ -133,53 +110,27 @@ const ContainerX = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '& .pagination': {
-    position: 'absolute',
-    bottom: '5.49rem',
-    right: '33.52rem',
-    color: '#666',
-    fontFamily: 'Pretendard',
-    fontWeight: 500,
-    letterSpacing: '-0.0195rem',
-    fontSize: ' 0.78125rem',
-    '& span': {
-      color: '#191F28',
-    },
-  },
-  '.swiper-button-prev': {
-    background: `url(${arrow}) center center no-repeat`,
-    backgroundSize: 'cover',
-    width: '3.125rem',
-    height: '3.125rem',
-    zIndex: 10,
-    transform: 'rotate(180deg)',
-    top: '25.16rem',
-    left: '7.7rem',
-    position: 'absolute',
-    '&::after': {
-      display: 'none',
-    },
-  },
-  '.swiper-button-next': {
-    background: `url(${arrow}) center center no-repeat`,
-    backgroundSize: 'cover',
-    width: '3.125rem',
-    height: '3.125rem',
-    top: '25.16rem',
-    right: '2rem',
-    position: 'absolute',
-    zIndex: 10,
-    '&::after': {
-      display: 'none',
-    },
-  },
 }));
 
 const CustomSwiperX = styled(Swiper)(() => ({
   width: '58.59375rem',
-  height: '16.472rem',
-  margin: '16.6rem 0 0 11.33rem',
+  height: '20rem',
+  margin: '16.6rem 0 0 9rem',
   paddingTop: '1rem',
+  '.swiper-pagination': {
+    bottom: '0rem',
+  },
+  '.swiper-pagination-bullet': {
+    opacity: '1',
+    width: '0.46875rem',
+    height: '0.46875rem',
+    background: '#ADB5BD',
+    borderRadius: '50%',
+    transition: 'background-color 0.3s ease, transform 0.3s ease',
+  },
+  '.swiper-pagination-bullet-active': {
+    background: '#191F28',
+  },
 }));
 
 const GridX = styled('div')(() => ({
@@ -200,7 +151,7 @@ const SlideItemX = styled('div')(() => ({
     marginBottom: '0.78rem',
   },
   '& .title': {
-    color: '#3C8F97',
+    color: '#191F28',
     fontFamily: 'Pretendard',
     fontWeight: 500,
     lineHeight: '140%',
@@ -214,7 +165,7 @@ const SlideItemX = styled('div')(() => ({
     whiteSpace: 'nowrap',
   },
   '& .writer': {
-    color: '#8B95A1',
+    color: '#6B7684',
     fontFamily: 'Pretendard',
     fontWeight: 400,
     marginBottom: '0.16rem',
