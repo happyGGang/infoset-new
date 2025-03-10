@@ -75,10 +75,10 @@ const ContainerX = styled('div')(() => ({
     },
   },
   '& .tabpanel': {
-    width: '19.1783rem',
+    width: '62.10938rem',
     height: '100%',
-    marginLeft: '2.29rem',
-    marginTop: '1.48rem',
+    marginLeft: '6.45rem',
+    marginTop: '1.37rem',
   },
 }));
 

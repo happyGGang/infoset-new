@@ -17,7 +17,7 @@ interface BubbleAProps {
 const remToPx = (rem: number): number =>
   rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
-const BubbleA: React.FC<BubbleAProps> = ({ data }) => {
+const BubbleB: React.FC<BubbleAProps> = ({ data }) => {
   const { selectedBubbleItems, toggleSelectedBubbleItem } = useBubbleAStore();
 
   useEffect(() => {
@@ -95,4 +95,4 @@ const BubbleA: React.FC<BubbleAProps> = ({ data }) => {
   );
 };
 
-export default BubbleA;
+export default BubbleB;

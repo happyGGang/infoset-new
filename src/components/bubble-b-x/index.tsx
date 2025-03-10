@@ -17,25 +17,20 @@ interface BubbleAProps {
 const remToPx = (rem: number): number =>
   rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
-const BubbleAX: React.FC<BubbleAProps> = ({ data }) => {
+const BubbleBX: React.FC<BubbleAProps> = ({ data }) => {
   const { selectedBubbleItems, toggleSelectedBubbleItem } = useBubbleAStore();
 
   useEffect(() => {
-    const width = remToPx(59.76563);
-    const height = remToPx(11.71875);
-
-    data.forEach((d, i) => {
-      d.x = (i % 5) * (width / 5) + width / 20;
-      d.y = Math.floor(i / 10) * (height / 10) + height / 3;
-    });
+    const width = remToPx(62.10938);
+    const height = remToPx(10.15625);
 
     const simulation = d3
       .forceSimulation<BubbleData>(data)
-      .force('x', d3.forceX((d) => d.x!).strength(0.5))
-      .force('y', d3.forceY((d) => d.y!).strength(0.5))
+      .force('x', d3.forceX(width / 2).strength(0.05))
+      .force('y', d3.forceY(height / 3.5).strength(1.5))
       .force(
         'collision',
-        d3.forceCollide((d) => d.value + remToPx(3))
+        d3.forceCollide((d) => remToPx(d.value / 1.5))
       )
       .on('tick', ticked);
 
@@ -49,7 +44,7 @@ const BubbleAX: React.FC<BubbleAProps> = ({ data }) => {
     function ticked() {
       const container = d3.select('#bubble-container');
 
-      const bubbles = container.selectAll('div').data(data);
+      const bubbles = container.selectAll('.bubble').data(data);
 
       bubbles
         .enter()
@@ -57,16 +52,23 @@ const BubbleAX: React.FC<BubbleAProps> = ({ data }) => {
         .attr('class', 'bubble')
         .style('position', 'absolute')
         .style('cursor', 'pointer')
-        .style('font-size', (d) => `${d.value}rem`)
-        .style('color', (d) => d.color)
-        .merge(bubbles as any)
-        .style('left', (d) => `${(d.x || width / 2) / remToPx(1)}rem`)
-        .style('top', (d) => `${(d.y || height / 2) / remToPx(1)}rem`)
-        .text((d) => d.id)
+        .style('display', 'flex')
+        .style('align-items', 'center')
+        .style('justify-content', 'center')
+        .style('border-radius', '50%')
+        .style('width', (d) => `${d.value}rem`)
+        .style('height', (d) => `${d.value}rem`)
+        .style('color', '#fff')
+        .style('font-size', '1.17188rem')
         .style('white-space', 'nowrap')
-        .style('border', (d) =>
-          selectedBubbleItems.includes(d.id) ? `1px solid ${d.color}` : 'none'
+        .style('text-align', 'center')
+        .style('background', (d) =>
+          selectedBubbleItems.includes(d.id) ? `#1773EB` : d.color
         )
+        .merge(bubbles as any)
+        .style('left', (d) => `${(d.x || 0) / remToPx(1)}rem`)
+        .style('top', (d) => `${(d.y || 0) / remToPx(1)}rem`)
+        .text((d) => d.id)
         .on('click', (e, d) => {
           e.stopPropagation();
           toggleSelectedBubbleItem(d.id);
@@ -86,16 +88,11 @@ const BubbleAX: React.FC<BubbleAProps> = ({ data }) => {
       id="bubble-container"
       style={{
         position: 'relative',
-        width: '59.76563rem',
-        height: '11.71875rem',
-        marginTop: '15.38rem',
-        marginLeft: '10.74rem',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        width: '62.10938rem',
+        height: '10.15625rem',
       }}
     ></div>
   );
 };
 
-export default BubbleAX;
+export default BubbleBX;

@@ -62,3 +62,19 @@ export const chart_list_b = [
   { id: '현대', value: 3.76544, color: '#45C4EC' },
   { id: '교육', value: 2.86938, color: '#7E6AA7' },
 ];
+
+export const chart_list_b_x = [
+  { id: '경제학자', value: 4.95069, color: '#A6C944' },
+  { id: '가족', value: 6.32875, color: '#2BA675' },
+  { id: '우주', value: 3.9805, color: '#A6C944' },
+  { id: '소설', value: 4.95069, color: '#7E6AA7' },
+  { id: '평등', value: 5.01563, color: '#FDA92B' },
+  { id: '학습', value: 2.90625, color: '#F3666C' },
+
+  { id: '작가', value: 5.64063, color: '#F3666C' },
+  { id: '마르크스', value: 7.98438, color: '#FDA92B' },
+  { id: '지구', value: 3.82319, color: '#2BA675' },
+  { id: '유럽', value: 3.82319, color: '#45C4EC' },
+  { id: '현대', value: 4.95069, color: '#45C4EC' },
+  { id: '교육', value: 6.32875, color: '#7E6AA7' },
+];
