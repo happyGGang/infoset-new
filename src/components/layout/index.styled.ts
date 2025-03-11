@@ -8,6 +8,7 @@ const Container = styled('div')(() => ({
   height: '100vh',
   background: '#222',
   display: 'flex',
+  overflow: 'hidden',
 }));
 
 const Navigation = styled('div')(() => ({
