@@ -27,12 +27,14 @@ import refresh_icon from '../../../../assets/icon/refresh.svg';
 import cancel_icon from '../../../../assets/icon/cancel-gray.svg';
 import { useBubbleAStore } from '../../../../store/bubble-a.store';
 import BubbleBX from '../../../bubble-b-x';
+import { useSelectedItemStore } from '../../../../store/selected-item.store';
 
 const ChartContent = () => {
   const { isLandscape } = useOrientationStore();
   const { selectedBubbleItems, toggleSelectedBubbleItem } = useBubbleAStore();
   const [selectedGender, setSelectedGender] = useState('male');
   const [selectedAge, setSelectedAge] = useState('20-29');
+  const { toggleSelectedItem } = useSelectedItemStore();
 
   const handleGenderChange = (e: any) => setSelectedGender(e.target.value);
 
@@ -89,7 +91,7 @@ const ChartContent = () => {
             <option value="30-39">20~30대</option>
           </select>
         </SelectBoxWrapperX>
-        <SubmitX>도서 추천받기</SubmitX>
+        <SubmitX onClick={() => toggleSelectedItem(2)}>도서 추천받기</SubmitX>
       </WrapperX>
     </>
   ) : (
@@ -144,7 +146,7 @@ const ChartContent = () => {
           </select>
         </SelectBoxWrapper>
       </Wrapper>
-      <Submit>도서 추천받기</Submit>
+      <Submit onClick={() => toggleSelectedItem(2)}>도서 추천받기</Submit>
     </>
   );
 };
