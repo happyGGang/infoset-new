@@ -1,6 +1,5 @@
 import { styled } from '@mui/material';
 import { Swiper } from 'swiper/react';
-import backgroundX from '../../../../assets/img/smart_b_x_custom_bg.svg';
 
 const Title = styled('div')(() => ({
   fontSize: '1.3195rem',
@@ -173,6 +172,15 @@ const SlideItemX = styled('div')(() => ({
   },
 }));
 
-export { CustomSwiper, Grid, SlideItem, CustomSwiperX, GridX, SlideItemX };
-
-export { Title, Caption, TitleX, CaptionX };
+export {
+  CustomSwiper,
+  Grid,
+  SlideItem,
+  CustomSwiperX,
+  GridX,
+  SlideItemX,
+  Title,
+  Caption,
+  TitleX,
+  CaptionX,
+};

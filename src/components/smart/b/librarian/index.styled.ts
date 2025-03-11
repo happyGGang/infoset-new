@@ -50,6 +50,7 @@ const CustomTab = styled(Tab)(() => ({
   width: '6.5rem',
   padding: '0 16px 0 12px',
   minHeight: '39px',
+  minWidth: '6.6rem',
   '&.Mui-selected': {
     color: '#242424',
   },
@@ -100,6 +101,7 @@ const CustomTabX = styled(Tab)(() => ({
   fontWeight: '600',
   width: '20.5rem',
   maxWidth: '20.5rem',
+  minWidth: '20.7rem',
   minHeight: '39px',
   '&.Mui-selected': {
     color: '#242424',
