@@ -22,7 +22,16 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-
+  '& .home': {
+    position: 'absolute',
+    bottom: '0.59rem',
+    left: '1.1rem',
+  },
+  '& .logout': {
+    position: 'absolute',
+    bottom: '0.59rem',
+    right: '1.1rem',
+  },
   '& .tabpanel': {
     width: '19.1783rem',
     height: '100%',
@@ -80,6 +89,20 @@ const ContainerX = styled('div')(() => ({
     height: '100%',
     marginLeft: '6.45rem',
     marginTop: '1.37rem',
+  },
+  '& .home': {
+    width: '3rem',
+    height: '3rem',
+    position: 'absolute',
+    bottom: '0.59rem',
+    left: '1.1rem',
+  },
+  '& .logout': {
+    width: '6.6rem',
+    height: '2.3rem',
+    position: 'absolute',
+    bottom: '0.59rem',
+    right: '1.1rem',
   },
 }));
 

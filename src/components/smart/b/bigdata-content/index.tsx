@@ -20,6 +20,8 @@ import { Pagination } from 'swiper/modules';
 import { SwiperSlide } from 'swiper/react';
 import { book_list } from '../../../../constants/book.constants';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
+import back from '../../../../assets/icon/back.svg';
+import login from '../../../../assets/icon/login.svg';
 
 const BigdataContent = () => {
   const { isLandscape } = useOrientationStore();
@@ -77,6 +79,8 @@ const BigdataContent = () => {
               </SwiperSlide>
             ))}
           </CustomSwiperX>
+          <img className={'back'} src={back} alt="" />
+          <img className={'login'} src={login} alt="" />
         </>
       ) : (
         <>
@@ -124,6 +128,8 @@ const BigdataContent = () => {
               </SwiperSlide>
             ))}
           </CustomSwiper>
+          <img className={'back'} src={back} alt="" />
+          <img className={'login'} src={login} alt="" />
         </>
       )}
     </>

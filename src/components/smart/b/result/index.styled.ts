@@ -22,7 +22,21 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-
+  '& .back': {
+    width: '1rem',
+    height: '1rem',
+    position: 'absolute',
+    bottom: '1.1rem',
+    left: '1.1rem',
+  },
+  '& .move': {
+    cursor: 'pointer',
+    width: '9.4rem',
+    height: '5.8rem',
+    position: 'absolute',
+    bottom: '-1.4rem',
+    right: '1.1rem',
+  },
   '& .tabpanel': {
     width: '19.1783rem',
     height: '100%',
@@ -73,6 +87,21 @@ const ContainerX = styled('div')(() => ({
     '100%': {
       opacity: 1,
     },
+  },
+  '& .back': {
+    width: '1.8rem',
+    height: '1.8rem',
+    position: 'absolute',
+    bottom: '1.1rem',
+    left: '1.1rem',
+  },
+  '& .move': {
+    cursor: 'pointer',
+    width: '16.8rem',
+    height: '10.6rem',
+    position: 'absolute',
+    bottom: '-3rem',
+    right: '1.1rem',
   },
   '& .tabpanel': {
     width: '62.10938rem',

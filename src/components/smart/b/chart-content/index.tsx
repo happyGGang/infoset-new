@@ -28,6 +28,8 @@ import cancel_icon from '../../../../assets/icon/cancel-gray.svg';
 import { useBubbleAStore } from '../../../../store/bubble-a.store';
 import BubbleBX from '../../../bubble-b-x';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
+import logout from '../../../../assets/icon/logout.svg';
+import home from '../../../../assets/icon/home.svg';
 
 const ChartContent = () => {
   const { isLandscape } = useOrientationStore();
@@ -93,6 +95,8 @@ const ChartContent = () => {
         </SelectBoxWrapperX>
         <SubmitX onClick={() => toggleSelectedItem(2)}>도서 추천받기</SubmitX>
       </WrapperX>
+      <img className={'home'} src={home} alt="" />
+      <img className={'logout'} src={logout} alt="" />
     </>
   ) : (
     <>
@@ -147,6 +151,8 @@ const ChartContent = () => {
         </SelectBoxWrapper>
       </Wrapper>
       <Submit onClick={() => toggleSelectedItem(2)}>도서 추천받기</Submit>
+      <img className={'home'} src={home} alt="" />
+      <img className={'logout'} src={logout} alt="" />
     </>
   );
 };

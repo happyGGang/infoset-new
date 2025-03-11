@@ -9,9 +9,11 @@ import {
   SlideItem,
   SlideItemX,
 } from './index.styled';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { SwiperSlide } from 'swiper/react';
 import { book_list } from '../../../../constants/book.constants';
+import back from '../../../../assets/icon/back.svg';
+import move from '../../../../assets/img/move.svg';
 
 const ResultContent = () => {
   const { isLandscape } = useOrientationStore();
@@ -50,7 +52,13 @@ const ResultContent = () => {
               </SwiperSlide>
             ))}
           </CustomSwiperX>
-          <div className={'move'} onClick={() => toggleSelectedItem(3)}></div>
+          <img className={'back'} src={back} alt="" />
+          <img
+            className={'move'}
+            src={move}
+            alt=""
+            onClick={() => toggleSelectedItem(3)}
+          />
         </>
       ) : (
         <>
@@ -81,8 +89,13 @@ const ResultContent = () => {
               </SwiperSlide>
             ))}
           </CustomSwiper>
-
-          <div className={'move'} onClick={() => toggleSelectedItem(3)}></div>
+          <img className={'back'} src={back} alt="" />
+          <img
+            className={'move'}
+            src={move}
+            alt=""
+            onClick={() => toggleSelectedItem(3)}
+          />
         </>
       )}
     </>

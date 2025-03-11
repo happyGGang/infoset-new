@@ -13,7 +13,6 @@ const Container = styled('div')(() => ({
   opacity: 0,
   animation: 'fadeIn 1s ease-out forwards',
   overflow: 'hidden',
-
   '@keyframes fadeIn': {
     '0%': {
       opacity: 0,
@@ -22,7 +21,19 @@ const Container = styled('div')(() => ({
       opacity: 1,
     },
   },
-
+  '& .back': {
+    width: '1rem',
+    height: '1rem',
+    position: 'absolute',
+    bottom: '1.1rem',
+    left: '1.1rem',
+  },
+  '& .login': {
+    cursor: 'pointer',
+    position: 'absolute',
+    bottom: '0.4rem',
+    right: '1.1rem',
+  },
   '& .tabpanel': {
     width: '19.1783rem',
     height: '100%',
@@ -74,6 +85,20 @@ const ContainerX = styled('div')(() => ({
     '100%': {
       opacity: 1,
     },
+  },
+  '& .back': {
+    width: '1.8rem',
+    height: '1.8rem',
+    position: 'absolute',
+    bottom: '1.1rem',
+    left: '1.1rem',
+  },
+  '& .login': {
+    cursor: 'pointer',
+    width: '9rem',
+    position: 'absolute',
+    bottom: '0.2rem',
+    right: '1.1rem',
   },
   '& .tabpanel': {
     width: '62.10938rem',

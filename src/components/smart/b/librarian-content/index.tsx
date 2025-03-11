@@ -13,6 +13,8 @@ import { Pagination } from 'swiper/modules';
 import { SwiperSlide } from 'swiper/react';
 import { book_list } from '../../../../constants/book.constants';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
+import back from '../../../../assets/icon/back.svg';
+import login from '../../../../assets/icon/login.svg';
 
 const LibrarianContent = () => {
   const { isLandscape } = useOrientationStore();
@@ -50,7 +52,8 @@ const LibrarianContent = () => {
           </SwiperSlide>
         ))}
       </CustomSwiperX>
-      <div className={'move'} onClick={() => toggleSelectedItem(3)}></div>
+      <img className={'back'} src={back} alt="" />
+      <img className={'login'} src={login} alt="" />
     </>
   ) : (
     <>
@@ -80,7 +83,8 @@ const LibrarianContent = () => {
           </SwiperSlide>
         ))}
       </CustomSwiper>
-      <div className={'move'} onClick={() => toggleSelectedItem(3)}></div>
+      <img className={'back'} src={back} alt="" />
+      <img className={'login'} src={login} alt="" />
     </>
   );
 };
