@@ -1,8 +1,7 @@
 import { styled } from '@mui/material';
-import background from '../../../../assets/img/smart_a_y_detail_bg.svg';
-import backgroundX from '../../../../assets/img/smart_a_x_detail_bg.svg';
+import background from '../../../../assets/img/smart_b_y_book_detail_bg.svg';
+import backgroundX from '../../../../assets/img/smart_b_x_book_detail_bg.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import arrow from '../../../../assets/icon/swiper-arrow.svg';
 
 const Container = styled('div')(() => ({
   width: '23.7275rem',
@@ -22,36 +21,52 @@ const Container = styled('div')(() => ({
   },
 }));
 
+const ContentWrapper = styled('div')(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  borderRadius: '0.65856rem',
+  backgroundColor: '#FFFFFF',
+  marginTop: '5.71rem',
+  marginLeft: '1.98rem',
+  width: ' 17.99781rem',
+  height: '25.07rem',
+  paddingRight: '1.76rem',
+}));
+
+const Row = styled('div')(() => ({
+  display: 'flex',
+}));
+
 const SelectedBook = styled('div')(() => ({
-  width: '11.11675rem',
-  height: '11.11675rem',
+  width: '8.78125rem',
+  height: '8.78125rem',
+  backgroundColor: '#EEE',
   borderRadius: '50%',
   position: 'relative',
-  marginTop: '5.03rem',
-  marginLeft: '6.31rem',
+  marginTop: '2.7rem',
+  marginLeft: '1.32rem',
   '& img': {
-    width: '8.35669rem',
-    height: '12.09519rem',
-    borderRadius: '0.26363rem',
-    boxShadow: '3.519px 3.519px 14.074px 1.407px rgba(0, 0, 0, 0.20)',
+    width: '6.80544rem',
+    height: '10.42775rem',
+    boxShadow: '1.756px 3.512px 8.781px 0px rgba(0, 0, 0, 0.25)',
     position: 'absolute',
     objectFit: 'cover',
-    top: '-0.64rem',
-    left: '1.39rem',
+    top: '-0.82rem',
+    right: '0.99rem',
   },
   '& .badge': {
-    width: '2.33106rem',
-    height: '2.33106rem',
+    width: '1.97575rem',
+    height: '1.97575rem',
     borderRadius: '50%',
     position: 'absolute',
-    bottom: '1.03rem',
-    right: '0.58rem',
+    top: '-1.26rem',
+    right: '0.55rem',
     color: '#FFFFFF',
-    backgroundColor: '#113B9E',
-    fontWeight: 500,
+    backgroundColor: '#029951',
+    fontWeight: 600,
     fontFamily: 'Pretendard',
-    fontSize: '0.54925rem',
-    letterSpacing: '-0.01375rem',
+    fontSize: '0.43906rem',
+    lineHeight: 'normal',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -70,136 +85,134 @@ const SelectedBook = styled('div')(() => ({
 }));
 
 const Title = styled('div')(() => ({
-  marginTop: '1.36rem',
-  color: '#FFF',
-  textAlign: 'center',
+  marginTop: '2.54rem',
+  color: '#191F28',
   fontFamily: 'Pretendard',
-  fontSize: '0.87963rem',
-  letterSpacing: '-0.022rem',
-  width: '18.69256rem',
-  marginBottom: '1.19rem',
-  fontWeight: 500,
-  marginLeft: '2.53rem',
+  fontSize: '0.79031rem',
+  width: '4.93944rem',
+  lineHeight: 'normal',
+  marginBottom: '0.45rem',
+  fontWeight: 600,
+  marginLeft: '1.1rem',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
   whiteSpace: 'nowrap',
 }));
 
-const Details = styled('div')(() => ({
+const Writer = styled('div')(() => ({
+  marginTop: '0.45rem',
+  color: '#6B7684',
+  fontFamily: 'Pretendard',
+  fontSize: '0.48294rem',
+  width: '4.93944rem',
+  lineHeight: 'normal',
+  marginBottom: '0.79rem',
+  fontWeight: 500,
+  marginLeft: '1.1rem',
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+}));
+
+const Detail = styled('div')(() => ({
   display: 'flex',
-  gap: '5rem',
-  marginLeft: '3.66rem',
+  flexDirection: 'column',
+  marginLeft: '1.1rem',
 }));
 
 const Wrapper = styled('div')(() => ({
   display: 'flex',
-  gap: '0.33rem',
-  marginBottom: '0.19rem',
+  gap: '0.4rem',
 }));
 
-const LeftLabel = styled('div')(() => ({
-  color: '#8B95A1',
+const Label = styled('div')(() => ({
+  color: '#191F28',
   fontFamily: 'Pretendard',
-  fontSize: '0.52725rem',
-  letterSpacing: '-0.01319rem',
-  width: '1.375rem',
-  fontWeight: 400,
-}));
-
-const RightLabel = styled('div')(() => ({
-  color: '#8B95A1',
-  fontFamily: 'Pretendard',
-  fontSize: '0.52725rem',
-  letterSpacing: '-0.01319rem',
-  width: '1.8125rem',
-  fontWeight: 400,
+  fontSize: '0.43906rem',
+  width: '1.5625rem',
+  fontWeight: 600,
+  lineHeight: '180%',
 }));
 
 const Value = styled('div')(() => ({
-  width: '4.21823rem',
+  width: '3.3125rem',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
   whiteSpace: 'nowrap',
-  color: '#FFF',
+  color: '#6B7684',
   fontFamily: 'Pretendard',
-  fontSize: '0.52725rem',
-  letterSpacing: '-0.01319rem',
+  fontSize: '0.43906rem',
+  lineHeight: '180%',
   fontWeight: 500,
 }));
 
 const Trigger = styled('div')(() => ({
-  width: '18.69256rem',
-  color: '#419BD7',
-  padding: '0.31rem 0rem',
+  width: '4.93944rem',
+  color: '#FFFFFF',
   fontFamily: 'Pretendard',
-  fontSize: '0.52725rem',
+  fontSize: '0.43906rem',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   fontWeight: 600,
-  marginLeft: '2.53rem',
-  marginTop: '0.88rem',
+  marginLeft: '1.1rem',
+  marginTop: '0.68rem',
   cursor: 'pointer',
-  marginBottom: '1.85rem',
-  backgroundColor: 'none',
-  borderRadius: '0.10994rem',
-  border: '0.704px solid #419BD7',
+  backgroundColor: '#191F28',
+  borderRadius: '5.48831rem',
+  padding: '0.4rem 0 0.4rem 0',
+}));
+
+const SummaryTitle = styled('div')(() => ({
+  color: '#191F28',
+  fontFamily: 'Pretendard',
+  fontSize: '0.48294rem',
+  lineHeight: '180%',
+  fontWeight: 700,
+  marginLeft: '1.76rem',
+  marginTop: '2.55rem',
 }));
 
 const Summary = styled('div')(() => ({
-  color: '#FFF',
-  marginLeft: '2.53rem',
+  color: '#252525',
+  height: '8.3rem',
+  overflowY: 'scroll',
+  marginLeft: '1.76rem',
   fontFamily: 'Pretendard',
-  fontSize: '0.52781rem',
+  fontSize: '0.48294rem',
   fontWeight: 400,
-  lineHeight: '0.87881rem',
-  width: '18.69256rem',
-  height: '3.5rem',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  WebkitBoxOrient: 'vertical',
-  WebkitLineClamp: '4',
-  display: '-webkit-box',
-  marginBottom: '2.66rem',
+  lineHeight: '180%',
+  marginTop: '0.4rem',
+  paddingRight: '0.22rem',
+  '&::-webkit-scrollbar': {
+    width: '0.08781rem',
+  },
+  '&::-webkit-scrollbar-track': {
+    background: '#E5E8EB',
+    borderRadius: '0.04388rem',
+  },
+  '&::-webkit-scrollbar-thumb': {
+    background: '#8B95A1',
+    borderRadius: '0.04388rem',
+  },
+  '&::-webkit-scrollbar-thumb:hover': {
+    background: '#8B95A1',
+  },
 }));
 
 const CustomSwiper = styled(Swiper)(() => ({
-  width: '22.75056rem',
-  height: '4.99rem',
-  '.swiper-button-prev': {
-    background: `url(${arrow}) center center no-repeat`,
-    backgroundSize: 'cover',
-    width: '1.05556rem',
-    height: '1.05556rem',
-    zIndex: 10,
-    transform: 'rotate(180deg)',
-    position: 'absolute',
-    top: '3rem',
-    '&::after': {
-      display: 'none',
-    },
-  },
-  '.swiper-button-next': {
-    background: `url(${arrow}) center center no-repeat`,
-    backgroundSize: 'cover',
-    width: '1.05556rem',
-    height: '1.05556rem',
-    zIndex: 10,
-    position: 'absolute',
-    top: '3rem',
-    '&::after': {
-      display: 'none',
-    },
-  },
+  width: '21.75781rem',
+  height: '6.3rem',
+  margin: '3rem 0 0 1.98rem',
 }));
 
-const CustomSlide = styled('div')(() => ({
-  position: 'relative',
+const CustomSlide = styled(SwiperSlide)(() => ({
   '& img': {
-    width: '2.63894rem',
-    height: '3.8155rem',
-    borderRadius: '0.17594rem',
+    width: '2.63638rem',
+    height: '3.73488rem',
+    borderRadius: '0.17575rem',
     boxShadow: '3.515px 3.515px 7.03px 0px rgba(0, 0, 0, 0.10)',
+    border: '1.5px solid transparent',
     cursor: 'pointer',
     marginBottom: '0.31rem',
     objectFit: 'cover',
@@ -208,37 +221,29 @@ const CustomSlide = styled('div')(() => ({
     width: '2.63638rem',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
     fontFamily: 'Pretendard',
-    color: '#ADB5BD',
-    fontWeight: 500,
-    letterSpacing: '-0.00881rem',
-    fontSize: '0.3515rem',
+    color: '#191F28',
+    fontWeight: 400,
+    lineHeight: '140%',
+    letterSpacing: '-0.00769rem',
+    fontSize: '0.30756rem',
     marginBottom: '0.09rem',
     paddingLeft: '0.09rem',
-    WebkitBoxOrient: 'vertical',
-    WebkitLineClamp: '2',
-    display: '-webkit-box',
   },
-  '& .badge': {
-    width: '0.87963rem',
-    height: '0.87963rem',
-    borderRadius: '50%',
-    position: 'absolute',
-    bottom: '1.5rem',
-    right: '-0.4rem',
-    color: '#FFFFFF',
-    backgroundColor: '#E71D36',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '0.30788rem',
+  '& .writer': {
+    width: '2.63638rem',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    fontFamily: 'Pretendard',
+    color: '#4E5968',
+    fontWeight: 400,
+    lineHeight: '140%',
+    letterSpacing: '-0.00713rem',
+    fontSize: '0.28563rem',
+    paddingLeft: '0.09rem',
   },
-}));
-
-const Row = styled('div')(() => ({
-  display: 'flex',
-  marginLeft: '1.9rem',
-  gap: '1.3rem',
 }));
 
 const ContainerX = styled('div')(() => ({
@@ -246,10 +251,9 @@ const ContainerX = styled('div')(() => ({
   height: '42.1875rem',
   background: `url(${backgroundX}) center center no-repeat`,
   backgroundSize: 'cover',
-  display: 'flex',
-  gap: '3.4rem',
   position: 'relative',
   opacity: 0,
+  display: 'flex',
   animation: 'fadeIn 1s ease-out forwards',
   '@keyframes fadeIn': {
     '0%': {
@@ -259,69 +263,54 @@ const ContainerX = styled('div')(() => ({
       opacity: 1,
     },
   },
-  '.swiper-container': {
-    position: 'relative',
-    width: '35.9375rem',
-    '.swiper-button-prev': {
-      background: `url(${arrow}) center center no-repeat`,
-      backgroundSize: 'cover',
-      width: '1.875rem',
-      height: '1.875rem',
-      zIndex: 10,
-      left: '-2rem',
-      transform: 'rotate(180deg)',
-      fontSize: 0,
-      border: 'none',
-      '&::after': {
-        display: 'none',
-      },
-    },
-    '.swiper-button-next': {
-      background: `url(${arrow}) center center no-repeat`,
-      backgroundSize: 'cover',
-      width: '1.875rem',
-      height: '1.875rem',
-      right: '-2rem',
-      zIndex: 10,
-      fontSize: 0,
-      border: 'none',
-      '&::after': {
-        display: 'none',
-      },
-    },
-  },
+}));
+
+const ContentWrapperX = styled('div')(() => ({
+  display: 'flex',
+  borderRadius: '0.65856rem',
+  backgroundColor: '#FFFFFF',
+  marginTop: '7.03rem',
+  marginLeft: '3.52rem',
+  width: ' 56.36719rem',
+  height: '27.34375rem',
+  position: 'relative',
+}));
+
+const RowX = styled('div')(() => ({
+  display: 'flex',
+  gap: '2.54rem',
 }));
 
 const SelectedBookX = styled('div')(() => ({
-  width: '19.76563rem',
-  height: '19.76563rem',
+  width: '15.625rem',
+  height: '15.625rem',
+  backgroundColor: '#EEE',
   borderRadius: '50%',
   position: 'relative',
-  marginTop: '9rem',
-  marginLeft: '11.33rem',
+  marginTop: '5.86rem',
+  marginLeft: '2.93rem',
   '& img': {
-    width: '14.84375rem',
-    height: '21.48438rem',
-    borderRadius: '0.46875rem',
-    boxShadow: '6.25px 6.25px 25px 2.5px rgba(0, 0, 0, 0.20)',
+    width: '12.10938rem',
+    height: '18.55469rem',
+    boxShadow: '3.125px 6.25px 15.625px 0px rgba(0, 0, 0, 0.25)',
     position: 'absolute',
     objectFit: 'cover',
-    top: '-1.13rem',
-    left: '2.46rem',
+    top: '-1.46rem',
+    left: '1.73rem',
   },
   '& .badge': {
-    width: '4.14063rem',
-    height: '4.14063rem',
+    width: '3.51563rem',
+    height: '3.51563rem',
     borderRadius: '50%',
     position: 'absolute',
-    bottom: '1.25rem',
-    right: '0.2rem',
+    top: '-2.25rem',
+    right: '0.79rem',
     color: '#FFFFFF',
-    backgroundColor: '#113B9E',
-    fontWeight: 500,
+    backgroundColor: '#029951',
+    fontWeight: 600,
     fontFamily: 'Pretendard',
-    fontSize: '0.97656rem',
-    letterSpacing: '-0.02444rem',
+    fontSize: '0.78125rem',
+    lineHeight: 'normal',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -340,130 +329,145 @@ const SelectedBookX = styled('div')(() => ({
 }));
 
 const TitleX = styled('div')(() => ({
-  marginTop: '2.15rem',
-  color: '#FFF',
-  textAlign: 'center',
+  marginTop: '3.52rem',
+  color: '#191F28',
   fontFamily: 'Pretendard',
-  fontSize: '1.60156rem',
-  letterSpacing: '-0.04006rem',
-  lineHeight: '140%',
-  width: '15.625rem',
-  fontWeight: 500,
-  marginLeft: '13.4rem',
+  fontSize: '1.40625rem',
+  width: '27rem',
+  lineHeight: 'normal',
+  marginBottom: '0.58rem',
+  fontWeight: 600,
   textOverflow: 'ellipsis',
   overflow: 'hidden',
-  WebkitBoxOrient: 'vertical',
-  WebkitLineClamp: '2',
-  display: '-webkit-box',
+  whiteSpace: 'nowrap',
+}));
+
+const WriterX = styled('div')(() => ({
+  marginTop: '0.45rem',
+  color: '#6B7684',
+  fontFamily: 'Pretendard',
+  fontSize: '0.85938rem',
+  lineHeight: 'normal',
+  marginBottom: '1.21rem',
+  fontWeight: 500,
 }));
 
 const DetailX = styled('div')(() => ({
   display: 'flex',
-  gap: '4rem',
-  marginTop: '7.81rem',
+  flexDirection: 'column',
 }));
 
 const WrapperX = styled('div')(() => ({
   display: 'flex',
-  gap: '0.31rem',
-  marginBottom: '0.32rem',
+  gap: '0.4rem',
 }));
 
-const LeftLabelX = styled('div')(() => ({
-  color: '#8B95A1',
+const LabelX = styled('div')(() => ({
+  color: '#191F28',
   fontFamily: 'Pretendard',
-  fontSize: '0.9375rem',
-  letterSpacing: '-0.01319rem',
-  width: '2.75rem',
-  fontWeight: 400,
-}));
-
-const RightLabelX = styled('div')(() => ({
-  color: '#8B95A1',
-  fontFamily: 'Pretendard',
-  fontSize: '0.9375rem',
-  letterSpacing: '-0.02344rem',
-  width: '3.5rem',
-  fontWeight: 400,
+  fontSize: '0.78125rem',
+  width: '3.0875rem',
+  fontWeight: 600,
+  lineHeight: '180%',
 }));
 
 const ValueX = styled('div')(() => ({
-  width: '11.71875rem',
-  textOverflow: 'ellipsis',
-  overflow: 'hidden',
-  whiteSpace: 'nowrap',
-  color: '#FFFFFF',
+  color: '#6B7684',
   fontFamily: 'Pretendard',
-  fontSize: '0.9375rem',
-  letterSpacing: '-0.02344rem',
+  fontSize: '0.78125rem',
+  lineHeight: '180%',
   fontWeight: 500,
 }));
 
 const TriggerX = styled('div')(() => ({
-  width: '35.9375rem',
-  color: '#419BD7',
-  padding: '0.55rem 0rem',
+  width: '9rem',
+  color: '#FFFFFF',
   fontFamily: 'Pretendard',
-  fontSize: '0.9375rem',
+  fontSize: '0.78125rem',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   fontWeight: 600,
-  marginTop: '1.55rem',
   cursor: 'pointer',
-  marginBottom: '3.27rem',
-  border: '1.25px solid #419BD7',
-  borderRadius: '0.19531rem',
+  backgroundColor: '#191F28',
+  borderRadius: '9.76563rem',
+  padding: '0.7rem 0 0.7rem 0',
+  position: 'absolute',
+  top: '11.8rem',
+  right: '2.93rem',
+}));
+
+const SummaryTitleX = styled('div')(() => ({
+  color: '#191F28',
+  fontFamily: 'Pretendard',
+  fontSize: '0.85938rem',
+  lineHeight: '180%',
+  fontWeight: 700,
+  marginTop: '2.23rem',
 }));
 
 const SummaryX = styled('div')(() => ({
-  color: '#FFF',
-  height: '6rem',
+  color: '#252525',
+  height: '6.4rem',
+  overflowY: 'scroll',
   fontFamily: 'Pretendard',
-  fontSize: '0.9375rem',
+  fontSize: '0.85938rem',
   fontWeight: 400,
-  lineHeight: ' 1.5625rem',
-  width: '35.9375rem',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  WebkitBoxOrient: 'vertical',
-  WebkitLineClamp: '5',
-  display: '-webkit-box',
-  marginBottom: '4.94rem',
+  width: '32rem',
+  lineHeight: '180%',
+  marginTop: '0.4rem',
+  paddingRight: '0.54rem',
+  '&::-webkit-scrollbar': {
+    width: '0.16113rem',
+  },
+  '&::-webkit-scrollbar-track': {
+    background: '#E5E8EB',
+    borderRadius: '0.07813rem',
+  },
+  '&::-webkit-scrollbar-thumb': {
+    background: '#8B95A1',
+    borderRadius: '0.07813rem',
+  },
+  '&::-webkit-scrollbar-thumb:hover': {
+    background: '#8B95A1',
+  },
 }));
 
 const CustomSwiperX = styled(Swiper)(() => ({
-  width: '37.20313rem',
-  height: '8.82232rem',
-  marginLeft: '-0.1rem',
+  width: '7rem',
+  height: '39.25rem',
+  margin: '1.93rem 0 0 6.2rem',
+  paddingTop: '1rem',
+  paddingLeft: '1rem',
 }));
 
 const CustomSlideX = styled(SwiperSlide)(() => ({
   '& img': {
-    width: '4.6875rem',
-    height: '6.64063rem',
+    width: '4.57031rem',
+    height: '6.48438rem',
     borderRadius: '0.3125rem',
-    boxShadow: '3px 3px 5px 1px rgba(0, 0, 0, 0.20)',
+    boxShadow: '6.114px 6.114px 24.457px 2.446px rgba(0, 0, 0, 0.20)',
+    border: '1.5px solid transparent',
     cursor: 'pointer',
-    marginBottom: '0.55rem',
+    marginBottom: '0.54rem',
     objectFit: 'cover',
   },
   '& .title': {
-    width: '4.6875rem',
+    width: '4.57031rem',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
     fontFamily: 'Pretendard',
-    color: '#ADB5BD',
+    color: '#191F28',
     fontWeight: 400,
     lineHeight: '140%',
     letterSpacing: '-0.01369rem',
     fontSize: '0.54688rem',
-    marginBottom: '0.16rem',
-    paddingLeft: '0.16rem',
+    marginBottom: '0.12rem',
+    paddingLeft: '0.15rem',
   },
   '& .writer': {
-    width: '4.6875rem',
+    width: '4.57031rem',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
@@ -471,36 +475,41 @@ const CustomSlideX = styled(SwiperSlide)(() => ({
     color: '#4E5968',
     fontWeight: 400,
     lineHeight: '140%',
-    letterSpacing: '-0.01269rem',
+    letterSpacing: '-0.01369rem',
     fontSize: '0.50781rem',
-    paddingLeft: '0.16rem',
+    paddingLeft: '0.15rem',
   },
 }));
 
 export {
+  Row,
+  ContentWrapper,
   Container,
   SelectedBook,
   Title,
-  Details,
+  Detail,
   Wrapper,
-  LeftLabel,
-  RightLabel,
+  Label,
   Value,
   Trigger,
   Summary,
   CustomSwiper,
   CustomSlide,
-  Row,
+  Writer,
+  SummaryTitle,
+  RowX,
+  ContentWrapperX,
   ContainerX,
   SelectedBookX,
   TitleX,
   DetailX,
   WrapperX,
-  LeftLabelX,
-  RightLabelX,
+  LabelX,
   ValueX,
   TriggerX,
   SummaryX,
   CustomSwiperX,
   CustomSlideX,
+  WriterX,
+  SummaryTitleX,
 };
