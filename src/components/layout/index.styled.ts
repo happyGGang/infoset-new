@@ -109,7 +109,7 @@ const TabPanel = styled('div')(() => ({
 
 const Tab = styled('div')<{ selected: boolean }>(({ selected }) => ({
   margin: '0.75rem 1.25rem 0.75rem 1.25rem',
-  borderBottom: selected ? '3px solid #FFFFFF' : 'none',
+  borderBottom: selected ? '0.1rem solid #FFFFFF' : 'none',
   paddingBottom: '0.62rem',
   color: selected ? '#FFFFFF' : '#6B7684',
   fontSize: '1rem',
