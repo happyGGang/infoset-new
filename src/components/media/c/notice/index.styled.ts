@@ -47,7 +47,7 @@ const Wrapper = styled('div')(() => ({
   '& .time': {
     fontSize: '1.17188rem',
     fontWeight: 400,
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     color: '#FFFFFF',
     letterSpacing: '0.09375rem',
     lineHeight: 'normal',
@@ -55,7 +55,7 @@ const Wrapper = styled('div')(() => ({
   '& .date': {
     fontSize: '0.46875rem',
     fontWeight: 400,
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     color: '#FFFFFF',
     lineHeight: 'normal',
   },
@@ -81,17 +81,16 @@ const BigSlide = styled(SwiperSlide)(() => ({
   },
   '& .index': {
     color: '#6B7684',
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     fontSize: '3.90625rem',
     fontWeight: 100,
     lineHeight: '120%',
   },
   '& .title': {
     color: '#FFF',
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     fontSize: '1.95313rem',
     fontWeight: 500,
-    fontFamily: 'Pretendard-Medium',
     lineHeight: '140%',
     width: '27.34375',
     overflow: 'hidden',
@@ -120,7 +119,7 @@ const SmallSlide = styled(SwiperSlide)(() => ({
   },
   '& .index': {
     color: '#ADB5BD',
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     fontSize: '0.9375rem',
     fontWeight: 300,
     lineHeight: '120%',

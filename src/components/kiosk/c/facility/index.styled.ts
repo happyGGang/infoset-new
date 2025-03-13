@@ -105,7 +105,7 @@ const SlideItem = styled('div')(() => ({
   },
   '& .index': {
     color: '#8B95A1',
-    fontFamily: 'Roboto Flex',
+    fontFamily: 'Roboto',
     fontSize: '1.09844rem',
     lineHeight: '120%',
     fontWeight: 300,
@@ -262,7 +262,7 @@ const SlideItemX = styled('div')(() => ({
   },
   '& .index': {
     color: '#8B95A1',
-    fontFamily: 'Roboto Flex',
+    fontFamily: 'Roboto',
     fontSize: '1.95313rem',
     lineHeight: '120%',
     fontWeight: 300,

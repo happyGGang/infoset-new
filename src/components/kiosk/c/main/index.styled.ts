@@ -24,7 +24,7 @@ const Container = styled('div')(() => ({
 
 const Time = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Spoqa Han Sans Neo',
+  fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: '1.49388rem',
   fontWeight: 300,
   lineHeight: 'normal',
@@ -127,7 +127,7 @@ const ContainerX = styled('div')(() => ({
 
 const TimeX = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Spoqa Han Sans Neo',
+  fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: '2.65625rem',
   fontWeight: 300,
   lineHeight: 'normal',

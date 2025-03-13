@@ -88,7 +88,6 @@ const CloseButton = styled('div')(() => ({
   borderTop: '1px solid #E5E8EB',
   '& .title': {
     color: '#FFFFFF',
-    fontFamily: '191F28',
     fontSize: '0.65913rem',
     fontWeight: 500,
     fontFamily: 'Pretendard-Medium',
@@ -190,7 +189,6 @@ const CloseButtonX = styled('div')(() => ({
   borderTop: '1px solid #E5E8EB',
   '& .title': {
     color: '#FFFFFF',
-    fontFamily: '191F28',
     fontSize: '1.17188rem',
     fontWeight: 500,
     fontFamily: 'Pretendard-Medium',

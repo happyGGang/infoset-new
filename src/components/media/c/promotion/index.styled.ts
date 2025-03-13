@@ -51,7 +51,7 @@ const Wrapper = styled('div')(() => ({
   '& .time': {
     fontSize: '1.17188rem',
     fontWeight: 400,
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     color: '#FFFFFF',
     letterSpacing: '0.09375rem',
     lineHeight: 'normal',
@@ -59,7 +59,7 @@ const Wrapper = styled('div')(() => ({
   '& .date': {
     fontSize: '0.46875rem',
     fontWeight: 400,
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     color: '#FFFFFF',
     lineHeight: 'normal',
   },
@@ -143,7 +143,7 @@ const Time = styled('div')(() => ({
   letterSpacing: '0.13675rem',
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'FjallaOne-Regular',
+  fontFamily: 'Century Gothic',
 }));
 
 const VideoWrapper = styled('video')(() => ({
@@ -195,7 +195,7 @@ const Temperature = styled('div')(() => ({
   fontWeight: 400,
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'FjallaOne-Regular',
+  fontFamily: 'Century Gothic',
 }));
 
 export {

@@ -69,7 +69,7 @@ const Wrapper = styled('div')(() => ({
   '& .time': {
     fontSize: '1.17188rem',
     fontWeight: 400,
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     color: '#191F28',
     letterSpacing: '0.09375rem',
     lineHeight: 'normal',
@@ -77,7 +77,7 @@ const Wrapper = styled('div')(() => ({
   '& .date': {
     fontSize: '0.46875rem',
     fontWeight: 400,
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     color: '#191F28',
     lineHeight: 'normal',
   },

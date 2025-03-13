@@ -46,7 +46,7 @@ const Wrapper = styled('div')(() => ({
   '& .time': {
     fontSize: '1.17188rem',
     fontWeight: 400,
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     color: '#FFFFFF',
     letterSpacing: '0.09375rem',
     lineHeight: 'normal',
@@ -54,7 +54,7 @@ const Wrapper = styled('div')(() => ({
   '& .date': {
     fontSize: '0.46875rem',
     fontWeight: 400,
-    fontFamily: 'Spoqa Han Sans Neo',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     color: '#FFFFFF',
     lineHeight: 'normal',
   },
@@ -73,7 +73,7 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
 
 const Title = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'SeoulHangang CM',
+  fontFamily: 'SeoulHangangM',
   fontSize: '2.34375rem',
   fontWeight: 400,
   letterSpacing: '-0.04688rem',
