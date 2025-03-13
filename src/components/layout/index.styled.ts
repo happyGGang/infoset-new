@@ -39,6 +39,7 @@ const Title = styled('div')(() => ({
   color: '#FFFFFF',
   fontSize: '1.25rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   padding: '3rem 3rem 2.38rem 3rem',
   textAlign: 'center',
   whiteSpace: 'nowrap',

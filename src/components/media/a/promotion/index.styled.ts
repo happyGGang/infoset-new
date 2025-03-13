@@ -35,11 +35,13 @@ const Header = styled('div')(() => ({
     color: '#FFFFFF',
     fontSize: '0.625rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
   },
   '& .en': {
     color: '#8B95A1',
     fontSize: '0.625rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     textTransform: 'uppercase',
   },
 }));
@@ -133,7 +135,7 @@ const Time = styled('div')(() => ({
   letterSpacing: '0.13675rem',
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'FjallaOne-Regular',
 }));
 
 const VideoWrapper = styled('video')(() => ({
@@ -185,7 +187,7 @@ const Temperature = styled('div')(() => ({
   fontWeight: 400,
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'FjallaOne-Regular',
 }));
 
 export {

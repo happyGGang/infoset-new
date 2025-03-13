@@ -38,6 +38,7 @@ const Wrapper = styled('div')(() => ({
   '& .kr': {
     fontSize: '0.625rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     color: '#FFFFFF',
   },
   '& .en': {
@@ -142,7 +143,7 @@ const Time = styled('div')(() => ({
   letterSpacing: '0.13675rem',
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'FjallaOne-Regular',
 }));
 
 const VideoWrapper = styled('video')(() => ({
@@ -194,7 +195,7 @@ const Temperature = styled('div')(() => ({
   fontWeight: 400,
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'FjallaOne-Regular',
 }));
 
 export {

@@ -34,6 +34,7 @@ const Wrapper = styled('div')(() => ({
   '& .kr': {
     fontSize: '0.625rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     color: '#FFFFFF',
   },
   '& .en': {
@@ -65,6 +66,7 @@ const ContentTitle = styled('div')(() => ({
   fontSize: '1.01563rem',
   letterSpacing: '0.20313rem',
   fontWeight: 700,
+  fontFamily: 'Pretendard-Bold',
   textAlign: 'center',
   lineHeight: '100%',
   marginTop: '6.98rem',
@@ -119,6 +121,7 @@ const Detail = styled('div')(() => ({
     color: '#FFEC8B',
     fontSize: '1.17188rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     letterSpacing: '0.11719rem',
     marginRight: '0.98rem',
   },
@@ -130,6 +133,7 @@ const Title = styled('div')(() => ({
   fontSize: '4.6875rem',
   letterSpacing: '-0.07813rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   WebkitBoxOrient: 'vertical',

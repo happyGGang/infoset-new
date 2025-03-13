@@ -91,6 +91,7 @@ const SlideItem = styled('div')(() => ({
     color: '#FFF',
     fontSize: '1.3185rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     marginBottom: '0.89rem',
   },
   '.caption': {
@@ -135,12 +136,13 @@ const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FEC962' : '#ADB5BD',
   fontSize: '0.87881rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   borderBottom: selected ? '2px solid #FEC962' : '2px solid #ADB5BD',
 }));
 
 const Time = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'FjallaOne-Regular',
   fontSize: '0.83506rem',
   fontWeight: 400,
   lineHeight: 'normal',

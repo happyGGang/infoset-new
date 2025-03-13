@@ -68,6 +68,7 @@ const Header = styled('div')(() => ({
   '& .title': {
     fontSize: '0.747rem',
     fontWeight: 700,
+    fontFamily: 'Pretendard-Bold',
     letterSpacing: '-0.01869rem',
     marginLeft: '1.21rem',
   },
@@ -169,6 +170,7 @@ const HeaderX = styled('div')(() => ({
   '& .title': {
     fontSize: '1.32813rem',
     fontWeight: 700,
+    fontFamily: 'Pretendard-Bold',
     letterSpacing: '-0.03319rem',
     marginLeft: '1.95rem',
   },

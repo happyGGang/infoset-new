@@ -94,6 +94,7 @@ const SlideItem = styled('div')(() => ({
       fontSize: '0.879rem',
       lineHeight: 'normal',
       fontWeight: 600,
+      fontFamily: 'Pretendard-SemiBold',
     },
     '.title_en': {
       color: '#6B7684',
@@ -152,6 +153,7 @@ const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FFF' : '#191F28',
   fontSize: '0.52738rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

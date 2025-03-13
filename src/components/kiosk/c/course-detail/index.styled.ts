@@ -32,6 +32,7 @@ const Button = styled('div')(() => ({
   color: '#FFFFFF',
   fontSize: '0.747rem',
   fontWeight: 700,
+  fontFamily: 'Pretendard-Bold',
   background: '#2E80EE',
   borderRadius: '0.43938rem',
 }));
@@ -66,6 +67,7 @@ const ButtonX = styled('div')(() => ({
   color: '#FFFFFF',
   fontSize: '0.85938rem',
   fontWeight: 700,
+  fontFamily: 'Pretendard-Bold',
   background: '#2E80EE',
   borderRadius: '0.78125rem',
 }));

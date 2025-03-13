@@ -58,7 +58,7 @@ const Container = styled('div')(() => ({
 
 const Time = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'FjallaOne-Regular',
   fontSize: '0.83506rem',
   fontWeight: 400,
   lineHeight: 'normal',
@@ -113,6 +113,7 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
     color: '#191F28',
     fontSize: '1.3185rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     lineHeight: 'normal',
     letterSpacing: '-0.03296rem',
     marginBottom: '0.66rem',

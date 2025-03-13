@@ -30,7 +30,7 @@ const Container = styled('div')(() => ({
 
 const Time = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'FjallaOne-Regular',
   fontSize: '0.83506rem',
   fontWeight: 400,
   lineHeight: 'normal',
@@ -85,6 +85,7 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
     color: '#8B95A1',
     fontSize: '0.65925rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     lineHeight: 'normal',
     textAlign: 'center',
     letterSpacing: '0.06594rem',
@@ -93,6 +94,7 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
     color: '#FFF',
     fontSize: '1.01088rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     lineHeight: 'normal',
     textAlign: 'center',
     letterSpacing: '0.10106rem',
@@ -102,6 +104,7 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
     width: '16.8rem',
     fontSize: '2.637rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     letterSpacing: '-0.06594rem',
     lineHeight: 'normal',
     textAlign: 'center',

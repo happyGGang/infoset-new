@@ -81,6 +81,7 @@ const TabItem = styled('div')(() => ({
   fontSize: '0.54981rem',
   lineHeight: 'normal',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   cursor: 'pointer',
   transition: 'background-color 0.3s ease, color 0.3s ease',
 }));
@@ -215,6 +216,7 @@ const TabItemX = styled('div')(() => ({
   fontSize: '0.97656rem',
   lineHeight: 'normal',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   cursor: 'pointer',
   transition: 'background-color 0.3s ease, color 0.3s ease',
 }));

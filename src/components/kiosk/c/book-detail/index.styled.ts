@@ -131,6 +131,7 @@ const Trigger = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'center',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   marginLeft: '1.76rem',
   marginTop: '0.96rem',
   cursor: 'pointer',
@@ -143,6 +144,7 @@ const SummaryTitle = styled('div')(() => ({
   color: '#4E5968',
   fontSize: '0.52725rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   lineHeight: '0.87875rem',
   marginLeft: '1.76rem',
 }));
@@ -391,6 +393,7 @@ const TriggerX = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'center',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   marginTop: '1.78rem',
   cursor: 'pointer',
   marginBottom: '2.1rem',

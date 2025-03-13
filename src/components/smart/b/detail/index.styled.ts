@@ -64,6 +64,7 @@ const SelectedBook = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#029951',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     fontSize: '0.43906rem',
     lineHeight: 'normal',
     display: 'flex',
@@ -91,6 +92,7 @@ const Title = styled('div')(() => ({
   lineHeight: 'normal',
   marginBottom: '0.45rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   marginLeft: '1.1rem',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
@@ -127,6 +129,7 @@ const Label = styled('div')(() => ({
   fontSize: '0.43906rem',
   width: '1.5625rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   lineHeight: '180%',
 }));
 
@@ -149,6 +152,7 @@ const Trigger = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'center',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   marginLeft: '1.1rem',
   marginTop: '0.68rem',
   cursor: 'pointer',
@@ -162,6 +166,7 @@ const SummaryTitle = styled('div')(() => ({
   fontSize: '0.48294rem',
   lineHeight: '180%',
   fontWeight: 700,
+  fontFamily: 'Pretendard-Bold',
   marginLeft: '1.76rem',
   marginTop: '2.55rem',
 }));
@@ -298,6 +303,7 @@ const SelectedBookX = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#029951',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     fontSize: '0.78125rem',
     lineHeight: 'normal',
     display: 'flex',
@@ -386,6 +392,7 @@ const SummaryTitleX = styled('div')(() => ({
   fontSize: '0.85938rem',
   lineHeight: '180%',
   fontWeight: 700,
+  fontFamily: 'Pretendard-Bold',
   marginTop: '2.23rem',
 }));
 

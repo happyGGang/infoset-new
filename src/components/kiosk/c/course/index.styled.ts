@@ -81,14 +81,14 @@ const Column = styled('div')(() => ({
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#00F6FF',
-    fontFamily: 'Century Gothic',
+    fontFamily: 'FjallaOne-Regular',
   },
   '& .dash': {
     fontSize: '0.725rem',
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#ADB5BD',
-    fontFamily: 'Century Gothic',
+    fontFamily: 'FjallaOne-Regular',
   },
   '& .count': {
     fontSize: '0.725rem',
@@ -96,7 +96,7 @@ const Column = styled('div')(() => ({
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#FFFFFF',
-    fontFamily: 'Century Gothic',
+    fontFamily: 'FjallaOne-Regular',
   },
 }));
 
@@ -118,6 +118,7 @@ const SlideItem = styled('div')(() => ({
     marginTop: '0.77rem',
     marginRight: '0.53rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     whiteSpace: 'pre-line',
   },
   '& .title': {
@@ -130,6 +131,7 @@ const SlideItem = styled('div')(() => ({
     color: '#191F28',
     fontSize: '0.65913rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     letterSpacing: '-0.0165rem',
     marginBottom: '0.04rem',
     lineHeight: 'normal',
@@ -264,21 +266,22 @@ const WrapperX = styled('div')(() => ({
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#00F6FF',
-    fontFamily: 'Century Gothic',
+    fontFamily: 'FjallaOne-Regular',
   },
   '& .dash': {
     fontSize: '1.28906rem',
     lineHeight: 'normal',
     fontWeight: 700,
-    color: '#ADB5BD',
-    fontFamily: 'Century Gothic',
+    fontFamily: 'Pretendard-Bold',
+    fontFamily: 'FjallaOne-Regular',
   },
   '& .count': {
     fontSize: '1.28906rem',
     lineHeight: 'normal',
     fontWeight: 700,
+    fontFamily: 'Pretendard-Bold',
     color: '#FFFFFF',
-    fontFamily: 'Century Gothic',
+    fontFamily: 'FjallaOne-Regular',
   },
 }));
 
@@ -306,6 +309,7 @@ const SlideItemX = styled('div')(() => ({
     marginTop: '0.78rem',
     marginRight: '0.94rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     whiteSpace: 'pre-line',
   },
   '& .title': {
@@ -318,6 +322,7 @@ const SlideItemX = styled('div')(() => ({
     color: '#191F28',
     fontSize: '1.17188rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     letterSpacing: '-0.02931rem',
     marginBottom: '0.04rem',
     lineHeight: 'normal',

@@ -244,6 +244,7 @@ const ApplyButton = styled('div')(() => ({
   color: '#FFFFFF',
   fontSize: '0.747rem',
   fontWeight: 700,
+  fontFamily: 'Pretendard-Bold',
   background: '#191F28',
   borderRadius: '0.43938rem',
 }));
@@ -485,6 +486,7 @@ const ApplyButtonX = styled('div')(() => ({
   color: '#FFFFFF',
   fontSize: '0.85938rem',
   fontWeight: 700,
+  fontFamily: 'Pretendard-Bold',
   background: '#191F28',
   borderRadius: '0.78125rem',
 }));

@@ -82,6 +82,7 @@ const SlideItem = styled('div')(() => ({
     color: '#191F28',
     fontSize: '1.3185rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     marginBottom: '0.89rem',
   },
   '.caption': {
@@ -128,6 +129,7 @@ const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
   backgroundColor: selected ? '#191F28' : 'none',
   fontSize: '0.87881rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   borderRadius: '5.49375rem',
   display: 'flex',
   justifyContent: 'center',

@@ -33,6 +33,7 @@ const Wrapper = styled('div')(() => ({
   '& .kr': {
     fontSize: '0.625rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     color: '#191F28',
   },
   '& .en': {

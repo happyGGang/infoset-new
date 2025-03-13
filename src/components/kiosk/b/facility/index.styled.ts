@@ -111,6 +111,7 @@ const SlideItem = styled('div')(() => ({
     color: '#191F28',
     fontSize: '0.43938rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     margin: '0 0 0.35rem 0.09rem',
   },
 }));
@@ -129,6 +130,7 @@ const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FFFFFF' : '#8B95A1',
   fontSize: '0.87813rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   lineHeight: 'normal',
   display: 'flex',
   alignItems: 'center',
@@ -245,6 +247,7 @@ const SlideItemX = styled('div')(() => ({
     color: '#191F28',
     fontSize: '0.9rem',
     fontWeight: 600,
+    fontFamily: 'Pretendard-SemiBold',
     margin: '0 0 0.5rem 0',
   },
 }));
@@ -267,6 +270,7 @@ const FilterX = styled('div')<{ selected: boolean }>(({ selected }) => ({
   borderRadius: '9.76563rem',
   fontSize: '1.5625rem',
   fontWeight: 600,
+  fontFamily: 'Pretendard-SemiBold',
   backgroundColor: selected ? '#191F28' : '#F5F0EE',
   cursor: 'pointer',
 }));
