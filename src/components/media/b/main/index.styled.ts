@@ -38,6 +38,7 @@ const Date = styled('div')(() => ({
   fontSize: '1.17188rem',
   fontStyle: 'normal',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   lineHeight: 'normal',
   marginBottom: '21.7rem',
 }));
@@ -70,6 +71,7 @@ const Message = styled('div')(() => ({
   fontSize: '2.34375rem',
   fontStyle: 'normal',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   lineHeight: '140%',
   letterSpacing: '-0.04688rem',
   textTransform: 'uppercase',
@@ -104,6 +106,7 @@ const TickerMessage = styled('div')(() => ({
   color: '#FFF',
   fontSize: '0.85938rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   lineHeight: 'normal',
   animation: 'tickerScroll 60s linear infinite',
   '@keyframes tickerScroll': {

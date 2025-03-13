@@ -43,6 +43,7 @@ const Wrapper = styled('div')(() => ({
   '& .en': {
     fontSize: '0.54688rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     color: '#8B95A1',
     marginTop: '0.31rem',
   },
@@ -67,6 +68,7 @@ const Title = styled('div')(() => ({
   color: '#ADB5BD',
   fontSize: '0.66406rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   letterSpacing: '0.11956rem',
   lineHeight: '100%',
   textAlign: 'center',

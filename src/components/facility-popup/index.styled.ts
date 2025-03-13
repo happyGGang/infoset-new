@@ -46,6 +46,7 @@ const PopupContent = styled('div')(() => ({
     color: '#191F28',
     fontSize: '0.48331rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     width: '15.9941rem',
     letterSpacing: '-0.0165rem',
     lineHeight: '140%',
@@ -89,6 +90,7 @@ const CloseButton = styled('div')(() => ({
     fontFamily: '191F28',
     fontSize: '0.65913rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
   },
   '& .icon': {
     width: '0.87881rem',
@@ -145,6 +147,7 @@ const PopupContentX = styled('div')(() => ({
     color: '#191F28',
     fontSize: '1.17188rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     width: '25.39063rem',
     letterSpacing: '-0.02931rem',
     lineHeight: '140%',
@@ -188,6 +191,7 @@ const CloseButtonX = styled('div')(() => ({
     fontFamily: '191F28',
     fontSize: '1.17188rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
   },
   '& .icon': {
     width: '1.48438rem',

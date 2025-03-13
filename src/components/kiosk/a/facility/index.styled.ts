@@ -37,6 +37,7 @@ const Map = styled('div')(() => ({
     bottom: '-1.79rem',
     left: '0.33rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '3.73488rem',
   },
   '.animate': {
@@ -165,6 +166,7 @@ const MapX = styled('div')(() => ({
     bottom: '-2.86rem',
     left: '0',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '6.64063rem',
     lineHeight: ' 6.64063rem',
   },

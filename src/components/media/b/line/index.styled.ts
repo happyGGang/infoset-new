@@ -54,6 +54,7 @@ const Caption = styled('div')(() => ({
   fontSize: '0.9375rem',
   textAlign: 'center',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
 }));
 
 const ContentTitle = styled('div')(() => ({
@@ -61,6 +62,7 @@ const ContentTitle = styled('div')(() => ({
   fontSize: '1.17188rem',
   textAlign: 'center',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   marginTop: '14.45rem',
 }));
 

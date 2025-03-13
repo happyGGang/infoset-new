@@ -55,6 +55,7 @@ const Caption = styled('div')(() => ({
   fontSize: '0.9375rem',
   textAlign: 'center',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
 }));
 
 export { Container, CustomSwiper, CustomSwiperSlide, Title, Caption };

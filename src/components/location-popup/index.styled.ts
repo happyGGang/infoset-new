@@ -59,6 +59,7 @@ const CloseButtonX = styled('div')(() => ({
     color: '#242424',
     fontSize: '1.17188rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
   },
   '& .icon': {
     width: '1.5625rem',
@@ -89,6 +90,7 @@ const PrintButtonX = styled('div')(() => ({
     color: '#242424',
     fontSize: '1.17188rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
   },
   '& .icon': {
     width: '1.5625rem',
@@ -156,6 +158,7 @@ const CloseButton = styled('div')(() => ({
     color: '#242424',
     fontSize: '0.65913rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
   },
   '& .icon': {
     width: '0.87881rem',
@@ -187,6 +190,7 @@ const PrintButton = styled('div')(() => ({
     color: '#242424',
     fontSize: '0.65913rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
   },
   '& .icon': {
     width: '0.87881rem',

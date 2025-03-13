@@ -43,6 +43,7 @@ const Title = styled('div')(() => ({
   padding: '0.66rem 0 0.66rem 0',
   color: '#191F28',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   fontSize: '0.65856rem',
   lineHeight: 'normal',
   letterSpacing: '-0.01644rem',
@@ -55,6 +56,7 @@ const Row = styled('div')(() => ({
   '& label': {
     color: '#191F28',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '0.57075rem',
     lineHeight: 'normal',
   },
@@ -126,6 +128,7 @@ const Column = styled('div')(() => ({
 const Label = styled('div')(() => ({
   color: '#191F28',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   fontSize: '0.57075rem',
   lineHeight: 'normal',
   marginLeft: '0.44rem',
@@ -201,6 +204,7 @@ const CustomRadioLabel = styled('label')<{ checked: boolean }>(
     alignItems: 'center',
     color: '#191f28',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '0.57075rem',
     fontFamily: 'Pretendard, sans-serif',
     lineHeight: 'normal',
@@ -279,6 +283,7 @@ const TitleX = styled('div')(() => ({
   padding: '1.17rem 0 1.17rem 0',
   color: '#191F28',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   fontSize: '1.17188rem',
   lineHeight: 'normal',
   letterSpacing: '-0.01644rem',
@@ -291,6 +296,7 @@ const RowX = styled('div')(() => ({
   '& label': {
     color: '#191F28',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '0.57075rem',
     lineHeight: 'normal',
   },
@@ -360,6 +366,7 @@ const ColumnX = styled('div')(() => ({
 const LabelX = styled('div')(() => ({
   color: '#191F28',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   fontSize: '1.01563rem',
   lineHeight: 'normal',
   marginLeft: '0.44rem',
@@ -437,6 +444,7 @@ const CustomRadioLabelX = styled('label')<{ checked: boolean }>(
     alignItems: 'center',
     color: '#191f28',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '1.01563rem !important',
     fontFamily: 'Pretendard, sans-serif',
     lineHeight: 'normal',

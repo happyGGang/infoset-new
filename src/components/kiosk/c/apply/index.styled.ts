@@ -44,6 +44,7 @@ const Title = styled('div')(() => ({
   padding: '0.66rem 0 0.66rem 0',
   color: '#191F28',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   fontSize: '0.65856rem',
   lineHeight: 'normal',
   letterSpacing: '-0.01644rem',
@@ -56,6 +57,7 @@ const Row = styled('div')(() => ({
   '& label': {
     color: '#191F28',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '0.57075rem',
     lineHeight: 'normal',
   },
@@ -127,6 +129,7 @@ const Column = styled('div')(() => ({
 const Label = styled('div')(() => ({
   color: '#191F28',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   fontSize: '0.57075rem',
   lineHeight: 'normal',
   marginLeft: '0.44rem',

@@ -105,6 +105,7 @@ const Writer = styled('div')(() => ({
   lineHeight: 'normal',
   marginBottom: '0.79rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   marginLeft: '1.1rem',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
@@ -139,6 +140,7 @@ const Value = styled('div')(() => ({
   fontSize: '0.43906rem',
   lineHeight: '180%',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
 }));
 
 const Trigger = styled('div')(() => ({
@@ -337,6 +339,7 @@ const WriterX = styled('div')(() => ({
   lineHeight: 'normal',
   marginBottom: '1.21rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
 }));
 
 const DetailX = styled('div')(() => ({
@@ -362,6 +365,7 @@ const ValueX = styled('div')(() => ({
   fontSize: '0.78125rem',
   lineHeight: '180%',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
 }));
 
 const TriggerX = styled('div')(() => ({

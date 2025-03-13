@@ -39,6 +39,7 @@ const Wrapper = styled('div')(() => ({
   '& .en': {
     fontSize: '0.54688rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     color: '#8B95A1',
     marginTop: '0.31rem',
   },
@@ -65,6 +66,7 @@ const Caption = styled('div')(() => ({
   fontSize: '0.78125rem',
   fontStyle: 'normal',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   lineHeight: 'normal',
   letterSpacing: '0.07813rem',
   textTransform: 'uppercase',
@@ -95,6 +97,7 @@ const Message = styled('div')(() => ({
   marginLeft: '7.81rem',
   '& span': {
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
   },
   animation: 'float-up 1.5s ease-out forwards',
 
@@ -127,6 +130,7 @@ const TickerMessage = styled('div')(() => ({
   color: '#FFF',
   fontSize: '0.85938rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   lineHeight: 'normal',
   animation: 'tickerScroll 60s linear infinite',
   '@keyframes tickerScroll': {

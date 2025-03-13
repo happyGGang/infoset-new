@@ -67,6 +67,7 @@ const Detail = styled('div')(() => ({
   color: '#6B7684',
   fontSize: '1.40625rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   lineHeight: '100%',
   display: 'flex',
   alignItems: 'center',

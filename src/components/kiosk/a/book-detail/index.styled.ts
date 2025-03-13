@@ -49,6 +49,7 @@ const SelectedBook = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#113B9E',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '0.54925rem',
     letterSpacing: '-0.01375rem',
     display: 'flex',
@@ -77,6 +78,7 @@ const Title = styled('div')(() => ({
   width: '15.09334rem',
   marginBottom: '1.19rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   marginLeft: '4.31rem',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
@@ -120,6 +122,7 @@ const Value = styled('div')(() => ({
   fontSize: '0.52725rem',
   letterSpacing: '-0.01319rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
 }));
 
 const Trigger = styled('div')(() => ({
@@ -261,6 +264,7 @@ const SelectedBookX = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#113B9E',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     fontSize: '0.97656rem',
     letterSpacing: '-0.02444rem',
     display: 'flex',
@@ -289,6 +293,7 @@ const TitleX = styled('div')(() => ({
   lineHeight: '140%',
   width: '19.76563rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   marginLeft: '10.23rem',
   textOverflow: 'ellipsis',
   overflow: 'hidden',
@@ -335,6 +340,7 @@ const ValueX = styled('div')(() => ({
   fontSize: '0.9375rem',
   letterSpacing: '-0.02344rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
 }));
 
 const TriggerX = styled('div')(() => ({

@@ -32,6 +32,7 @@ const Menu = styled(Link)<{ active: string }>(({ active }) => ({
   color: active === 'true' ? '#FFFFFF' : '#8B95A1',
   fontSize: '1rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
 }));
 
 const Title = styled('div')(() => ({
@@ -76,6 +77,7 @@ const Pagination = styled('div')(() => ({
   '& span': {
     color: '#FFFFFF',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
   },
 }));
 

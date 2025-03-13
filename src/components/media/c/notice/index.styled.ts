@@ -39,6 +39,7 @@ const Wrapper = styled('div')(() => ({
   '& .en': {
     fontSize: '0.54688rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     color: '#8B95A1',
     marginTop: '0.31rem',
   },
@@ -89,6 +90,7 @@ const BigSlide = styled(SwiperSlide)(() => ({
     fontFamily: 'Spoqa Han Sans Neo',
     fontSize: '1.95313rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     lineHeight: '140%',
     width: '27.34375',
     overflow: 'hidden',

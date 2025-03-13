@@ -39,6 +39,7 @@ const Wrapper = styled('div')(() => ({
   '& .en': {
     fontSize: '0.54688rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     color: '#8B95A1',
     marginTop: '0.31rem',
   },
@@ -110,6 +111,7 @@ const Detail = styled('div')(() => ({
   color: '#F7F8FA',
   fontSize: '1.40625rem',
   fontWeight: 500,
+  fontFamily: 'Pretendard-Medium',
   lineHeight: '140%',
   display: 'flex',
   alignItems: 'center',

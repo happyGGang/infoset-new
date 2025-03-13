@@ -41,6 +41,7 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
     color: '#FFFFFF',
     fontSize: '0.9375rem',
     fontWeight: 500,
+    fontFamily: 'Pretendard-Medium',
     letterSpacing: '-0.02344rem',
     lineHeight: '140%',
     textOverflow: 'ellipsis',
