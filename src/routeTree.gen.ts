@@ -11,6 +11,10 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as InformationImport } from './routes/information'
+import { Route as GalleryImport } from './routes/gallery'
+import { Route as EtcImport } from './routes/etc'
+import { Route as BookInformationImport } from './routes/bookInformation'
 import { Route as IndexImport } from './routes/index'
 import { Route as SmartBImport } from './routes/smart.b'
 import { Route as SmartAImport } from './routes/smart.a'
@@ -25,6 +29,30 @@ import { Route as KioskBImport } from './routes/kiosk.b'
 import { Route as KioskAImport } from './routes/kiosk.a'
 
 // Create/Update Routes
+
+const InformationRoute = InformationImport.update({
+  id: '/information',
+  path: '/information',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const GalleryRoute = GalleryImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const EtcRoute = EtcImport.update({
+  id: '/etc',
+  path: '/etc',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BookInformationRoute = BookInformationImport.update({
+  id: '/bookInformation',
+  path: '/bookInformation',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -107,6 +135,34 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/bookInformation': {
+      id: '/bookInformation'
+      path: '/bookInformation'
+      fullPath: '/bookInformation'
+      preLoaderRoute: typeof BookInformationImport
+      parentRoute: typeof rootRoute
+    }
+    '/etc': {
+      id: '/etc'
+      path: '/etc'
+      fullPath: '/etc'
+      preLoaderRoute: typeof EtcImport
+      parentRoute: typeof rootRoute
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryImport
+      parentRoute: typeof rootRoute
+    }
+    '/information': {
+      id: '/information'
+      path: '/information'
+      fullPath: '/information'
+      preLoaderRoute: typeof InformationImport
       parentRoute: typeof rootRoute
     }
     '/kiosk/a': {
@@ -193,6 +249,10 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/bookInformation': typeof BookInformationRoute
+  '/etc': typeof EtcRoute
+  '/gallery': typeof GalleryRoute
+  '/information': typeof InformationRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
   '/kiosk/c': typeof KioskCRoute
@@ -208,6 +268,10 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/bookInformation': typeof BookInformationRoute
+  '/etc': typeof EtcRoute
+  '/gallery': typeof GalleryRoute
+  '/information': typeof InformationRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
   '/kiosk/c': typeof KioskCRoute
@@ -224,6 +288,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/bookInformation': typeof BookInformationRoute
+  '/etc': typeof EtcRoute
+  '/gallery': typeof GalleryRoute
+  '/information': typeof InformationRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
   '/kiosk/c': typeof KioskCRoute
@@ -241,6 +309,10 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/bookInformation'
+    | '/etc'
+    | '/gallery'
+    | '/information'
     | '/kiosk/a'
     | '/kiosk/b'
     | '/kiosk/c'
@@ -255,6 +327,10 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/bookInformation'
+    | '/etc'
+    | '/gallery'
+    | '/information'
     | '/kiosk/a'
     | '/kiosk/b'
     | '/kiosk/c'
@@ -269,6 +345,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/bookInformation'
+    | '/etc'
+    | '/gallery'
+    | '/information'
     | '/kiosk/a'
     | '/kiosk/b'
     | '/kiosk/c'
@@ -285,6 +365,10 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BookInformationRoute: typeof BookInformationRoute
+  EtcRoute: typeof EtcRoute
+  GalleryRoute: typeof GalleryRoute
+  InformationRoute: typeof InformationRoute
   KioskARoute: typeof KioskARoute
   KioskBRoute: typeof KioskBRoute
   KioskCRoute: typeof KioskCRoute
@@ -300,6 +384,10 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BookInformationRoute: BookInformationRoute,
+  EtcRoute: EtcRoute,
+  GalleryRoute: GalleryRoute,
+  InformationRoute: InformationRoute,
   KioskARoute: KioskARoute,
   KioskBRoute: KioskBRoute,
   KioskCRoute: KioskCRoute,
@@ -324,6 +412,10 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/bookInformation",
+        "/etc",
+        "/gallery",
+        "/information",
         "/kiosk/a",
         "/kiosk/b",
         "/kiosk/c",
@@ -339,6 +431,18 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/bookInformation": {
+      "filePath": "bookInformation.tsx"
+    },
+    "/etc": {
+      "filePath": "etc.tsx"
+    },
+    "/gallery": {
+      "filePath": "gallery.tsx"
+    },
+    "/information": {
+      "filePath": "information.tsx"
     },
     "/kiosk/a": {
       "filePath": "kiosk.a.tsx"
