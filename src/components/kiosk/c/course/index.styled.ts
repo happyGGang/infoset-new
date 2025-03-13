@@ -75,7 +75,6 @@ const Column = styled('div')(() => ({
     lineHeight: 'normal',
     fontWeight: 500,
     color: '#FFFFFF',
-    fontFamily: 'Pretendard',
   },
   '& .highlight': {
     fontSize: '0.725rem',
@@ -108,7 +107,6 @@ const SlideItem = styled('div')(() => ({
   height: '3.73488rem',
   cursor: 'pointer',
   '& .badge': {
-    fontFamily: 'Pretendard',
     borderRadius: '50%',
     width: '2.197rem',
     height: '2.197rem',
@@ -133,7 +131,6 @@ const SlideItem = styled('div')(() => ({
     fontSize: '0.65913rem',
     fontWeight: 600,
     letterSpacing: '-0.0165rem',
-    fontFamily: 'Pretendard',
     marginBottom: '0.04rem',
     lineHeight: 'normal',
   },

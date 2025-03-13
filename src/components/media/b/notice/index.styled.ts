@@ -46,7 +46,6 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
   },
   '& .index': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontSize: '1.36719rem',
     fontWeight: 700,
     letterSpacing: '-0.02731rem',
@@ -55,7 +54,6 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
   },
   '& .title': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontSize: '1.01563rem',
     fontWeight: 500,
     letterSpacing: '-0.02031rem',

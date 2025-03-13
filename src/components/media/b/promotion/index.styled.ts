@@ -29,7 +29,6 @@ const Title = styled('div')(() => ({
   letterSpacing: '0.11956rem',
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   textTransform: 'uppercase',
 }));
 
@@ -88,7 +87,6 @@ const Date = styled('div')(() => ({
   letterSpacing: '-0.01638rem',
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   textTransform: 'uppercase',
   marginBottom: '0.2rem',
   marginTop: '1.48rem',
@@ -125,7 +123,6 @@ const Perceived = styled('div')(() => ({
   letterSpacing: '-0.02419rem',
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   marginTop: '1.84rem',
 }));
 
@@ -145,7 +142,6 @@ const WeatherDescription = styled('div')(() => ({
   letterSpacing: '-0.01875rem',
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   marginTop: '0.78rem',
 }));
 

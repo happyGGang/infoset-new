@@ -44,7 +44,6 @@ const PopupContent = styled('div')(() => ({
   },
   '& .text': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontSize: '0.48331rem',
     fontWeight: 500,
     width: '15.9941rem',
@@ -59,7 +58,6 @@ const Header = styled('div')(() => ({
   height: '3.29169rem',
   position: 'relative',
   '& .index': {
-    fontFamily: 'Pretendard',
     fontSize: '0.48331rem',
     fontWeight: 400,
     marginLeft: '1.21rem',
@@ -67,7 +65,6 @@ const Header = styled('div')(() => ({
     paddingTop: '1.09rem',
   },
   '& .title': {
-    fontFamily: 'Pretendard',
     fontSize: '0.747rem',
     fontWeight: 700,
     letterSpacing: '-0.01869rem',
@@ -146,7 +143,6 @@ const PopupContentX = styled('div')(() => ({
   },
   '& .text': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontSize: '1.17188rem',
     fontWeight: 500,
     width: '25.39063rem',
@@ -161,7 +157,6 @@ const HeaderX = styled('div')(() => ({
   height: '5.85938rem',
   position: 'relative',
   '& .index': {
-    fontFamily: 'Pretendard',
     fontSize: '0.85938rem',
     fontWeight: 400,
     marginLeft: '1.95rem',
@@ -169,7 +164,6 @@ const HeaderX = styled('div')(() => ({
     paddingTop: '1.94rem',
   },
   '& .title': {
-    fontFamily: 'Pretendard',
     fontSize: '1.32813rem',
     fontWeight: 700,
     letterSpacing: '-0.03319rem',

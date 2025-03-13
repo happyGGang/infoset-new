@@ -57,7 +57,6 @@ const Detail = styled('div')(() => ({
   border: '0.938px solid rgba(229, 232, 235, 0.50)',
   padding: '1.17188rem 3.125rem',
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '1.79688rem',
   fontWeight: 600,
   width: '20rem',
@@ -66,7 +65,6 @@ const Detail = styled('div')(() => ({
   alignItems: 'center',
   '& .label': {
     color: '#8B95A1',
-    fontFamily: 'Pretendard',
     fontSize: '1.17188rem',
     fontWeight: 600,
     letterSpacing: '0.11719rem',
@@ -80,7 +78,6 @@ const Title = styled('div')(() => ({
   fontSize: '4.6875rem',
   letterSpacing: '-0.11719rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   WebkitBoxOrient: 'vertical',

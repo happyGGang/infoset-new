@@ -35,7 +35,7 @@ const CustomSwiperSlide = styled(SwiperSlide)(() => ({
 
 const Title = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'SeoulHangang CM',
+  fontFamily: 'SeoulHangangCm-Regular',
   fontSize: '2.34375rem',
   fontWeight: 400,
   letterSpacing: '-0.04688rem',
@@ -52,7 +52,6 @@ const Title = styled('div')(() => ({
 
 const Caption = styled('div')(() => ({
   color: '#ADB5BD',
-  fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   textAlign: 'center',
   fontWeight: 500,

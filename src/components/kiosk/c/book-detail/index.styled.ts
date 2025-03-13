@@ -49,7 +49,6 @@ const SelectedBook = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#113B9E',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     fontSize: '0.54925rem',
     letterSpacing: '-0.01375rem',
     display: 'flex',
@@ -73,7 +72,6 @@ const Title = styled('div')(() => ({
   marginTop: '1.38rem',
   color: '#191F28',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   fontSize: '1.01063rem',
   letterSpacing: '-0.02525rem',
   width: '15.09334rem',
@@ -99,7 +97,6 @@ const Wrapper = styled('div')(() => ({
 
 const LeftLabel = styled('div')(() => ({
   color: '#4E5968',
-  fontFamily: 'Pretendard',
   fontSize: '0.52725rem',
   letterSpacing: '-0.01319rem',
   width: '1.52725rem',
@@ -108,7 +105,6 @@ const LeftLabel = styled('div')(() => ({
 
 const RightLabel = styled('div')(() => ({
   color: '#4E5968',
-  fontFamily: 'Pretendard',
   fontSize: '0.52725rem',
   letterSpacing: '-0.01319rem',
   width: '2.30684rem',
@@ -121,7 +117,6 @@ const Value = styled('div')(() => ({
   overflow: 'hidden',
   whiteSpace: 'nowrap',
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '0.52725rem',
   letterSpacing: '-0.01319rem',
   fontWeight: 500,
@@ -131,7 +126,6 @@ const Trigger = styled('div')(() => ({
   width: '20.21231rem',
   color: '#FFFFFF',
   padding: '0.30756rem 0rem',
-  fontFamily: 'Pretendard',
   fontSize: '0.52725rem',
   display: 'flex',
   alignItems: 'center',
@@ -156,7 +150,6 @@ const SummaryTitle = styled('div')(() => ({
 const Summary = styled('div')(() => ({
   color: '#252525',
   marginLeft: '1.76rem',
-  fontFamily: 'Pretendard',
   fontSize: '0.57119rem',
   fontWeight: 400,
   lineHeight: '0.87881rem',
@@ -210,7 +203,6 @@ const CustomSlide = styled('div')(() => ({
     width: '2.63638rem',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    fontFamily: 'Pretendard',
     color: '#191F28',
     fontWeight: 500,
     letterSpacing: '-0.00881rem',
@@ -315,7 +307,6 @@ const SelectedBookX = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#113B9E',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     fontSize: '0.97656rem',
     letterSpacing: '-0.02444rem',
     display: 'flex',
@@ -339,7 +330,6 @@ const TitleX = styled('div')(() => ({
   marginTop: '2.15rem',
   color: '#191F28',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   fontSize: '1.60156rem',
   letterSpacing: '-0.04006rem',
   lineHeight: '140%',
@@ -367,7 +357,6 @@ const WrapperX = styled('div')(() => ({
 
 const LeftLabelX = styled('div')(() => ({
   color: '#4E5968',
-  fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   letterSpacing: '-0.01319rem',
   width: '2.96875rem',
@@ -376,7 +365,6 @@ const LeftLabelX = styled('div')(() => ({
 
 const RightLabelX = styled('div')(() => ({
   color: '#4E5968',
-  fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   letterSpacing: '-0.02344rem',
   width: '3.59375rem',
@@ -389,7 +377,6 @@ const ValueX = styled('div')(() => ({
   overflow: 'hidden',
   whiteSpace: 'nowrap',
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   letterSpacing: '-0.02344rem',
   fontWeight: 500,
@@ -399,7 +386,6 @@ const TriggerX = styled('div')(() => ({
   width: '35.9375rem',
   color: '#FFFFFF',
   padding: '0.55rem 0rem',
-  fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   display: 'flex',
   alignItems: 'center',
@@ -415,7 +401,6 @@ const TriggerX = styled('div')(() => ({
 const SummaryX = styled('div')(() => ({
   color: '#252525',
   height: '7.5625rem',
-  fontFamily: 'Pretendard',
   fontSize: '1.01563rem',
   fontWeight: 400,
   lineHeight: ' 1.5625rem',
@@ -464,7 +449,6 @@ const CustomSlideX = styled(SwiperSlide)(() => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    fontFamily: 'Pretendard',
     color: '#191F28',
     fontWeight: 400,
     lineHeight: '140%',
@@ -478,7 +462,6 @@ const CustomSlideX = styled(SwiperSlide)(() => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    fontFamily: 'Pretendard',
     color: '#4E5968',
     fontWeight: 400,
     lineHeight: '140%',

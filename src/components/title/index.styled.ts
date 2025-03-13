@@ -4,7 +4,6 @@ const CustomTitle = styled('div')(() => ({
   color: '#FFFFFF',
   fontSize: '0.875rem',
   fontWeight: 500,
-  fontFamily: 'Pretendard',
   textAlign: 'center',
   marginBottom: '2.63rem',
   padding: '0.75rem 1.25rem',

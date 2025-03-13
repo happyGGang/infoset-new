@@ -28,7 +28,6 @@ const ContentTitle = styled('div')(() => ({
   letterSpacing: '0.20313rem',
   fontWeight: 700,
   lineHeight: '100%',
-  fontFamily: 'Pretendard',
   marginBottom: '1.56rem',
   textTransform: 'uppercase',
 }));
@@ -66,7 +65,6 @@ const DetailWrapper = styled('div')(() => ({
 
 const Detail = styled('div')(() => ({
   color: '#6B7684',
-  fontFamily: 'Pretendard',
   fontSize: '1.40625rem',
   fontWeight: 500,
   lineHeight: '100%',
@@ -74,7 +72,6 @@ const Detail = styled('div')(() => ({
   alignItems: 'center',
   '& .label': {
     color: '#B87045',
-    fontFamily: 'Pretendard',
     fontSize: '1.17188rem',
     fontWeight: 600,
     letterSpacing: '0.11719rem',
@@ -88,7 +85,6 @@ const Title = styled('div')(() => ({
   fontSize: '3.90625rem',
   letterSpacing: '-0.07813rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   WebkitBoxOrient: 'vertical',

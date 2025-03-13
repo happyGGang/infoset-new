@@ -34,13 +34,11 @@ const Wrapper = styled('div')(() => ({
   '& .kr': {
     fontSize: '0.625rem',
     fontWeight: 600,
-    fontFamily: 'Pretendard',
     color: '#FFFFFF',
   },
   '& .en': {
     fontSize: '0.54688rem',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     color: '#8B95A1',
     marginTop: '0.31rem',
   },
@@ -66,7 +64,6 @@ const ContentTitle = styled('div')(() => ({
   fontSize: '1.01563rem',
   letterSpacing: '0.20313rem',
   fontWeight: 700,
-  fontFamily: 'Pretendard',
   textAlign: 'center',
   lineHeight: '100%',
   marginTop: '6.98rem',
@@ -111,7 +108,6 @@ const DetailWrapper = styled('div')(() => ({
 const Detail = styled('div')(() => ({
   padding: '1.17188rem 3.125rem',
   color: '#F7F8FA',
-  fontFamily: 'Pretendard',
   fontSize: '1.40625rem',
   fontWeight: 500,
   lineHeight: '140%',
@@ -119,7 +115,6 @@ const Detail = styled('div')(() => ({
   alignItems: 'center',
   '& .label': {
     color: '#FFEC8B',
-    fontFamily: 'Pretendard',
     fontSize: '1.17188rem',
     fontWeight: 600,
     letterSpacing: '0.11719rem',
@@ -133,7 +128,6 @@ const Title = styled('div')(() => ({
   fontSize: '4.6875rem',
   letterSpacing: '-0.07813rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   WebkitBoxOrient: 'vertical',

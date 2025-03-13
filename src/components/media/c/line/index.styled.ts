@@ -33,13 +33,11 @@ const Wrapper = styled('div')(() => ({
   '& .kr': {
     fontSize: '0.625rem',
     fontWeight: 600,
-    fontFamily: 'Pretendard',
     color: '#FFFFFF',
   },
   '& .en': {
     fontSize: '0.54688rem',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     color: '#8B95A1',
     marginTop: '0.31rem',
   },
@@ -89,7 +87,6 @@ const Title = styled('div')(() => ({
 
 const Caption = styled('div')(() => ({
   color: '#EFF1F3',
-  fontFamily: 'Pretendard',
   fontSize: '1.17188rem',
   fontWeight: 500,
 }));

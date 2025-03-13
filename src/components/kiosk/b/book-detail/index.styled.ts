@@ -64,7 +64,6 @@ const SelectedBook = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#029951',
     fontWeight: 600,
-    fontFamily: 'Pretendard',
     fontSize: '0.43906rem',
     lineHeight: 'normal',
     display: 'flex',
@@ -87,7 +86,6 @@ const SelectedBook = styled('div')(() => ({
 const Title = styled('div')(() => ({
   marginTop: '2.54rem',
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '0.79031rem',
   width: '4.93944rem',
   lineHeight: 'normal',
@@ -102,7 +100,6 @@ const Title = styled('div')(() => ({
 const Writer = styled('div')(() => ({
   marginTop: '0.45rem',
   color: '#6B7684',
-  fontFamily: 'Pretendard',
   fontSize: '0.48294rem',
   width: '4.93944rem',
   lineHeight: 'normal',
@@ -127,7 +124,6 @@ const Wrapper = styled('div')(() => ({
 
 const Label = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '0.43906rem',
   width: '1.5625rem',
   fontWeight: 600,
@@ -140,7 +136,6 @@ const Value = styled('div')(() => ({
   overflow: 'hidden',
   whiteSpace: 'nowrap',
   color: '#6B7684',
-  fontFamily: 'Pretendard',
   fontSize: '0.43906rem',
   lineHeight: '180%',
   fontWeight: 500,
@@ -149,7 +144,6 @@ const Value = styled('div')(() => ({
 const Trigger = styled('div')(() => ({
   width: '4.93944rem',
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.43906rem',
   display: 'flex',
   alignItems: 'center',
@@ -165,7 +159,6 @@ const Trigger = styled('div')(() => ({
 
 const SummaryTitle = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '0.48294rem',
   lineHeight: '180%',
   fontWeight: 700,
@@ -178,7 +171,6 @@ const Summary = styled('div')(() => ({
   height: '5.81756rem',
   overflowY: 'scroll',
   marginLeft: '1.76rem',
-  fontFamily: 'Pretendard',
   fontSize: '0.48294rem',
   fontWeight: 400,
   lineHeight: '180%',
@@ -222,7 +214,6 @@ const CustomSlide = styled(SwiperSlide)(() => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    fontFamily: 'Pretendard',
     color: '#191F28',
     fontWeight: 400,
     lineHeight: '140%',
@@ -236,7 +227,6 @@ const CustomSlide = styled(SwiperSlide)(() => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    fontFamily: 'Pretendard',
     color: '#4E5968',
     fontWeight: 400,
     lineHeight: '140%',
@@ -308,7 +298,6 @@ const SelectedBookX = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#029951',
     fontWeight: 600,
-    fontFamily: 'Pretendard',
     fontSize: '0.78125rem',
     lineHeight: 'normal',
     display: 'flex',
@@ -331,7 +320,6 @@ const SelectedBookX = styled('div')(() => ({
 const TitleX = styled('div')(() => ({
   marginTop: '3.52rem',
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '1.40625rem',
   width: '27rem',
   lineHeight: 'normal',
@@ -345,7 +333,6 @@ const TitleX = styled('div')(() => ({
 const WriterX = styled('div')(() => ({
   marginTop: '0.45rem',
   color: '#6B7684',
-  fontFamily: 'Pretendard',
   fontSize: '0.85938rem',
   lineHeight: 'normal',
   marginBottom: '1.21rem',
@@ -364,7 +351,6 @@ const WrapperX = styled('div')(() => ({
 
 const LabelX = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '0.78125rem',
   width: '3.0875rem',
   fontWeight: 600,
@@ -373,7 +359,6 @@ const LabelX = styled('div')(() => ({
 
 const ValueX = styled('div')(() => ({
   color: '#6B7684',
-  fontFamily: 'Pretendard',
   fontSize: '0.78125rem',
   lineHeight: '180%',
   fontWeight: 500,
@@ -382,7 +367,6 @@ const ValueX = styled('div')(() => ({
 const TriggerX = styled('div')(() => ({
   width: '9rem',
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.78125rem',
   display: 'flex',
   alignItems: 'center',
@@ -399,7 +383,6 @@ const TriggerX = styled('div')(() => ({
 
 const SummaryTitleX = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '0.85938rem',
   lineHeight: '180%',
   fontWeight: 700,
@@ -410,7 +393,6 @@ const SummaryX = styled('div')(() => ({
   color: '#252525',
   height: '6.4rem',
   overflowY: 'scroll',
-  fontFamily: 'Pretendard',
   fontSize: '0.85938rem',
   fontWeight: 400,
   width: '28.90625rem',
@@ -457,7 +439,6 @@ const CustomSlideX = styled(SwiperSlide)(() => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    fontFamily: 'Pretendard',
     color: '#191F28',
     fontWeight: 400,
     lineHeight: '140%',
@@ -471,7 +452,6 @@ const CustomSlideX = styled(SwiperSlide)(() => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    fontFamily: 'Pretendard',
     color: '#4E5968',
     fontWeight: 400,
     lineHeight: '140%',

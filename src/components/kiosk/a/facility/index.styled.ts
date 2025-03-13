@@ -37,7 +37,6 @@ const Map = styled('div')(() => ({
     bottom: '-1.79rem',
     left: '0.33rem',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     fontSize: '3.73488rem',
   },
   '.animate': {
@@ -99,7 +98,6 @@ const SlideItem = styled('div')(() => ({
     width: '5.05306rem',
     textAlign: 'left',
     color: '#ADB5BD',
-    fontFamily: 'Pretendard',
     fontSize: '0.43938rem',
     letterSpacing: '0.022rem',
     fontWeight: 400,
@@ -109,7 +107,6 @@ const SlideItem = styled('div')(() => ({
     width: '5.05306rem',
     textAlign: 'left',
     color: '#FFF',
-    fontFamily: 'Pretendard',
     fontSize: '0.43938rem',
     fontWeight: 600,
     margin: '0 0 0.35rem 0.09rem',
@@ -129,7 +126,6 @@ const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FEC962' : '#ADB5BD',
   fontSize: '0.87881rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   borderBottom: selected ? '2px solid #FEC962' : '2px solid #ADB5BD',
   cursor: 'pointer',
 }));
@@ -169,7 +165,6 @@ const MapX = styled('div')(() => ({
     bottom: '-2.86rem',
     left: '0',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     fontSize: '6.64063rem',
     lineHeight: ' 6.64063rem',
   },
@@ -231,7 +226,6 @@ const SlideItemX = styled('div')(() => ({
     width: '5.05306rem',
     textAlign: 'left',
     color: '#ADB5BD',
-    fontFamily: 'Pretendard',
     fontSize: '0.78125rem',
     letterSpacing: '0.03906rem',
     fontWeight: 400,
@@ -240,7 +234,6 @@ const SlideItemX = styled('div')(() => ({
   '& .title': {
     textAlign: 'left',
     color: '#FFF',
-    fontFamily: 'Pretendard',
     fontSize: '0.78125rem',
     fontWeight: 600,
     margin: '0 0 0.63rem 1.17rem',
@@ -260,7 +253,6 @@ const FilterX = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FEC962' : '#ADB5BD',
   fontSize: '1.5625rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   borderBottom: selected ? '2px solid #FEC962' : '2px solid #ADB5BD',
   cursor: 'pointer',
 }));

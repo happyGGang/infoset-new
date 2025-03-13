@@ -57,7 +57,6 @@ const RightSlide = styled(SwiperSlide)(() => ({
   },
   '& div': {
     color: '#ADB5BD',
-    fontFamily: 'Pretendard',
     fontSize: '0.78125rem',
     fontWeight: 500,
     lineHeight: '140%',
@@ -83,7 +82,6 @@ const LeftWrapper = styled('div')(() => ({
 const RightWrapper = styled('div')(() => ({
   '& .title': {
     color: '#FFFFFF',
-    fontFamily: 'Pretendard',
     fontSize: '1.5625rem',
     fontWeight: 500,
     lineHeight: '140%',
@@ -97,7 +95,6 @@ const RightWrapper = styled('div')(() => ({
   },
   '& .writer': {
     color: '#6B7684',
-    fontFamily: 'Pretendard',
     fontSize: '0.9375rem',
     fontWeight: 400,
     lineHeight: '150%',
@@ -110,7 +107,6 @@ const RightWrapper = styled('div')(() => ({
   },
   '& .summary': {
     color: '#FFFFFF',
-    fontFamily: 'Pretendard',
     fontSize: '0.85938rem',
     fontWeight: 400,
     lineHeight: '150%',

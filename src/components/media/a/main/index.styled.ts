@@ -35,7 +35,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '1.17188rem',
   fontStyle: 'normal',
   fontWeight: 500,
@@ -45,7 +44,6 @@ const Date = styled('div')(() => ({
 
 const Caption = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '1.17188rem',
   fontStyle: 'normal',
   fontWeight: 400,
@@ -69,7 +67,6 @@ const Caption = styled('div')(() => ({
 
 const Message = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '2.34375rem',
   fontStyle: 'normal',
   fontWeight: 500,
@@ -105,7 +102,6 @@ const TickerMessage = styled('div')(() => ({
   display: 'inline-block',
   whiteSpace: 'nowrap',
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.85938rem',
   fontWeight: 500,
   lineHeight: 'normal',

@@ -44,7 +44,6 @@ const Title = styled('div')(() => ({
   padding: '0.66rem 0 0.66rem 0',
   color: '#191F28',
   fontWeight: 500,
-  fontFamily: 'Pretendard',
   fontSize: '0.65856rem',
   lineHeight: 'normal',
   letterSpacing: '-0.01644rem',
@@ -57,7 +56,6 @@ const Row = styled('div')(() => ({
   '& label': {
     color: '#191F28',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     fontSize: '0.57075rem',
     lineHeight: 'normal',
   },
@@ -85,7 +83,6 @@ const Row = styled('div')(() => ({
 const PhoneInput = styled('input')(() => ({
   color: '#191F28',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   fontSize: '0.57075rem',
   lineHeight: 'normal',
   backgroundColor: '#EBEBEB',
@@ -130,7 +127,6 @@ const Column = styled('div')(() => ({
 const Label = styled('div')(() => ({
   color: '#191F28',
   fontWeight: 500,
-  fontFamily: 'Pretendard',
   fontSize: '0.57075rem',
   lineHeight: 'normal',
   marginLeft: '0.44rem',
@@ -141,7 +137,6 @@ const Label = styled('div')(() => ({
 const Input = styled('input')(() => ({
   color: '#191F28',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   fontSize: '0.57075rem',
   lineHeight: 'normal',
   backgroundColor: '#EBEBEB',
@@ -168,7 +163,6 @@ const Gender = styled('div')<{ active: boolean }>(({ active }) => ({
   color: active ? '#191F28' : '#6B7684',
   fontSize: '0.57075rem',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   background: active ? '#FFFFFF' : '#EBEBEB',
   borderRadius: '0.2195rem',
   border: '1px solid transparent',
@@ -186,7 +180,6 @@ const CustomSelect = styled('select')(() => ({
   width: '5.04919rem',
   color: '#191F28',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   fontSize: '0.57075rem',
   lineHeight: 'normal',
   padding: '0 0.87813rem',
@@ -229,7 +222,6 @@ const CustomRadioLabel = styled('label')<{ checked: boolean }>(
 const Caption = styled('div')(() => ({
   color: '#191F28',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   fontSize: '0.48294rem',
   lineHeight: '140%',
   backgroundColor: '#EBEBEB',
@@ -249,7 +241,6 @@ const ApplyButton = styled('div')(() => ({
   color: '#FFFFFF',
   fontSize: '0.747rem',
   fontWeight: 700,
-  fontFamily: 'Pretendard',
   background: '#2E80EE',
   borderRadius: '0.43938rem',
 }));
@@ -290,7 +281,6 @@ const TitleX = styled('div')(() => ({
   padding: '1.17rem 0 1.17rem 0',
   color: '#191F28',
   fontWeight: 500,
-  fontFamily: 'Pretendard',
   fontSize: '1.17188rem',
   lineHeight: 'normal',
   letterSpacing: '-0.01644rem',
@@ -303,7 +293,6 @@ const RowX = styled('div')(() => ({
   '& label': {
     color: '#191F28',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     fontSize: '0.57075rem',
     lineHeight: 'normal',
   },
@@ -331,7 +320,6 @@ const RowX = styled('div')(() => ({
 const PhoneInputX = styled('input')(() => ({
   color: '#191F28',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   fontSize: '1.01563rem',
   lineHeight: 'normal',
   backgroundColor: '#EBEBEB',
@@ -374,7 +362,6 @@ const ColumnX = styled('div')(() => ({
 const LabelX = styled('div')(() => ({
   color: '#191F28',
   fontWeight: 500,
-  fontFamily: 'Pretendard',
   fontSize: '1.01563rem',
   lineHeight: 'normal',
   marginLeft: '0.44rem',
@@ -387,7 +374,6 @@ const InputX = styled('input')(() => ({
   minWidth: '26.875rem',
   maxWidth: '53.5rem',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   fontSize: '1.01563rem',
   lineHeight: 'normal',
   backgroundColor: '#EBEBEB',
@@ -414,7 +400,6 @@ const GenderX = styled('div')<{ active: boolean }>(({ active }) => ({
   color: active ? '#191F28' : '#6B7684',
   fontSize: '1.01563rem',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   background: active ? '#FFFFFF' : '#EBEBEB',
   borderRadius: '0.39063rem',
   border: '1px solid transparent',
@@ -432,7 +417,6 @@ const CustomSelectX = styled('select')(() => ({
   width: '8.8rem',
   color: '#191F28',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   fontSize: '1.01563rem',
   lineHeight: 'normal',
   padding: '0 0.87813rem',
@@ -475,7 +459,6 @@ const CustomRadioLabelX = styled('label')<{ checked: boolean }>(
 const CaptionX = styled('div')(() => ({
   color: '#191F28',
   fontWeight: 400,
-  fontFamily: 'Pretendard',
   fontSize: '0.85938rem',
   lineHeight: '140%',
   backgroundColor: '#EBEBEB',
@@ -496,7 +479,6 @@ const ApplyButtonX = styled('div')(() => ({
   color: '#FFFFFF',
   fontSize: '0.85938rem',
   fontWeight: 700,
-  fontFamily: 'Pretendard',
   background: '#2E80EE',
   borderRadius: '0.78125rem',
 }));

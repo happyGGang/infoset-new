@@ -34,7 +34,6 @@ const HeaderX = styled('div')(() => ({
   padding: '2.11rem 0 0.75rem 0',
   color: '#242424',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   fontSize: '1.40625rem',
 }));
 
@@ -131,7 +130,6 @@ const Header = styled('div')(() => ({
   padding: '1.19rem 0 0.44rem 0',
   color: '#242424',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   fontSize: '0.79094rem',
 }));
 

@@ -51,7 +51,6 @@ const Title = styled('div')(() => ({
 
 const Caption = styled('div')(() => ({
   color: '#6B7684',
-  fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   textAlign: 'center',
   fontWeight: 500,
@@ -59,7 +58,6 @@ const Caption = styled('div')(() => ({
 
 const ContentTitle = styled('div')(() => ({
   color: '#8B95A1',
-  fontFamily: 'Pretendard',
   fontSize: '1.17188rem',
   textAlign: 'center',
   fontWeight: 500,

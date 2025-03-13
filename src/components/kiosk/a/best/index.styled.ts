@@ -131,7 +131,6 @@ const SlideItem = styled('div')(() => ({
   },
   '& .title': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontWeight: 500,
     fontSize: '0.65913rem',
     marginBottom: '0.22rem',
@@ -142,7 +141,6 @@ const SlideItem = styled('div')(() => ({
   },
   '& .writer': {
     color: '#4E5968',
-    fontFamily: 'Pretendard',
     fontWeight: 400,
     fontSize: '0.54925rem',
     width: '5.63531rem',
@@ -228,7 +226,6 @@ const SlideItemX = styled('div')(() => ({
   },
   '& .title': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontWeight: 500,
     fontSize: '1.17188rem',
     marginBottom: '0.47rem',
@@ -239,7 +236,6 @@ const SlideItemX = styled('div')(() => ({
   },
   '& .writer': {
     color: '#4E5968',
-    fontFamily: 'Pretendard',
     fontWeight: 400,
     fontSize: '0.97656rem',
     width: '10.35156rem',

@@ -35,7 +35,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.79031rem',
   fontWeight: 400,
   lineHeight: 'normal',
@@ -45,7 +44,6 @@ const Date = styled('div')(() => ({
 
 const Message = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '1.31719rem',
   fontWeight: 500,
   lineHeight: '140%',
@@ -67,7 +65,6 @@ const Message = styled('div')(() => ({
 
 const Caption = styled('div')(() => ({
   color: '#8B95A1',
-  fontFamily: 'Pretendard',
   fontSize: '0.48294rem',
   fontWeight: 400,
   lineHeight: '150%',
@@ -121,7 +118,6 @@ const TimeX = styled('div')(() => ({
 const DateX = styled('div')(() => ({
   color: '#FFFFFF',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   fontSize: '1.17188rem',
   fontWeight: 400,
   lineHeight: 'normal',
@@ -130,7 +126,6 @@ const DateX = styled('div')(() => ({
 
 const MessageX = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '2.34375rem',
   fontWeight: 500,
   textAlign: 'center',
@@ -151,7 +146,6 @@ const MessageX = styled('div')(() => ({
 
 const CaptionX = styled('div')(() => ({
   color: '#8B95A1',
-  fontFamily: 'Pretendard',
   fontSize: '0.85938rem',
   textAlign: 'center',
   fontWeight: 400,

@@ -32,12 +32,10 @@ const Menu = styled(Link)<{ active: string }>(({ active }) => ({
   color: active === 'true' ? '#FFFFFF' : '#8B95A1',
   fontSize: '1rem',
   fontWeight: 500,
-  fontFamily: 'Pretendard',
 }));
 
 const Title = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '1.25rem',
   fontWeight: 600,
   padding: '3rem 3rem 2.38rem 3rem',
@@ -113,7 +111,6 @@ const Tab = styled('div')<{ selected: boolean }>(({ selected }) => ({
   paddingBottom: '0.62rem',
   color: selected ? '#FFFFFF' : '#6B7684',
   fontSize: '1rem',
-  fontFamily: 'Pretendard',
   cursor: 'pointer',
   fontWeight: selected ? 600 : 400,
 }));
