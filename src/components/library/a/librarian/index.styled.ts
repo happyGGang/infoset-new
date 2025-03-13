@@ -52,7 +52,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.30763rem',
   fontWeight: 400,
   lineHeight: 'normal',
@@ -100,7 +99,6 @@ const SlideItem = styled('div')(() => ({
   },
   '& .title': {
     color: '#95CACF',
-    fontFamily: 'Pretendard',
     fontWeight: 500,
     lineHeight: '140%',
     letterSpacing: '-0.01975rem',
@@ -114,7 +112,6 @@ const SlideItem = styled('div')(() => ({
   },
   '& .writer': {
     color: '#8B95A1',
-    fontFamily: 'Pretendard',
     fontWeight: 500,
     letterSpacing: '-0.0165rem',
     fontSize: '0.65925rem',

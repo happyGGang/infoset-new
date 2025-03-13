@@ -34,7 +34,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.43938rem',
   fontWeight: 400,
   lineHeight: 'normal',
@@ -44,7 +43,6 @@ const Date = styled('div')(() => ({
 
 const Message = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '1.7575rem',
   fontWeight: 300,
   letterSpacing: '-0.0439rem',
@@ -139,7 +137,6 @@ const TimeX = styled('div')(() => ({
 
 const DateX = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.78125rem',
   fontWeight: 400,
   lineHeight: 'normal',
@@ -149,7 +146,6 @@ const DateX = styled('div')(() => ({
 
 const MessageX = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '3.125rem',
   fontWeight: 300,
   letterSpacing: '-0.07813rem',

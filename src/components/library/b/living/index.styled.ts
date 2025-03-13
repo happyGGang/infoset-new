@@ -33,7 +33,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.79113rem',
   fontWeight: 400,
   lineHeight: 'normal',

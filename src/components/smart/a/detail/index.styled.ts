@@ -49,7 +49,6 @@ const SelectedBook = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#113B9E',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     fontSize: '0.54925rem',
     letterSpacing: '-0.01375rem',
     display: 'flex',
@@ -73,7 +72,6 @@ const Title = styled('div')(() => ({
   marginTop: '1.36rem',
   color: '#FFF',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   fontSize: '0.87963rem',
   letterSpacing: '-0.022rem',
   width: '18.69256rem',
@@ -99,7 +97,6 @@ const Wrapper = styled('div')(() => ({
 
 const LeftLabel = styled('div')(() => ({
   color: '#8B95A1',
-  fontFamily: 'Pretendard',
   fontSize: '0.52725rem',
   letterSpacing: '-0.01319rem',
   width: '1.375rem',
@@ -108,7 +105,6 @@ const LeftLabel = styled('div')(() => ({
 
 const RightLabel = styled('div')(() => ({
   color: '#8B95A1',
-  fontFamily: 'Pretendard',
   fontSize: '0.52725rem',
   letterSpacing: '-0.01319rem',
   width: '1.8125rem',
@@ -121,7 +117,6 @@ const Value = styled('div')(() => ({
   overflow: 'hidden',
   whiteSpace: 'nowrap',
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.52725rem',
   letterSpacing: '-0.01319rem',
   fontWeight: 500,
@@ -131,7 +126,6 @@ const Trigger = styled('div')(() => ({
   width: '18.69256rem',
   color: '#419BD7',
   padding: '0.31rem 0rem',
-  fontFamily: 'Pretendard',
   fontSize: '0.52725rem',
   display: 'flex',
   alignItems: 'center',
@@ -149,7 +143,6 @@ const Trigger = styled('div')(() => ({
 const Summary = styled('div')(() => ({
   color: '#FFF',
   marginLeft: '2.53rem',
-  fontFamily: 'Pretendard',
   fontSize: '0.52781rem',
   fontWeight: 400,
   lineHeight: '0.87881rem',
@@ -208,7 +201,6 @@ const CustomSlide = styled('div')(() => ({
     width: '2.63638rem',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    fontFamily: 'Pretendard',
     color: '#ADB5BD',
     fontWeight: 500,
     letterSpacing: '-0.00881rem',
@@ -319,7 +311,6 @@ const SelectedBookX = styled('div')(() => ({
     color: '#FFFFFF',
     backgroundColor: '#113B9E',
     fontWeight: 500,
-    fontFamily: 'Pretendard',
     fontSize: '0.97656rem',
     letterSpacing: '-0.02444rem',
     display: 'flex',
@@ -343,7 +334,6 @@ const TitleX = styled('div')(() => ({
   marginTop: '2.15rem',
   color: '#FFF',
   textAlign: 'center',
-  fontFamily: 'Pretendard',
   fontSize: '1.60156rem',
   letterSpacing: '-0.04006rem',
   lineHeight: '140%',
@@ -371,7 +361,6 @@ const WrapperX = styled('div')(() => ({
 
 const LeftLabelX = styled('div')(() => ({
   color: '#8B95A1',
-  fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   letterSpacing: '-0.01319rem',
   width: '2.75rem',
@@ -380,7 +369,6 @@ const LeftLabelX = styled('div')(() => ({
 
 const RightLabelX = styled('div')(() => ({
   color: '#8B95A1',
-  fontFamily: 'Pretendard',
   fontSize: '0.9375rem',
   letterSpacing: '-0.02344rem',
   width: '3.5rem',

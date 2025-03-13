@@ -94,7 +94,6 @@ const TickerMessage = styled('div')(() => ({
   display: 'inline-block',
   whiteSpace: 'nowrap',
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.48344rem',
   fontWeight: 500,
   lineHeight: 'normal',
@@ -120,7 +119,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Pretendard',
   fontSize: '0.30763rem',
   fontWeight: 400,
   lineHeight: 'normal',

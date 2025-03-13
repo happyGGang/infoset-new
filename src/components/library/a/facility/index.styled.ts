@@ -44,7 +44,6 @@ const Map = styled('div')(() => ({
     bottom: '-1.79rem',
     left: '0.33rem',
     fontWeight: 200,
-    fontFamily: 'Pretendard',
     fontSize: '3.73575rem',
   },
   '.animate': {
@@ -90,7 +89,6 @@ const SlideItem = styled('div')(() => ({
   '& .title': {
     textAlign: 'left',
     color: '#FFF',
-    fontFamily: 'Pretendard',
     fontSize: '1.3185rem',
     fontWeight: 600,
     marginBottom: '0.89rem',
@@ -137,7 +135,6 @@ const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FEC962' : '#ADB5BD',
   fontSize: '0.87881rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   borderBottom: selected ? '2px solid #FEC962' : '2px solid #ADB5BD',
 }));
 
@@ -152,7 +149,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.30763rem',
   fontWeight: 400,
   lineHeight: 'normal',

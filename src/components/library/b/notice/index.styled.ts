@@ -96,7 +96,6 @@ const TickerMessage = styled('div')(() => ({
   display: 'inline-block',
   whiteSpace: 'nowrap',
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.48344rem',
   fontWeight: 500,
   lineHeight: 'normal',

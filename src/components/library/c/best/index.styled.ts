@@ -132,7 +132,6 @@ const SlideItem = styled('div')(() => ({
   },
   '& .title': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontWeight: 500,
     fontSize: '0.65913rem',
     marginBottom: '0.22rem',
@@ -144,7 +143,6 @@ const SlideItem = styled('div')(() => ({
   '& .writer': {
     marginBottom: '0.13rem',
     color: '#4E5968',
-    fontFamily: 'Pretendard',
     fontWeight: 400,
     fontSize: '0.54925rem',
     width: '5.63531rem',

@@ -72,7 +72,6 @@ const SlideItem = styled('div')(() => ({
   },
   '& .title': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontWeight: 500,
     fontSize: '0.879rem',
     marginBottom: '0.31rem',
@@ -83,7 +82,6 @@ const SlideItem = styled('div')(() => ({
   },
   '& .writer': {
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontWeight: 500,
     fontSize: '0.65925rem',
     letterSpacing: '-0.0165rem',
@@ -95,7 +93,6 @@ const SlideItem = styled('div')(() => ({
   },
   '& .publisher': {
     color: '#4E5968',
-    fontFamily: 'Pretendard',
     fontWeight: 500,
     fontSize: '0.65925rem',
     marginBottom: '0.44rem',
@@ -143,7 +140,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.30763rem',
   fontWeight: 400,
   lineHeight: 'normal',

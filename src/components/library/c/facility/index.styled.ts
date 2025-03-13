@@ -35,7 +35,6 @@ const Map = styled('div')(() => ({
     bottom: '0',
     left: '0.64rem',
     fontWeight: 300,
-    fontFamily: 'Pretendard',
     fontSize: '3.21525rem',
   },
   '.animate': {
@@ -153,7 +152,6 @@ const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FFF' : '#191F28',
   fontSize: '0.52738rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

@@ -37,7 +37,6 @@ const Time = styled('div')(() => ({
 
 const Date = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.79094rem',
   fontWeight: 400,
   lineHeight: 'normal',
@@ -47,7 +46,6 @@ const Date = styled('div')(() => ({
 
 const Message = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '2.63638rem',
   fontWeight: 500,
   lineHeight: 'normal',
@@ -69,7 +67,6 @@ const Message = styled('div')(() => ({
 
 const Caption = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Pretendard',
   fontSize: '0.65913rem',
   fontWeight: 600,
   lineHeight: 'normal',

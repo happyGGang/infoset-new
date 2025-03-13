@@ -38,7 +38,6 @@ const Map = styled('div')(() => ({
     bottom: '0',
     left: '0.43rem',
     fontWeight: 300,
-    fontFamily: 'Pretendard',
     fontSize: '3.21431rem',
   },
   '.animate': {
@@ -115,7 +114,6 @@ const SlideItem = styled('div')(() => ({
     marginLeft: '0.3rem',
     marginTop: '0.3rem',
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontSize: '0.48331rem',
     fontWeight: 600,
     lineHeight: 'normal',
@@ -149,7 +147,6 @@ const Filter = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FFFFFF' : '#191F28',
   fontSize: '0.52725rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   backgroundColor: selected ? '#309BDF' : '#D9D9D9',
   cursor: 'pointer',
 }));
@@ -195,7 +192,6 @@ const MapX = styled('div')(() => ({
     bottom: '0',
     left: '0',
     fontWeight: 300,
-    fontFamily: 'Pretendard',
     fontSize: '5.71538rem',
   },
   '.animate': {
@@ -273,7 +269,6 @@ const SlideItemX = styled('div')(() => ({
     marginLeft: '0.14rem',
     marginTop: '0.4rem',
     color: '#191F28',
-    fontFamily: 'Pretendard',
     fontSize: '0.85938rem',
     fontWeight: 600,
     lineHeight: 'normal',
@@ -304,7 +299,6 @@ const FilterX = styled('div')<{ selected: boolean }>(({ selected }) => ({
   color: selected ? '#FFFFFF' : '#191F28',
   fontSize: '0.9375rem',
   fontWeight: 600,
-  fontFamily: 'Pretendard',
   backgroundColor: selected ? '#309BDF' : '#D9D9D9',
   cursor: 'pointer',
 }));
