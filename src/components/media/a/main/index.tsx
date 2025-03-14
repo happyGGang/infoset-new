@@ -10,7 +10,7 @@ import {
 } from './index.styled';
 import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 
-const Main = () => {
+const MediaWelcomeMessageA = () => {
   return (
     <Container>
       <Time>{getCurrentTime()}</Time>
@@ -28,4 +28,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MediaWelcomeMessageA;

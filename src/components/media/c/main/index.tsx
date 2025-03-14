@@ -13,7 +13,7 @@ import {
   getSimpleCurrentDate,
 } from '../../../../util/date-time';
 
-const Main = () => {
+const MediaWelcomeMessageC = () => {
   return (
     <Container>
       <Header>
@@ -43,4 +43,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MediaWelcomeMessageC;

@@ -13,5 +13,5 @@ function HomeComponent() {
     navigate({ to: '/informationGroup/welcomeMessage' });
   }, []);
 
-  return <div>/informationGroup/welcomeMessage</div>;
+  return <div></div>;
 }

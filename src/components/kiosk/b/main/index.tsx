@@ -14,7 +14,7 @@ import {
 import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const Main = () => {
+const KioskWelcomeMessageB = () => {
   const { isLandscape } = useOrientationStore();
 
   return (
@@ -42,4 +42,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default KioskWelcomeMessageB;
