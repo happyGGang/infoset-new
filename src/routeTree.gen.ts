@@ -11,28 +11,36 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as InformationImport } from './routes/information'
+import { Route as InformationGroupImport } from './routes/informationGroup'
 import { Route as GalleryImport } from './routes/gallery'
 import { Route as EtcImport } from './routes/etc'
-import { Route as BookInformationImport } from './routes/bookInformation'
+import { Route as BookInformationGroupImport } from './routes/bookInformationGroup'
 import { Route as IndexImport } from './routes/index'
-import { Route as SmartBImport } from './routes/smart.b'
-import { Route as SmartAImport } from './routes/smart.a'
-import { Route as MediaCImport } from './routes/media.c'
-import { Route as MediaBImport } from './routes/media.b'
-import { Route as MediaAImport } from './routes/media.a'
-import { Route as LibraryCImport } from './routes/library.c'
-import { Route as LibraryBImport } from './routes/library.b'
-import { Route as LibraryAImport } from './routes/library.a'
-import { Route as KioskCImport } from './routes/kiosk.c'
-import { Route as KioskBImport } from './routes/kiosk.b'
-import { Route as KioskAImport } from './routes/kiosk.a'
+import { Route as InformationGroupWelcomeMessageImport } from './routes/informationGroup.welcomeMessage'
+import { Route as InformationGroupPromotionImport } from './routes/informationGroup.promotion'
+import { Route as InformationGroupNoticeImport } from './routes/informationGroup.notice'
+import { Route as InformationGroupLivingImport } from './routes/informationGroup.living'
+import { Route as InformationGroupInformationImport } from './routes/informationGroup.information'
+import { Route as InformationGroupFacilityImport } from './routes/informationGroup.facility'
+import { Route as InformationGroupEventImport } from './routes/informationGroup.event'
+import { Route as GalleryDigitalGalleryImport } from './routes/gallery.digitalGallery'
+import { Route as EtcReturnImport } from './routes/etc.return'
+import { Route as EtcLineImport } from './routes/etc.line'
+import { Route as EtcCourseRegistrationImport } from './routes/etc.courseRegistration'
+import { Route as EtcCourseListImport } from './routes/etc.courseList'
+import { Route as BookInformationGroupNewImport } from './routes/bookInformationGroup.new'
+import { Route as BookInformationGroupLibrarianImport } from './routes/bookInformationGroup.librarian'
+import { Route as BookInformationGroupDetailImport } from './routes/bookInformationGroup.detail'
+import { Route as BookInformationGroupCustomImport } from './routes/bookInformationGroup.custom'
+import { Route as BookInformationGroupChartImport } from './routes/bookInformationGroup.chart'
+import { Route as BookInformationGroupBigdataImport } from './routes/bookInformationGroup.bigdata'
+import { Route as BookInformationGroupBestImport } from './routes/bookInformationGroup.best'
 
 // Create/Update Routes
 
-const InformationRoute = InformationImport.update({
-  id: '/information',
-  path: '/information',
+const InformationGroupRoute = InformationGroupImport.update({
+  id: '/informationGroup',
+  path: '/informationGroup',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -48,9 +56,9 @@ const EtcRoute = EtcImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const BookInformationRoute = BookInformationImport.update({
-  id: '/bookInformation',
-  path: '/bookInformation',
+const BookInformationGroupRoute = BookInformationGroupImport.update({
+  id: '/bookInformationGroup',
+  path: '/bookInformationGroup',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -60,70 +68,126 @@ const IndexRoute = IndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const SmartBRoute = SmartBImport.update({
-  id: '/smart/b',
-  path: '/smart/b',
-  getParentRoute: () => rootRoute,
+const InformationGroupWelcomeMessageRoute =
+  InformationGroupWelcomeMessageImport.update({
+    id: '/welcomeMessage',
+    path: '/welcomeMessage',
+    getParentRoute: () => InformationGroupRoute,
+  } as any)
+
+const InformationGroupPromotionRoute = InformationGroupPromotionImport.update({
+  id: '/promotion',
+  path: '/promotion',
+  getParentRoute: () => InformationGroupRoute,
 } as any)
 
-const SmartARoute = SmartAImport.update({
-  id: '/smart/a',
-  path: '/smart/a',
-  getParentRoute: () => rootRoute,
+const InformationGroupNoticeRoute = InformationGroupNoticeImport.update({
+  id: '/notice',
+  path: '/notice',
+  getParentRoute: () => InformationGroupRoute,
 } as any)
 
-const MediaCRoute = MediaCImport.update({
-  id: '/media/c',
-  path: '/media/c',
-  getParentRoute: () => rootRoute,
+const InformationGroupLivingRoute = InformationGroupLivingImport.update({
+  id: '/living',
+  path: '/living',
+  getParentRoute: () => InformationGroupRoute,
 } as any)
 
-const MediaBRoute = MediaBImport.update({
-  id: '/media/b',
-  path: '/media/b',
-  getParentRoute: () => rootRoute,
+const InformationGroupInformationRoute =
+  InformationGroupInformationImport.update({
+    id: '/information',
+    path: '/information',
+    getParentRoute: () => InformationGroupRoute,
+  } as any)
+
+const InformationGroupFacilityRoute = InformationGroupFacilityImport.update({
+  id: '/facility',
+  path: '/facility',
+  getParentRoute: () => InformationGroupRoute,
 } as any)
 
-const MediaARoute = MediaAImport.update({
-  id: '/media/a',
-  path: '/media/a',
-  getParentRoute: () => rootRoute,
+const InformationGroupEventRoute = InformationGroupEventImport.update({
+  id: '/event',
+  path: '/event',
+  getParentRoute: () => InformationGroupRoute,
 } as any)
 
-const LibraryCRoute = LibraryCImport.update({
-  id: '/library/c',
-  path: '/library/c',
-  getParentRoute: () => rootRoute,
+const GalleryDigitalGalleryRoute = GalleryDigitalGalleryImport.update({
+  id: '/digitalGallery',
+  path: '/digitalGallery',
+  getParentRoute: () => GalleryRoute,
 } as any)
 
-const LibraryBRoute = LibraryBImport.update({
-  id: '/library/b',
-  path: '/library/b',
-  getParentRoute: () => rootRoute,
+const EtcReturnRoute = EtcReturnImport.update({
+  id: '/return',
+  path: '/return',
+  getParentRoute: () => EtcRoute,
 } as any)
 
-const LibraryARoute = LibraryAImport.update({
-  id: '/library/a',
-  path: '/library/a',
-  getParentRoute: () => rootRoute,
+const EtcLineRoute = EtcLineImport.update({
+  id: '/line',
+  path: '/line',
+  getParentRoute: () => EtcRoute,
 } as any)
 
-const KioskCRoute = KioskCImport.update({
-  id: '/kiosk/c',
-  path: '/kiosk/c',
-  getParentRoute: () => rootRoute,
+const EtcCourseRegistrationRoute = EtcCourseRegistrationImport.update({
+  id: '/courseRegistration',
+  path: '/courseRegistration',
+  getParentRoute: () => EtcRoute,
 } as any)
 
-const KioskBRoute = KioskBImport.update({
-  id: '/kiosk/b',
-  path: '/kiosk/b',
-  getParentRoute: () => rootRoute,
+const EtcCourseListRoute = EtcCourseListImport.update({
+  id: '/courseList',
+  path: '/courseList',
+  getParentRoute: () => EtcRoute,
 } as any)
 
-const KioskARoute = KioskAImport.update({
-  id: '/kiosk/a',
-  path: '/kiosk/a',
-  getParentRoute: () => rootRoute,
+const BookInformationGroupNewRoute = BookInformationGroupNewImport.update({
+  id: '/new',
+  path: '/new',
+  getParentRoute: () => BookInformationGroupRoute,
+} as any)
+
+const BookInformationGroupLibrarianRoute =
+  BookInformationGroupLibrarianImport.update({
+    id: '/librarian',
+    path: '/librarian',
+    getParentRoute: () => BookInformationGroupRoute,
+  } as any)
+
+const BookInformationGroupDetailRoute = BookInformationGroupDetailImport.update(
+  {
+    id: '/detail',
+    path: '/detail',
+    getParentRoute: () => BookInformationGroupRoute,
+  } as any,
+)
+
+const BookInformationGroupCustomRoute = BookInformationGroupCustomImport.update(
+  {
+    id: '/custom',
+    path: '/custom',
+    getParentRoute: () => BookInformationGroupRoute,
+  } as any,
+)
+
+const BookInformationGroupChartRoute = BookInformationGroupChartImport.update({
+  id: '/chart',
+  path: '/chart',
+  getParentRoute: () => BookInformationGroupRoute,
+} as any)
+
+const BookInformationGroupBigdataRoute =
+  BookInformationGroupBigdataImport.update({
+    id: '/bigdata',
+    path: '/bigdata',
+    getParentRoute: () => BookInformationGroupRoute,
+  } as any)
+
+const BookInformationGroupBestRoute = BookInformationGroupBestImport.update({
+  id: '/best',
+  path: '/best',
+  getParentRoute: () => BookInformationGroupRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
@@ -137,11 +201,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/bookInformation': {
-      id: '/bookInformation'
-      path: '/bookInformation'
-      fullPath: '/bookInformation'
-      preLoaderRoute: typeof BookInformationImport
+    '/bookInformationGroup': {
+      id: '/bookInformationGroup'
+      path: '/bookInformationGroup'
+      fullPath: '/bookInformationGroup'
+      preLoaderRoute: typeof BookInformationGroupImport
       parentRoute: typeof rootRoute
     }
     '/etc': {
@@ -158,247 +222,402 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryImport
       parentRoute: typeof rootRoute
     }
-    '/information': {
-      id: '/information'
+    '/informationGroup': {
+      id: '/informationGroup'
+      path: '/informationGroup'
+      fullPath: '/informationGroup'
+      preLoaderRoute: typeof InformationGroupImport
+      parentRoute: typeof rootRoute
+    }
+    '/bookInformationGroup/best': {
+      id: '/bookInformationGroup/best'
+      path: '/best'
+      fullPath: '/bookInformationGroup/best'
+      preLoaderRoute: typeof BookInformationGroupBestImport
+      parentRoute: typeof BookInformationGroupImport
+    }
+    '/bookInformationGroup/bigdata': {
+      id: '/bookInformationGroup/bigdata'
+      path: '/bigdata'
+      fullPath: '/bookInformationGroup/bigdata'
+      preLoaderRoute: typeof BookInformationGroupBigdataImport
+      parentRoute: typeof BookInformationGroupImport
+    }
+    '/bookInformationGroup/chart': {
+      id: '/bookInformationGroup/chart'
+      path: '/chart'
+      fullPath: '/bookInformationGroup/chart'
+      preLoaderRoute: typeof BookInformationGroupChartImport
+      parentRoute: typeof BookInformationGroupImport
+    }
+    '/bookInformationGroup/custom': {
+      id: '/bookInformationGroup/custom'
+      path: '/custom'
+      fullPath: '/bookInformationGroup/custom'
+      preLoaderRoute: typeof BookInformationGroupCustomImport
+      parentRoute: typeof BookInformationGroupImport
+    }
+    '/bookInformationGroup/detail': {
+      id: '/bookInformationGroup/detail'
+      path: '/detail'
+      fullPath: '/bookInformationGroup/detail'
+      preLoaderRoute: typeof BookInformationGroupDetailImport
+      parentRoute: typeof BookInformationGroupImport
+    }
+    '/bookInformationGroup/librarian': {
+      id: '/bookInformationGroup/librarian'
+      path: '/librarian'
+      fullPath: '/bookInformationGroup/librarian'
+      preLoaderRoute: typeof BookInformationGroupLibrarianImport
+      parentRoute: typeof BookInformationGroupImport
+    }
+    '/bookInformationGroup/new': {
+      id: '/bookInformationGroup/new'
+      path: '/new'
+      fullPath: '/bookInformationGroup/new'
+      preLoaderRoute: typeof BookInformationGroupNewImport
+      parentRoute: typeof BookInformationGroupImport
+    }
+    '/etc/courseList': {
+      id: '/etc/courseList'
+      path: '/courseList'
+      fullPath: '/etc/courseList'
+      preLoaderRoute: typeof EtcCourseListImport
+      parentRoute: typeof EtcImport
+    }
+    '/etc/courseRegistration': {
+      id: '/etc/courseRegistration'
+      path: '/courseRegistration'
+      fullPath: '/etc/courseRegistration'
+      preLoaderRoute: typeof EtcCourseRegistrationImport
+      parentRoute: typeof EtcImport
+    }
+    '/etc/line': {
+      id: '/etc/line'
+      path: '/line'
+      fullPath: '/etc/line'
+      preLoaderRoute: typeof EtcLineImport
+      parentRoute: typeof EtcImport
+    }
+    '/etc/return': {
+      id: '/etc/return'
+      path: '/return'
+      fullPath: '/etc/return'
+      preLoaderRoute: typeof EtcReturnImport
+      parentRoute: typeof EtcImport
+    }
+    '/gallery/digitalGallery': {
+      id: '/gallery/digitalGallery'
+      path: '/digitalGallery'
+      fullPath: '/gallery/digitalGallery'
+      preLoaderRoute: typeof GalleryDigitalGalleryImport
+      parentRoute: typeof GalleryImport
+    }
+    '/informationGroup/event': {
+      id: '/informationGroup/event'
+      path: '/event'
+      fullPath: '/informationGroup/event'
+      preLoaderRoute: typeof InformationGroupEventImport
+      parentRoute: typeof InformationGroupImport
+    }
+    '/informationGroup/facility': {
+      id: '/informationGroup/facility'
+      path: '/facility'
+      fullPath: '/informationGroup/facility'
+      preLoaderRoute: typeof InformationGroupFacilityImport
+      parentRoute: typeof InformationGroupImport
+    }
+    '/informationGroup/information': {
+      id: '/informationGroup/information'
       path: '/information'
-      fullPath: '/information'
-      preLoaderRoute: typeof InformationImport
-      parentRoute: typeof rootRoute
+      fullPath: '/informationGroup/information'
+      preLoaderRoute: typeof InformationGroupInformationImport
+      parentRoute: typeof InformationGroupImport
     }
-    '/kiosk/a': {
-      id: '/kiosk/a'
-      path: '/kiosk/a'
-      fullPath: '/kiosk/a'
-      preLoaderRoute: typeof KioskAImport
-      parentRoute: typeof rootRoute
+    '/informationGroup/living': {
+      id: '/informationGroup/living'
+      path: '/living'
+      fullPath: '/informationGroup/living'
+      preLoaderRoute: typeof InformationGroupLivingImport
+      parentRoute: typeof InformationGroupImport
     }
-    '/kiosk/b': {
-      id: '/kiosk/b'
-      path: '/kiosk/b'
-      fullPath: '/kiosk/b'
-      preLoaderRoute: typeof KioskBImport
-      parentRoute: typeof rootRoute
+    '/informationGroup/notice': {
+      id: '/informationGroup/notice'
+      path: '/notice'
+      fullPath: '/informationGroup/notice'
+      preLoaderRoute: typeof InformationGroupNoticeImport
+      parentRoute: typeof InformationGroupImport
     }
-    '/kiosk/c': {
-      id: '/kiosk/c'
-      path: '/kiosk/c'
-      fullPath: '/kiosk/c'
-      preLoaderRoute: typeof KioskCImport
-      parentRoute: typeof rootRoute
+    '/informationGroup/promotion': {
+      id: '/informationGroup/promotion'
+      path: '/promotion'
+      fullPath: '/informationGroup/promotion'
+      preLoaderRoute: typeof InformationGroupPromotionImport
+      parentRoute: typeof InformationGroupImport
     }
-    '/library/a': {
-      id: '/library/a'
-      path: '/library/a'
-      fullPath: '/library/a'
-      preLoaderRoute: typeof LibraryAImport
-      parentRoute: typeof rootRoute
-    }
-    '/library/b': {
-      id: '/library/b'
-      path: '/library/b'
-      fullPath: '/library/b'
-      preLoaderRoute: typeof LibraryBImport
-      parentRoute: typeof rootRoute
-    }
-    '/library/c': {
-      id: '/library/c'
-      path: '/library/c'
-      fullPath: '/library/c'
-      preLoaderRoute: typeof LibraryCImport
-      parentRoute: typeof rootRoute
-    }
-    '/media/a': {
-      id: '/media/a'
-      path: '/media/a'
-      fullPath: '/media/a'
-      preLoaderRoute: typeof MediaAImport
-      parentRoute: typeof rootRoute
-    }
-    '/media/b': {
-      id: '/media/b'
-      path: '/media/b'
-      fullPath: '/media/b'
-      preLoaderRoute: typeof MediaBImport
-      parentRoute: typeof rootRoute
-    }
-    '/media/c': {
-      id: '/media/c'
-      path: '/media/c'
-      fullPath: '/media/c'
-      preLoaderRoute: typeof MediaCImport
-      parentRoute: typeof rootRoute
-    }
-    '/smart/a': {
-      id: '/smart/a'
-      path: '/smart/a'
-      fullPath: '/smart/a'
-      preLoaderRoute: typeof SmartAImport
-      parentRoute: typeof rootRoute
-    }
-    '/smart/b': {
-      id: '/smart/b'
-      path: '/smart/b'
-      fullPath: '/smart/b'
-      preLoaderRoute: typeof SmartBImport
-      parentRoute: typeof rootRoute
+    '/informationGroup/welcomeMessage': {
+      id: '/informationGroup/welcomeMessage'
+      path: '/welcomeMessage'
+      fullPath: '/informationGroup/welcomeMessage'
+      preLoaderRoute: typeof InformationGroupWelcomeMessageImport
+      parentRoute: typeof InformationGroupImport
     }
   }
 }
 
 // Create and export the route tree
 
+interface BookInformationGroupRouteChildren {
+  BookInformationGroupBestRoute: typeof BookInformationGroupBestRoute
+  BookInformationGroupBigdataRoute: typeof BookInformationGroupBigdataRoute
+  BookInformationGroupChartRoute: typeof BookInformationGroupChartRoute
+  BookInformationGroupCustomRoute: typeof BookInformationGroupCustomRoute
+  BookInformationGroupDetailRoute: typeof BookInformationGroupDetailRoute
+  BookInformationGroupLibrarianRoute: typeof BookInformationGroupLibrarianRoute
+  BookInformationGroupNewRoute: typeof BookInformationGroupNewRoute
+}
+
+const BookInformationGroupRouteChildren: BookInformationGroupRouteChildren = {
+  BookInformationGroupBestRoute: BookInformationGroupBestRoute,
+  BookInformationGroupBigdataRoute: BookInformationGroupBigdataRoute,
+  BookInformationGroupChartRoute: BookInformationGroupChartRoute,
+  BookInformationGroupCustomRoute: BookInformationGroupCustomRoute,
+  BookInformationGroupDetailRoute: BookInformationGroupDetailRoute,
+  BookInformationGroupLibrarianRoute: BookInformationGroupLibrarianRoute,
+  BookInformationGroupNewRoute: BookInformationGroupNewRoute,
+}
+
+const BookInformationGroupRouteWithChildren =
+  BookInformationGroupRoute._addFileChildren(BookInformationGroupRouteChildren)
+
+interface EtcRouteChildren {
+  EtcCourseListRoute: typeof EtcCourseListRoute
+  EtcCourseRegistrationRoute: typeof EtcCourseRegistrationRoute
+  EtcLineRoute: typeof EtcLineRoute
+  EtcReturnRoute: typeof EtcReturnRoute
+}
+
+const EtcRouteChildren: EtcRouteChildren = {
+  EtcCourseListRoute: EtcCourseListRoute,
+  EtcCourseRegistrationRoute: EtcCourseRegistrationRoute,
+  EtcLineRoute: EtcLineRoute,
+  EtcReturnRoute: EtcReturnRoute,
+}
+
+const EtcRouteWithChildren = EtcRoute._addFileChildren(EtcRouteChildren)
+
+interface GalleryRouteChildren {
+  GalleryDigitalGalleryRoute: typeof GalleryDigitalGalleryRoute
+}
+
+const GalleryRouteChildren: GalleryRouteChildren = {
+  GalleryDigitalGalleryRoute: GalleryDigitalGalleryRoute,
+}
+
+const GalleryRouteWithChildren =
+  GalleryRoute._addFileChildren(GalleryRouteChildren)
+
+interface InformationGroupRouteChildren {
+  InformationGroupEventRoute: typeof InformationGroupEventRoute
+  InformationGroupFacilityRoute: typeof InformationGroupFacilityRoute
+  InformationGroupInformationRoute: typeof InformationGroupInformationRoute
+  InformationGroupLivingRoute: typeof InformationGroupLivingRoute
+  InformationGroupNoticeRoute: typeof InformationGroupNoticeRoute
+  InformationGroupPromotionRoute: typeof InformationGroupPromotionRoute
+  InformationGroupWelcomeMessageRoute: typeof InformationGroupWelcomeMessageRoute
+}
+
+const InformationGroupRouteChildren: InformationGroupRouteChildren = {
+  InformationGroupEventRoute: InformationGroupEventRoute,
+  InformationGroupFacilityRoute: InformationGroupFacilityRoute,
+  InformationGroupInformationRoute: InformationGroupInformationRoute,
+  InformationGroupLivingRoute: InformationGroupLivingRoute,
+  InformationGroupNoticeRoute: InformationGroupNoticeRoute,
+  InformationGroupPromotionRoute: InformationGroupPromotionRoute,
+  InformationGroupWelcomeMessageRoute: InformationGroupWelcomeMessageRoute,
+}
+
+const InformationGroupRouteWithChildren =
+  InformationGroupRoute._addFileChildren(InformationGroupRouteChildren)
+
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/bookInformation': typeof BookInformationRoute
-  '/etc': typeof EtcRoute
-  '/gallery': typeof GalleryRoute
-  '/information': typeof InformationRoute
-  '/kiosk/a': typeof KioskARoute
-  '/kiosk/b': typeof KioskBRoute
-  '/kiosk/c': typeof KioskCRoute
-  '/library/a': typeof LibraryARoute
-  '/library/b': typeof LibraryBRoute
-  '/library/c': typeof LibraryCRoute
-  '/media/a': typeof MediaARoute
-  '/media/b': typeof MediaBRoute
-  '/media/c': typeof MediaCRoute
-  '/smart/a': typeof SmartARoute
-  '/smart/b': typeof SmartBRoute
+  '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
+  '/etc': typeof EtcRouteWithChildren
+  '/gallery': typeof GalleryRouteWithChildren
+  '/informationGroup': typeof InformationGroupRouteWithChildren
+  '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
+  '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
+  '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
+  '/bookInformationGroup/custom': typeof BookInformationGroupCustomRoute
+  '/bookInformationGroup/detail': typeof BookInformationGroupDetailRoute
+  '/bookInformationGroup/librarian': typeof BookInformationGroupLibrarianRoute
+  '/bookInformationGroup/new': typeof BookInformationGroupNewRoute
+  '/etc/courseList': typeof EtcCourseListRoute
+  '/etc/courseRegistration': typeof EtcCourseRegistrationRoute
+  '/etc/line': typeof EtcLineRoute
+  '/etc/return': typeof EtcReturnRoute
+  '/gallery/digitalGallery': typeof GalleryDigitalGalleryRoute
+  '/informationGroup/event': typeof InformationGroupEventRoute
+  '/informationGroup/facility': typeof InformationGroupFacilityRoute
+  '/informationGroup/information': typeof InformationGroupInformationRoute
+  '/informationGroup/living': typeof InformationGroupLivingRoute
+  '/informationGroup/notice': typeof InformationGroupNoticeRoute
+  '/informationGroup/promotion': typeof InformationGroupPromotionRoute
+  '/informationGroup/welcomeMessage': typeof InformationGroupWelcomeMessageRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/bookInformation': typeof BookInformationRoute
-  '/etc': typeof EtcRoute
-  '/gallery': typeof GalleryRoute
-  '/information': typeof InformationRoute
-  '/kiosk/a': typeof KioskARoute
-  '/kiosk/b': typeof KioskBRoute
-  '/kiosk/c': typeof KioskCRoute
-  '/library/a': typeof LibraryARoute
-  '/library/b': typeof LibraryBRoute
-  '/library/c': typeof LibraryCRoute
-  '/media/a': typeof MediaARoute
-  '/media/b': typeof MediaBRoute
-  '/media/c': typeof MediaCRoute
-  '/smart/a': typeof SmartARoute
-  '/smart/b': typeof SmartBRoute
+  '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
+  '/etc': typeof EtcRouteWithChildren
+  '/gallery': typeof GalleryRouteWithChildren
+  '/informationGroup': typeof InformationGroupRouteWithChildren
+  '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
+  '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
+  '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
+  '/bookInformationGroup/custom': typeof BookInformationGroupCustomRoute
+  '/bookInformationGroup/detail': typeof BookInformationGroupDetailRoute
+  '/bookInformationGroup/librarian': typeof BookInformationGroupLibrarianRoute
+  '/bookInformationGroup/new': typeof BookInformationGroupNewRoute
+  '/etc/courseList': typeof EtcCourseListRoute
+  '/etc/courseRegistration': typeof EtcCourseRegistrationRoute
+  '/etc/line': typeof EtcLineRoute
+  '/etc/return': typeof EtcReturnRoute
+  '/gallery/digitalGallery': typeof GalleryDigitalGalleryRoute
+  '/informationGroup/event': typeof InformationGroupEventRoute
+  '/informationGroup/facility': typeof InformationGroupFacilityRoute
+  '/informationGroup/information': typeof InformationGroupInformationRoute
+  '/informationGroup/living': typeof InformationGroupLivingRoute
+  '/informationGroup/notice': typeof InformationGroupNoticeRoute
+  '/informationGroup/promotion': typeof InformationGroupPromotionRoute
+  '/informationGroup/welcomeMessage': typeof InformationGroupWelcomeMessageRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/bookInformation': typeof BookInformationRoute
-  '/etc': typeof EtcRoute
-  '/gallery': typeof GalleryRoute
-  '/information': typeof InformationRoute
-  '/kiosk/a': typeof KioskARoute
-  '/kiosk/b': typeof KioskBRoute
-  '/kiosk/c': typeof KioskCRoute
-  '/library/a': typeof LibraryARoute
-  '/library/b': typeof LibraryBRoute
-  '/library/c': typeof LibraryCRoute
-  '/media/a': typeof MediaARoute
-  '/media/b': typeof MediaBRoute
-  '/media/c': typeof MediaCRoute
-  '/smart/a': typeof SmartARoute
-  '/smart/b': typeof SmartBRoute
+  '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
+  '/etc': typeof EtcRouteWithChildren
+  '/gallery': typeof GalleryRouteWithChildren
+  '/informationGroup': typeof InformationGroupRouteWithChildren
+  '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
+  '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
+  '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
+  '/bookInformationGroup/custom': typeof BookInformationGroupCustomRoute
+  '/bookInformationGroup/detail': typeof BookInformationGroupDetailRoute
+  '/bookInformationGroup/librarian': typeof BookInformationGroupLibrarianRoute
+  '/bookInformationGroup/new': typeof BookInformationGroupNewRoute
+  '/etc/courseList': typeof EtcCourseListRoute
+  '/etc/courseRegistration': typeof EtcCourseRegistrationRoute
+  '/etc/line': typeof EtcLineRoute
+  '/etc/return': typeof EtcReturnRoute
+  '/gallery/digitalGallery': typeof GalleryDigitalGalleryRoute
+  '/informationGroup/event': typeof InformationGroupEventRoute
+  '/informationGroup/facility': typeof InformationGroupFacilityRoute
+  '/informationGroup/information': typeof InformationGroupInformationRoute
+  '/informationGroup/living': typeof InformationGroupLivingRoute
+  '/informationGroup/notice': typeof InformationGroupNoticeRoute
+  '/informationGroup/promotion': typeof InformationGroupPromotionRoute
+  '/informationGroup/welcomeMessage': typeof InformationGroupWelcomeMessageRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/bookInformation'
+    | '/bookInformationGroup'
     | '/etc'
     | '/gallery'
-    | '/information'
-    | '/kiosk/a'
-    | '/kiosk/b'
-    | '/kiosk/c'
-    | '/library/a'
-    | '/library/b'
-    | '/library/c'
-    | '/media/a'
-    | '/media/b'
-    | '/media/c'
-    | '/smart/a'
-    | '/smart/b'
+    | '/informationGroup'
+    | '/bookInformationGroup/best'
+    | '/bookInformationGroup/bigdata'
+    | '/bookInformationGroup/chart'
+    | '/bookInformationGroup/custom'
+    | '/bookInformationGroup/detail'
+    | '/bookInformationGroup/librarian'
+    | '/bookInformationGroup/new'
+    | '/etc/courseList'
+    | '/etc/courseRegistration'
+    | '/etc/line'
+    | '/etc/return'
+    | '/gallery/digitalGallery'
+    | '/informationGroup/event'
+    | '/informationGroup/facility'
+    | '/informationGroup/information'
+    | '/informationGroup/living'
+    | '/informationGroup/notice'
+    | '/informationGroup/promotion'
+    | '/informationGroup/welcomeMessage'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/bookInformation'
+    | '/bookInformationGroup'
     | '/etc'
     | '/gallery'
-    | '/information'
-    | '/kiosk/a'
-    | '/kiosk/b'
-    | '/kiosk/c'
-    | '/library/a'
-    | '/library/b'
-    | '/library/c'
-    | '/media/a'
-    | '/media/b'
-    | '/media/c'
-    | '/smart/a'
-    | '/smart/b'
+    | '/informationGroup'
+    | '/bookInformationGroup/best'
+    | '/bookInformationGroup/bigdata'
+    | '/bookInformationGroup/chart'
+    | '/bookInformationGroup/custom'
+    | '/bookInformationGroup/detail'
+    | '/bookInformationGroup/librarian'
+    | '/bookInformationGroup/new'
+    | '/etc/courseList'
+    | '/etc/courseRegistration'
+    | '/etc/line'
+    | '/etc/return'
+    | '/gallery/digitalGallery'
+    | '/informationGroup/event'
+    | '/informationGroup/facility'
+    | '/informationGroup/information'
+    | '/informationGroup/living'
+    | '/informationGroup/notice'
+    | '/informationGroup/promotion'
+    | '/informationGroup/welcomeMessage'
   id:
     | '__root__'
     | '/'
-    | '/bookInformation'
+    | '/bookInformationGroup'
     | '/etc'
     | '/gallery'
-    | '/information'
-    | '/kiosk/a'
-    | '/kiosk/b'
-    | '/kiosk/c'
-    | '/library/a'
-    | '/library/b'
-    | '/library/c'
-    | '/media/a'
-    | '/media/b'
-    | '/media/c'
-    | '/smart/a'
-    | '/smart/b'
+    | '/informationGroup'
+    | '/bookInformationGroup/best'
+    | '/bookInformationGroup/bigdata'
+    | '/bookInformationGroup/chart'
+    | '/bookInformationGroup/custom'
+    | '/bookInformationGroup/detail'
+    | '/bookInformationGroup/librarian'
+    | '/bookInformationGroup/new'
+    | '/etc/courseList'
+    | '/etc/courseRegistration'
+    | '/etc/line'
+    | '/etc/return'
+    | '/gallery/digitalGallery'
+    | '/informationGroup/event'
+    | '/informationGroup/facility'
+    | '/informationGroup/information'
+    | '/informationGroup/living'
+    | '/informationGroup/notice'
+    | '/informationGroup/promotion'
+    | '/informationGroup/welcomeMessage'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BookInformationRoute: typeof BookInformationRoute
-  EtcRoute: typeof EtcRoute
-  GalleryRoute: typeof GalleryRoute
-  InformationRoute: typeof InformationRoute
-  KioskARoute: typeof KioskARoute
-  KioskBRoute: typeof KioskBRoute
-  KioskCRoute: typeof KioskCRoute
-  LibraryARoute: typeof LibraryARoute
-  LibraryBRoute: typeof LibraryBRoute
-  LibraryCRoute: typeof LibraryCRoute
-  MediaARoute: typeof MediaARoute
-  MediaBRoute: typeof MediaBRoute
-  MediaCRoute: typeof MediaCRoute
-  SmartARoute: typeof SmartARoute
-  SmartBRoute: typeof SmartBRoute
+  BookInformationGroupRoute: typeof BookInformationGroupRouteWithChildren
+  EtcRoute: typeof EtcRouteWithChildren
+  GalleryRoute: typeof GalleryRouteWithChildren
+  InformationGroupRoute: typeof InformationGroupRouteWithChildren
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BookInformationRoute: BookInformationRoute,
-  EtcRoute: EtcRoute,
-  GalleryRoute: GalleryRoute,
-  InformationRoute: InformationRoute,
-  KioskARoute: KioskARoute,
-  KioskBRoute: KioskBRoute,
-  KioskCRoute: KioskCRoute,
-  LibraryARoute: LibraryARoute,
-  LibraryBRoute: LibraryBRoute,
-  LibraryCRoute: LibraryCRoute,
-  MediaARoute: MediaARoute,
-  MediaBRoute: MediaBRoute,
-  MediaCRoute: MediaCRoute,
-  SmartARoute: SmartARoute,
-  SmartBRoute: SmartBRoute,
+  BookInformationGroupRoute: BookInformationGroupRouteWithChildren,
+  EtcRoute: EtcRouteWithChildren,
+  GalleryRoute: GalleryRouteWithChildren,
+  InformationGroupRoute: InformationGroupRouteWithChildren,
 }
 
 export const routeTree = rootRoute
@@ -412,70 +631,129 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/bookInformation",
+        "/bookInformationGroup",
         "/etc",
         "/gallery",
-        "/information",
-        "/kiosk/a",
-        "/kiosk/b",
-        "/kiosk/c",
-        "/library/a",
-        "/library/b",
-        "/library/c",
-        "/media/a",
-        "/media/b",
-        "/media/c",
-        "/smart/a",
-        "/smart/b"
+        "/informationGroup"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/bookInformation": {
-      "filePath": "bookInformation.tsx"
+    "/bookInformationGroup": {
+      "filePath": "bookInformationGroup.tsx",
+      "children": [
+        "/bookInformationGroup/best",
+        "/bookInformationGroup/bigdata",
+        "/bookInformationGroup/chart",
+        "/bookInformationGroup/custom",
+        "/bookInformationGroup/detail",
+        "/bookInformationGroup/librarian",
+        "/bookInformationGroup/new"
+      ]
     },
     "/etc": {
-      "filePath": "etc.tsx"
+      "filePath": "etc.tsx",
+      "children": [
+        "/etc/courseList",
+        "/etc/courseRegistration",
+        "/etc/line",
+        "/etc/return"
+      ]
     },
     "/gallery": {
-      "filePath": "gallery.tsx"
+      "filePath": "gallery.tsx",
+      "children": [
+        "/gallery/digitalGallery"
+      ]
     },
-    "/information": {
-      "filePath": "information.tsx"
+    "/informationGroup": {
+      "filePath": "informationGroup.tsx",
+      "children": [
+        "/informationGroup/event",
+        "/informationGroup/facility",
+        "/informationGroup/information",
+        "/informationGroup/living",
+        "/informationGroup/notice",
+        "/informationGroup/promotion",
+        "/informationGroup/welcomeMessage"
+      ]
     },
-    "/kiosk/a": {
-      "filePath": "kiosk.a.tsx"
+    "/bookInformationGroup/best": {
+      "filePath": "bookInformationGroup.best.tsx",
+      "parent": "/bookInformationGroup"
     },
-    "/kiosk/b": {
-      "filePath": "kiosk.b.tsx"
+    "/bookInformationGroup/bigdata": {
+      "filePath": "bookInformationGroup.bigdata.tsx",
+      "parent": "/bookInformationGroup"
     },
-    "/kiosk/c": {
-      "filePath": "kiosk.c.tsx"
+    "/bookInformationGroup/chart": {
+      "filePath": "bookInformationGroup.chart.tsx",
+      "parent": "/bookInformationGroup"
     },
-    "/library/a": {
-      "filePath": "library.a.tsx"
+    "/bookInformationGroup/custom": {
+      "filePath": "bookInformationGroup.custom.tsx",
+      "parent": "/bookInformationGroup"
     },
-    "/library/b": {
-      "filePath": "library.b.tsx"
+    "/bookInformationGroup/detail": {
+      "filePath": "bookInformationGroup.detail.tsx",
+      "parent": "/bookInformationGroup"
     },
-    "/library/c": {
-      "filePath": "library.c.tsx"
+    "/bookInformationGroup/librarian": {
+      "filePath": "bookInformationGroup.librarian.tsx",
+      "parent": "/bookInformationGroup"
     },
-    "/media/a": {
-      "filePath": "media.a.tsx"
+    "/bookInformationGroup/new": {
+      "filePath": "bookInformationGroup.new.tsx",
+      "parent": "/bookInformationGroup"
     },
-    "/media/b": {
-      "filePath": "media.b.tsx"
+    "/etc/courseList": {
+      "filePath": "etc.courseList.tsx",
+      "parent": "/etc"
     },
-    "/media/c": {
-      "filePath": "media.c.tsx"
+    "/etc/courseRegistration": {
+      "filePath": "etc.courseRegistration.tsx",
+      "parent": "/etc"
     },
-    "/smart/a": {
-      "filePath": "smart.a.tsx"
+    "/etc/line": {
+      "filePath": "etc.line.tsx",
+      "parent": "/etc"
     },
-    "/smart/b": {
-      "filePath": "smart.b.tsx"
+    "/etc/return": {
+      "filePath": "etc.return.tsx",
+      "parent": "/etc"
+    },
+    "/gallery/digitalGallery": {
+      "filePath": "gallery.digitalGallery.tsx",
+      "parent": "/gallery"
+    },
+    "/informationGroup/event": {
+      "filePath": "informationGroup.event.tsx",
+      "parent": "/informationGroup"
+    },
+    "/informationGroup/facility": {
+      "filePath": "informationGroup.facility.tsx",
+      "parent": "/informationGroup"
+    },
+    "/informationGroup/information": {
+      "filePath": "informationGroup.information.tsx",
+      "parent": "/informationGroup"
+    },
+    "/informationGroup/living": {
+      "filePath": "informationGroup.living.tsx",
+      "parent": "/informationGroup"
+    },
+    "/informationGroup/notice": {
+      "filePath": "informationGroup.notice.tsx",
+      "parent": "/informationGroup"
+    },
+    "/informationGroup/promotion": {
+      "filePath": "informationGroup.promotion.tsx",
+      "parent": "/informationGroup"
+    },
+    "/informationGroup/welcomeMessage": {
+      "filePath": "informationGroup.welcomeMessage.tsx",
+      "parent": "/informationGroup"
     }
   }
 }

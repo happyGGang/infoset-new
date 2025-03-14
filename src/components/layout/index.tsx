@@ -15,16 +15,12 @@ import {
   ArrowRight,
   ArrowLeft,
   Navigation,
-  Zoom,
-  Tilt,
-  Wrapper,
 } from './index.styled';
 import { indexMapping, media_a } from '../../constants/index.constants';
 import arrowRight from '../../assets/img/navigation_arrow_right.svg';
 import arrowLeft from '../../assets/img/navigation_arrow_left.svg';
 import { useSelectedItemStore } from '../../store/selected-item.store';
 import MenuTitle from '../title';
-import { useZoomModeStore } from '../../store/zoom-mode';
 import { useOrientationStore } from '../../store/landscape-mode.store';
 
 interface LayoutProps {
@@ -35,7 +31,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const { toggleSelectedItem, selectedItem } = useSelectedItemStore();
-  const { toggleZoomMode } = useZoomModeStore();
   const { toggleLandscape } = useOrientationStore();
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -46,16 +41,54 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const menu = useMemo(
     () => [
-      { path: '/media', label: '미디어월' },
-      { path: '/kiosk', label: '이용안내키오스크' },
-      { path: '/smart', label: '스마트추천도서' },
-      { path: '/library', label: '라이브러리보드' },
+      { path: 'informationGroup/welcomeMessage', label: '인포메이션 GROUP' },
+      { path: 'bookInformationGroup/new', label: '도서정보 GROUP' },
+      { path: 'gallery/digitalGallery', label: '디지털갤러리' },
+      { path: 'etc/courseList', label: '기타' },
     ],
     []
   );
 
-  const handleTabClick = (tab: string) =>
-    navigate({ to: pathname.replace(/(\/[a-z]+)\/[a-z]/, `$1/${tab}`) });
+  const tabList = useMemo(() => {
+    switch (true) {
+      case pathname.startsWith('/informationGroup/'):
+        return [
+          { key: 'welcomeMessage', label: '환영메세지' },
+          { key: 'promotion', label: '홍보동영상' },
+          { key: 'notice', label: '공지사항' },
+          { key: 'information', label: '이용안내' },
+          { key: 'facility', label: '시설안내' },
+          { key: 'event', label: '행사안내' },
+          { key: 'living', label: '생활정보' },
+        ];
+      case pathname.startsWith('/bookInformationGroup/'):
+        return [
+          { key: 'new', label: '신착도서' },
+          { key: 'best', label: '대출베스트' },
+          { key: 'librarian', label: '사서추천' },
+          { key: 'chart', label: '능동형추천' },
+          { key: 'custom', label: '맞춤형추천' },
+          { key: 'bigdata', label: '빅데이터추천' },
+          { key: 'detail', label: '도서상세' },
+        ];
+      case pathname.startsWith('/gallery/'):
+        return [{ key: 'digital_gallery', label: '디지털갤러리' }];
+      case pathname.startsWith('/etc/'):
+        return [
+          { key: 'courseList', label: '강좌목록' },
+          { key: 'courseRegistration', label: '강좌신청' },
+          { key: 'return', label: '대출반납일' },
+          { key: 'line', label: '책속한줄' },
+        ];
+      default:
+        return [];
+    }
+  }, [pathname]);
+
+  const handleTabClick = (key: string) => {
+    const basePath = pathname.split('/').slice(0, -1).join('/');
+    navigate({ to: `${basePath}/${key}` });
+  };
 
   const handleArrowClick = (direction: 'left' | 'right') => {
     const newIndex =
@@ -92,38 +125,43 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Navigation>
         <Title>인포셋도서관</Title>
         <MenuList>
-          {menu.map(({ path, label }) => (
-            <Menu
-              key={path}
-              to={`${path}/a`}
-              active={pathname.startsWith(path) ? 'true' : 'false'}
-              onClick={() => {
-                setCurrentIndex(0);
-                toggleLandscape(false);
-              }}
-            >
-              {label}
-            </Menu>
-          ))}
+          {menu.map(({ path, label }) => {
+            const isActive = pathname.includes(path.split('/')[0]);
+            return (
+              <Menu
+                key={path}
+                to={path}
+                active={isActive ? 'true' : 'false'}
+                onClick={() => {
+                  setCurrentIndex(0);
+                  toggleLandscape(false);
+                }}
+              >
+                {label}
+              </Menu>
+            );
+          })}
         </MenuList>
       </Navigation>
       <Content>
         <TabPanel>
-          {(pathname.startsWith('/smart') ? ['a', 'b'] : ['a', 'b', 'c']).map(
-            (tab) => (
+          {tabList.map((tab) => {
+            const lastPath = pathname.split('/').pop();
+            return (
               <Tab
-                key={tab}
+                key={tab.label}
                 onClick={() => {
-                  handleTabClick(tab);
+                  handleTabClick(tab.key);
                   toggleLandscape(false);
                 }}
-                selected={pathname.endsWith(`/${tab}`)}
+                selected={lastPath === tab.key}
               >
-                Type {tab.toUpperCase()}
+                {tab.label}
               </Tab>
-            )
-          )}
+            );
+          })}
         </TabPanel>
+
         <MenuTitle />
         <ArrowLeft
           src={arrowLeft}
@@ -134,13 +172,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           }}
         />
         {children}
-        <Wrapper>
-          {/*<Zoom onClick={() => toggleZoomMode(true)} />*/}
-          {!pathname.startsWith(`/media/`) &&
-            !pathname.startsWith(`/library/`) && (
-              <Tilt onClick={() => toggleLandscape()} />
-            )}
-        </Wrapper>
         <ArrowRight
           src={arrowRight}
           alt="Next"

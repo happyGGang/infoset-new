@@ -9,7 +9,7 @@ import Librarian from '../components/smart/b/librarian';
 import Bigdata from '../components/smart/b/bigdata';
 import Detail from '../components/smart/b/detail';
 
-export const Route = createFileRoute('/information')({
+export const Route = createFileRoute('/informationGroup/living')({
   component: RouteComponent,
 });
 
