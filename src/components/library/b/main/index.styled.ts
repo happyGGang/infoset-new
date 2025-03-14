@@ -24,7 +24,7 @@ const Container = styled('div')(() => ({
 
 const Time = styled('div')(() => ({
   color: '#FFFFFF',
-  fontFamily: 'Montserrat',
+  fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: '2.637rem',
   fontWeight: 400,
   lineHeight: 'normal',

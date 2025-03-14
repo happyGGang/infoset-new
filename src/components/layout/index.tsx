@@ -24,6 +24,7 @@ import arrowLeft from '../../assets/img/navigation_arrow_left.svg';
 import { useSelectedItemStore } from '../../store/selected-item.store';
 import MenuTitle from '../title';
 import { useOrientationStore } from '../../store/landscape-mode.store';
+import tilt from '../../assets/icon/tilt.svg';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -175,7 +176,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         />
         {children}
         <Wrapper>
-          <Tilt onClick={() => toggleLandscape()} />
+          <Tilt src={tilt} alt="" onClick={() => toggleLandscape()} />
         </Wrapper>
         <ArrowRight
           src={arrowRight}

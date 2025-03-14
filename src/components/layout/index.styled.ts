@@ -151,12 +151,10 @@ const Zoom = styled('div')(() => ({
   backgroundSize: 'cover',
 }));
 
-const Tilt = styled('div')(() => ({
+const Tilt = styled('img')(() => ({
   width: '3rem',
   height: '3rem',
   cursor: 'pointer',
-  background: `url(${tilt}) center center no-repeat`,
-  backgroundSize: 'cover',
 }));
 
 export {

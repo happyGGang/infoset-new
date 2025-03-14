@@ -122,7 +122,7 @@ const SlideItem = styled('div')(() => ({
     lineHeight: 'normal',
     fontSize: '0.52738rem',
     fontWeight: 700,
-    fontFamily: 'Montserrat',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
     top: '0',
     right: '14.2rem',
     position: 'absolute',
@@ -131,7 +131,7 @@ const SlideItem = styled('div')(() => ({
 
 const Time = styled('div')(() => ({
   color: '#FFF',
-  fontFamily: 'Montserrat',
+  fontFamily: 'SpoqaHanSansNeo-Regular',
   fontSize: '0.83506rem',
   fontWeight: 400,
   lineHeight: 'normal',

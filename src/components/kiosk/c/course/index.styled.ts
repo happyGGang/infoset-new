@@ -81,14 +81,14 @@ const Column = styled('div')(() => ({
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#00F6FF',
-    fontFamily: 'Montserrat',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
   },
   '& .dash': {
     fontSize: '0.725rem',
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#ADB5BD',
-    fontFamily: 'Montserrat',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
   },
   '& .count': {
     fontSize: '0.725rem',
@@ -96,7 +96,7 @@ const Column = styled('div')(() => ({
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#FFFFFF',
-    fontFamily: 'Montserrat',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
   },
 }));
 
@@ -266,20 +266,20 @@ const WrapperX = styled('div')(() => ({
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#00F6FF',
-    fontFamily: 'Montserrat',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
   },
   '& .dash': {
     fontSize: '1.28906rem',
     lineHeight: 'normal',
     fontWeight: 700,
-    fontFamily: 'Montserrat',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
   },
   '& .count': {
     fontSize: '1.28906rem',
     lineHeight: 'normal',
     fontWeight: 700,
     color: '#FFFFFF',
-    fontFamily: 'Montserrat',
+    fontFamily: 'SpoqaHanSansNeo-Regular',
   },
 }));
 

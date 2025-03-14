@@ -156,7 +156,7 @@ import library_c_librarian from '../assets/img/library_c_librarian.svg';
 
 import digital_gallery from '../assets/img/gallery.jpg';
 
-export const welcomeMessage = [kiosk_a_y_main, kiosk_b_y_main, kiosk_b_y_main];
+export const welcomeMessage = [kiosk_a_y_main, kiosk_b_y_main, kiosk_c_y_main];
 
 export const promotion = [
   media_a_promotion,
