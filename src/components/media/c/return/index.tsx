@@ -5,7 +5,7 @@ import {
   getSimpleCurrentDate,
 } from '../../../../util/date-time';
 
-const Return = () => {
+const ReturnC = () => {
   return (
     <Container>
       <Header>
@@ -22,4 +22,4 @@ const Return = () => {
   );
 };
 
-export default Return;
+export default ReturnC;

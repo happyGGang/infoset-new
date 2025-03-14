@@ -16,7 +16,7 @@ import { book_list } from '../../../../constants/book.constants';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
 import { Navigation } from 'swiper/modules';
 
-const Custom = () => {
+const CustomA = () => {
   const { isLandscape } = useOrientationStore();
   const { toggleSelectedItem } = useSelectedItemStore();
   const [activeIndex, setActiveIndex] = useState(1);
@@ -47,10 +47,7 @@ const Custom = () => {
                   {book_list
                     .slice(pageIndex * 5, (pageIndex + 1) * 5)
                     .map((item, index) => (
-                      <SlideItemX
-                        key={index}
-                        onClick={() => toggleSelectedItem(6)}
-                      >
+                      <SlideItemX key={index}>
                         <img src={item.img} alt="" />
                         <div className={'title'}>{item.title}</div>
                         <div className={'writer'}>{item.writer}</div>
@@ -64,7 +61,7 @@ const Custom = () => {
           <div className={'pagination'}>
             <span>{activeIndex}</span> / {totalSlidesX}
           </div>
-          <div className={'move'} onClick={() => toggleSelectedItem(3)}></div>
+          <div className={'move'}></div>
         </ContainerX>
       ) : (
         <Container>
@@ -88,10 +85,7 @@ const Custom = () => {
                   {book_list
                     .slice(pageIndex * 12, (pageIndex + 1) * 12)
                     .map((item, index) => (
-                      <SlideItem
-                        key={index}
-                        onClick={() => toggleSelectedItem(6)}
-                      >
+                      <SlideItem key={index}>
                         <img src={item.img} alt="" />
                         <div className={'title'}>{item.title}</div>
                         <div className={'writer'}>{item.writer}</div>
@@ -105,11 +99,11 @@ const Custom = () => {
           <div className={'pagination'}>
             <span>{activeIndex}</span> / {totalSlides}
           </div>
-          <div className={'move'} onClick={() => toggleSelectedItem(3)}></div>
+          <div className={'move'}></div>
         </Container>
       )}
     </>
   );
 };
 
-export default Custom;
+export default CustomA;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from './index.styled';
 
-const Return = () => {
+const ReturnB = () => {
   return <Container />;
 };
 
-export default Return;
+export default ReturnB;

@@ -24,7 +24,7 @@ const TabPanel: React.FC<TabPanelProps> = ({ children, value, index }) => (
   </div>
 );
 
-const Bigdata = () => {
+const BigdataB = () => {
   const { isLandscape } = useOrientationStore();
   const [value, setValue] = useState('three');
 
@@ -56,4 +56,4 @@ const Bigdata = () => {
   );
 };
 
-export default Bigdata;
+export default BigdataB;

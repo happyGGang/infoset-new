@@ -47,10 +47,7 @@ const Result = () => {
                   {book_list
                     .slice(pageIndex * 10, (pageIndex + 1) * 10)
                     .map((item, index) => (
-                      <SlideItemX
-                        key={index}
-                        onClick={() => toggleSelectedItem(6)}
-                      >
+                      <SlideItemX key={index}>
                         <img src={item.img} alt="" />
                         <div className={'title'}>{item.title}</div>
                         <div className={'writer'}>{item.writer}</div>
@@ -64,7 +61,7 @@ const Result = () => {
           <div className={'pagination'}>
             <span>{activeIndex}</span> / {totalSlidesX}
           </div>
-          <div className={'move'} onClick={() => toggleSelectedItem(3)}></div>
+          <div className={'move'}></div>
         </ContainerX>
       ) : (
         <Container>
@@ -88,10 +85,7 @@ const Result = () => {
                   {book_list
                     .slice(pageIndex * 9, (pageIndex + 1) * 9)
                     .map((item, index) => (
-                      <SlideItem
-                        key={index}
-                        onClick={() => toggleSelectedItem(6)}
-                      >
+                      <SlideItem key={index}>
                         <img src={item.img} alt="" />
                         <div className={'title'}>{item.title}</div>
                         <div className={'writer'}>{item.writer}</div>
@@ -105,7 +99,7 @@ const Result = () => {
           <div className={'pagination'}>
             <span>{activeIndex}</span> / {totalSlides}
           </div>
-          <div className={'move'} onClick={() => toggleSelectedItem(3)}></div>
+          <div className={'move'}></div>
         </Container>
       )}
     </>

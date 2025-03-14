@@ -19,7 +19,7 @@ import { SwiperSlide } from 'swiper/react';
 import { book_list } from '../../../../constants/book.constants';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
 
-const Bigdata = () => {
+const BigdataA = () => {
   const { isLandscape } = useOrientationStore();
   const { toggleSelectedItem } = useSelectedItemStore();
   const [activeIndex, setActiveIndex] = useState(1);
@@ -67,10 +67,7 @@ const Bigdata = () => {
                   {book_list
                     .slice(pageIndex * 5, (pageIndex + 1) * 5)
                     .map((item, index) => (
-                      <SlideItemX
-                        key={index}
-                        onClick={() => toggleSelectedItem(6)}
-                      >
+                      <SlideItemX key={index}>
                         <img src={item.img} alt="" />
                         <div className={'title'}>{item.title}</div>
                         <div className={'writer'}>{item.writer}</div>
@@ -122,10 +119,7 @@ const Bigdata = () => {
                   {book_list
                     .slice(pageIndex * 6, (pageIndex + 1) * 6)
                     .map((item, index) => (
-                      <SlideItem
-                        key={index}
-                        onClick={() => toggleSelectedItem(6)}
-                      >
+                      <SlideItem key={index}>
                         <img src={item.img} alt="" />
                         <div className={'title'}>{item.title}</div>
                         <div className={'writer'}>{item.writer}</div>
@@ -145,4 +139,4 @@ const Bigdata = () => {
   );
 };
 
-export default Bigdata;
+export default BigdataA;

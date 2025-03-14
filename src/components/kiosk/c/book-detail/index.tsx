@@ -35,7 +35,7 @@ import LocationPopup from '../../../location-popup';
 import { SwiperSlide } from 'swiper/react';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const BookDetail = () => {
+const BookDetailC = () => {
   const [selectedItem, setSelectedItem] = useState(book_list[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [animate, setAnimate] = useState(false);
@@ -232,4 +232,4 @@ const BookDetail = () => {
   );
 };
 
-export default BookDetail;
+export default BookDetailC;

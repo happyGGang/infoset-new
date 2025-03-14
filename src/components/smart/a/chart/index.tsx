@@ -28,7 +28,7 @@ import { useOrientationStore } from '../../../../store/landscape-mode.store';
 import BubbleAX from '../../../bubble-a-x';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
 
-const Chart = () => {
+const ChartA = () => {
   const { selectedBubbleItems, toggleSelectedBubbleItem } = useBubbleAStore();
   const [selectedGender, setSelectedGender] = useState('male');
   const [selectedAge, setSelectedAge] = useState('20-29');
@@ -90,9 +90,7 @@ const Chart = () => {
                 <option value="30-39">20~30대</option>
               </select>
             </SelectBoxWrapperX>
-            <SubmitX onClick={() => toggleSelectedItem(2)}>
-              도서 추천받기
-            </SubmitX>
+            <SubmitX>도서 추천받기</SubmitX>
           </WrapperX>
         </ContainerX>
       ) : (
@@ -147,11 +145,11 @@ const Chart = () => {
               </select>
             </SelectBoxWrapper>
           </Wrapper>
-          <Submit onClick={() => toggleSelectedItem(2)}>도서 추천받기</Submit>
+          <Submit>도서 추천받기</Submit>
         </Container>
       )}
     </>
   );
 };
 
-export default Chart;
+export default ChartA;

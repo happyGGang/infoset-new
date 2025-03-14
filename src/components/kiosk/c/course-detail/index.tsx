@@ -11,11 +11,11 @@ const CourseDetail = () => {
     <>
       {isLandscape ? (
         <ContainerX>
-          <ButtonX onClick={() => toggleSelectedItem(9)}>신청하기</ButtonX>
+          <ButtonX>신청하기</ButtonX>
         </ContainerX>
       ) : (
         <Container>
-          <Button onClick={() => toggleSelectedItem(9)}>신청하기</Button>
+          <Button>신청하기</Button>
         </Container>
       )}
     </>

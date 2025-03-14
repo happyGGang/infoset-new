@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Date, Time } from './index.styled';
 import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 
-const Return = () => {
+const ReturnA = () => {
   return (
     <Container>
       <div className={'time_date_wrapper'}>
@@ -13,4 +13,4 @@ const Return = () => {
   );
 };
 
-export default Return;
+export default ReturnA;

@@ -37,7 +37,7 @@ import {
 } from '../../../../util/birth';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const Apply = () => {
+const ApplyB = () => {
   const [gender, setGender] = useState('m');
   const [smsConsent, setSmsConsent] = useState('yes');
   const [photoConsent, setPhotoConsent] = useState('yes');
@@ -366,4 +366,4 @@ const Apply = () => {
   );
 };
 
-export default Apply;
+export default ApplyB;

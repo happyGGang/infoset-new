@@ -17,7 +17,7 @@ import {
   getSimpleCurrentDate,
 } from '../../../../util/date-time';
 
-const Line = () => {
+const LineC = () => {
   const [animateText, setAnimateText] = useState(false);
   const swiperRef = useRef(null);
 
@@ -75,4 +75,4 @@ const Line = () => {
   );
 };
 
-export default Line;
+export default LineC;

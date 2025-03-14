@@ -35,7 +35,7 @@ import { book_list } from '../../../../constants/book.constants';
 import LocationPopup from '../../../location-popup';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const BookDetail = () => {
+const BookDetailB = () => {
   const [selectedItem, setSelectedItem] = useState(book_list[1]);
   const [isOpen, setIsOpen] = useState(false);
   const [animate, setAnimate] = useState(false);
@@ -208,4 +208,4 @@ const BookDetail = () => {
   );
 };
 
-export default BookDetail;
+export default BookDetailB;

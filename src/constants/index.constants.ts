@@ -154,6 +154,8 @@ import library_c_new from '../assets/img/library_c_new.svg';
 import library_c_best from '../assets/img/library_c_best.svg';
 import library_c_librarian from '../assets/img/library_c_librarian.svg';
 
+import digital_gallery from '../assets/img/gallery.jpg';
+
 export const welcomeMessage = [kiosk_a_y_main, kiosk_b_y_main, kiosk_b_y_main];
 
 export const promotion = [
@@ -180,6 +182,40 @@ export const event = [library_a_event, library_b_event, library_c_event];
 
 export const living = [library_a_living, library_b_living, library_c_living];
 
+export const newBook = [kiosk_a_y_new, kiosk_b_y_new, kiosk_c_y_new];
+
+export const best = [kiosk_a_y_best, kiosk_b_y_best, kiosk_c_y_best];
+
+export const librarian = [smart_a_y_librarian, smart_b_y_librarian];
+
+export const chart = [smart_a_y_keyword, smart_b_y_keyword];
+
+export const custom = [smart_a_y_custom, smart_b_y_custom];
+
+export const bigdata = [smart_a_y_bigdata, smart_b_y_bigdata];
+
+export const detail = [
+  kiosk_a_y_book_detail,
+  kiosk_b_y_book_detail,
+  kiosk_c_y_book_detail,
+];
+
+export const course = [kiosk_a_y_course, kiosk_b_y_course, kiosk_c_y_course];
+
+export const courseRegistration = [
+  kiosk_a_y_course_apply,
+  kiosk_b_y_course_apply,
+  kiosk_c_y_course_apply,
+];
+
+export const return_book = [
+  library_a_return,
+  library_b_return,
+  library_c_return,
+];
+
+export const line = [media_a_line, media_b_line, media_c_line];
+
 export const indexMapping = {
   '/informationGroup/welcomeMessage': welcomeMessage,
   '/informationGroup/promotion': promotion,
@@ -188,4 +224,19 @@ export const indexMapping = {
   '/informationGroup/facility': facility,
   '/informationGroup/event': event,
   '/informationGroup/living': living,
+
+  '/bookInformationGroup/new': newBook,
+  '/bookInformationGroup/best': best,
+  '/bookInformationGroup/librarian': librarian,
+  '/bookInformationGroup/chart': chart,
+  '/bookInformationGroup/custom': custom,
+  '/bookInformationGroup/bigdata': bigdata,
+  '/bookInformationGroup/detail': detail,
+
+  '/gallery/digitalGallery': [digital_gallery],
+
+  '/etc/courseList': course,
+  '/etc/courseRegistration': courseRegistration,
+  '/etc/return': return_book,
+  '/etc/line': line,
 };

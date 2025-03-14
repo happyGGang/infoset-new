@@ -23,7 +23,7 @@ const New = () => {
         <SwiperSlide>
           <Grid>
             {book_list?.slice(0, 9).map((item, index) => (
-              <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
+              <SlideItem key={index}>
                 <img src={item.img} alt="" />
                 <div className={'title'}>{item.title}</div>
                 <div className={'writer'}>{item.writer}</div>
@@ -34,7 +34,7 @@ const New = () => {
         <SwiperSlide>
           <Grid>
             {book_list?.slice(9, 18).map((item, index) => (
-              <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
+              <SlideItem key={index}>
                 <img src={item.img} alt="" />
                 <div className={'title'}>{item.title}</div>
                 <div className={'writer'}>{item.writer}</div>

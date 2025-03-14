@@ -24,7 +24,7 @@ const TabPanel: React.FC<TabPanelProps> = ({ children, value, index }) => (
   </div>
 );
 
-const Chart = () => {
+const ChartB = () => {
   const { isLandscape } = useOrientationStore();
   const [value, setValue] = useState('one');
 
@@ -56,4 +56,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default ChartB;

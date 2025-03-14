@@ -17,7 +17,7 @@ import { book_list } from '../../../../constants/book.constants';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const New = () => {
+const NewC = () => {
   const { toggleSelectedItem } = useSelectedItemStore();
   const { isLandscape } = useOrientationStore();
 
@@ -41,7 +41,7 @@ const New = () => {
             <SwiperSlide>
               <GridX>
                 {book_list?.slice(0, 10).map((item, index) => (
-                  <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                  <SlideItemX key={index}>
                     <img src={item.img} alt="" />
                     <div className={'title'}>{item.title}</div>
                     <div className={'writer'}>{item.writer}</div>
@@ -52,7 +52,7 @@ const New = () => {
             <SwiperSlide>
               <GridX>
                 {book_list?.slice(11, 21).map((item, index) => (
-                  <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                  <SlideItemX key={index}>
                     <img src={item.img} alt="" />
                     <div className={'title'}>{item.title}</div>
                     <div className={'writer'}>{item.writer}</div>
@@ -75,7 +75,7 @@ const New = () => {
             <SwiperSlide>
               <Grid>
                 {book_list?.slice(0, 9).map((item, index) => (
-                  <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
+                  <SlideItem key={index}>
                     <img src={item.img} alt="" />
                     <div className={'title'}>{item.title}</div>
                     <div className={'writer'}>{item.writer}</div>
@@ -87,7 +87,7 @@ const New = () => {
             <SwiperSlide>
               <Grid>
                 {book_list?.slice(9, 18).map((item, index) => (
-                  <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
+                  <SlideItem key={index}>
                     <img src={item.img} alt="" />
                     <div className={'title'}>{item.title}</div>
                     <div className={'writer'}>{item.writer}</div>
@@ -103,4 +103,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default NewC;

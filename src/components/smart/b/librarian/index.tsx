@@ -24,7 +24,7 @@ const TabPanel: React.FC<TabPanelProps> = ({ children, value, index }) => (
   </div>
 );
 
-const Librarian = () => {
+const LibrarianB = () => {
   const { isLandscape } = useOrientationStore();
   const [value, setValue] = useState('two');
 
@@ -56,4 +56,4 @@ const Librarian = () => {
   );
 };
 
-export default Librarian;
+export default LibrarianB;

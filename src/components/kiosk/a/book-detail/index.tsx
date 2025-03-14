@@ -30,7 +30,7 @@ import { Pagination } from 'swiper/modules';
 import LocationPopup from '../../../location-popup';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const BookDetail = () => {
+const BookDetailA = () => {
   const { isLandscape } = useOrientationStore();
   const [selectedItem, setSelectedItem] = useState(book_list[0]);
   const [isOpen, setIsOpen] = useState(false);
@@ -200,4 +200,4 @@ const BookDetail = () => {
   );
 };
 
-export default BookDetail;
+export default BookDetailA;

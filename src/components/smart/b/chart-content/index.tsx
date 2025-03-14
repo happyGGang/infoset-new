@@ -93,7 +93,7 @@ const ChartContent = () => {
             <option value="30-39">20~30대</option>
           </select>
         </SelectBoxWrapperX>
-        <SubmitX onClick={() => toggleSelectedItem(2)}>도서 추천받기</SubmitX>
+        <SubmitX>도서 추천받기</SubmitX>
       </WrapperX>
       <img className={'home'} src={home} alt="" />
       <img className={'logout'} src={logout} alt="" />

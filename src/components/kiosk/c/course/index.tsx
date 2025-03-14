@@ -22,7 +22,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const Course = () => {
+const CourseC = () => {
   const { toggleSelectedItem } = useSelectedItemStore();
   const { isLandscape } = useOrientationStore();
 
@@ -46,7 +46,7 @@ const Course = () => {
             <SwiperSlide>
               <ItemWrapperX>
                 {course_list?.slice(0, 5).map((item, index) => (
-                  <SlideItemX key={index} onClick={() => toggleSelectedItem(8)}>
+                  <SlideItemX key={index}>
                     <WrapperX>
                       <div className={`${'badge'} ${item.className}`}>
                         {item.status}
@@ -90,7 +90,7 @@ const Course = () => {
             <SwiperSlide>
               <ItemWrapperX>
                 {course_list?.slice(5, 10).map((item, index) => (
-                  <SlideItemX key={index} onClick={() => toggleSelectedItem(8)}>
+                  <SlideItemX key={index}>
                     <WrapperX>
                       <div className={`${'badge'} ${item.className}`}>
                         {item.status}
@@ -147,7 +147,7 @@ const Course = () => {
             <SwiperSlide>
               <ItemWrapper>
                 {course_list?.slice(0, 7).map((item, index) => (
-                  <SlideItem key={index} onClick={() => toggleSelectedItem(8)}>
+                  <SlideItem key={index}>
                     <Wrapper>
                       <div className={`${'badge'} ${item.className}`}>
                         {item.status}
@@ -191,7 +191,7 @@ const Course = () => {
             <SwiperSlide>
               <ItemWrapper>
                 {course_list?.slice(8, 15).map((item, index) => (
-                  <SlideItem key={index} onClick={() => toggleSelectedItem(8)}>
+                  <SlideItem key={index}>
                     <Wrapper>
                       <div className={`${'badge'} ${item.className}`}>
                         {item.status}
@@ -239,4 +239,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default CourseC;

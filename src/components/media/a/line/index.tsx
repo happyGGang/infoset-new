@@ -11,7 +11,7 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
 
-const Line = () => {
+const LineA = () => {
   const [animateText, setAnimateText] = useState(false);
   const swiperRef = useRef(null);
 
@@ -58,4 +58,4 @@ const Line = () => {
   );
 };
 
-export default Line;
+export default LineA;

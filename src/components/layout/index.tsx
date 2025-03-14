@@ -15,15 +15,10 @@ import {
   ArrowRight,
   ArrowLeft,
   Navigation,
-  Zoom,
   Tilt,
   Wrapper,
 } from './index.styled';
-import {
-  indexMapping,
-  media_a,
-  welcomeMessage,
-} from '../../constants/index.constants';
+import { indexMapping, welcomeMessage } from '../../constants/index.constants';
 import arrowRight from '../../assets/img/navigation_arrow_right.svg';
 import arrowLeft from '../../assets/img/navigation_arrow_left.svg';
 import { useSelectedItemStore } from '../../store/selected-item.store';
@@ -79,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           { key: 'detail', label: '도서상세' },
         ];
       case pathname.startsWith('/gallery/'):
-        return [{ key: 'digital_gallery', label: '디지털갤러리' }];
+        return [{ key: 'digitalGallery', label: '디지털갤러리' }];
       case pathname.startsWith('/etc/'):
         return [
           { key: 'courseList', label: '강좌목록' },

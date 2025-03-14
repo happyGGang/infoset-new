@@ -17,7 +17,7 @@ import { book_list } from '../../../../constants/book.constants';
 import { useSelectedItemStore } from '../../../../store/selected-item.store';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const Best = () => {
+const BestB = () => {
   const { toggleSelectedItem } = useSelectedItemStore();
   const { isLandscape } = useOrientationStore();
 
@@ -36,7 +36,7 @@ const Best = () => {
             <SwiperSlide>
               <GridX>
                 {book_list?.slice(0, 5).map((item, index) => (
-                  <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                  <SlideItemX key={index}>
                     <div className={'badge'}>
                       {(index + 1).toString().padStart(2, '0')}
                     </div>
@@ -50,7 +50,7 @@ const Best = () => {
             <SwiperSlide>
               <GridX>
                 {book_list?.slice(6, 11).map((item, index) => (
-                  <SlideItemX key={index} onClick={() => toggleSelectedItem(6)}>
+                  <SlideItemX key={index}>
                     <div className={'badge'}>
                       {(index + 6).toString().padStart(2, '0')}
                     </div>
@@ -76,7 +76,7 @@ const Best = () => {
             <SwiperSlide>
               <Grid>
                 {book_list?.slice(0, 5).map((item, index) => (
-                  <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
+                  <SlideItem key={index}>
                     <div className={'badge'}>
                       {(index + 1).toString().padStart(2, '0')}
                     </div>
@@ -90,7 +90,7 @@ const Best = () => {
             <SwiperSlide>
               <Grid>
                 {book_list?.slice(6, 11).map((item, index) => (
-                  <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
+                  <SlideItem key={index}>
                     <div className={'badge'}>
                       {(index + 6).toString().padStart(2, '0')}
                     </div>
@@ -108,4 +108,4 @@ const Best = () => {
   );
 };
 
-export default Best;
+export default BestB;

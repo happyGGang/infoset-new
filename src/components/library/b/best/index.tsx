@@ -23,7 +23,7 @@ const Best = () => {
         <SwiperSlide>
           <Grid>
             {book_list?.slice(0, 5).map((item, index) => (
-              <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
+              <SlideItem key={index}>
                 <div className={'badge'}>
                   {(index + 1).toString().padStart(2, '0')}
                 </div>
@@ -38,7 +38,7 @@ const Best = () => {
         <SwiperSlide>
           <Grid>
             {book_list?.slice(6, 11).map((item, index) => (
-              <SlideItem key={index} onClick={() => toggleSelectedItem(6)}>
+              <SlideItem key={index}>
                 <div className={'badge'}>
                   {(index + 6).toString().padStart(2, '0')}
                 </div>

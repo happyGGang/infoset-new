@@ -11,7 +11,6 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as BookInformationGroupImport } from './routes/bookInformationGroup'
 import { Route as IndexImport } from './routes/index'
 import { Route as InformationGroupWelcomeMessageImport } from './routes/informationGroup.welcomeMessage'
 import { Route as InformationGroupPromotionImport } from './routes/informationGroup.promotion'
@@ -34,12 +33,6 @@ import { Route as BookInformationGroupBigdataImport } from './routes/bookInforma
 import { Route as BookInformationGroupBestImport } from './routes/bookInformationGroup.best'
 
 // Create/Update Routes
-
-const BookInformationGroupRoute = BookInformationGroupImport.update({
-  id: '/bookInformationGroup',
-  path: '/bookInformationGroup',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -122,51 +115,51 @@ const EtcCourseListRoute = EtcCourseListImport.update({
 } as any)
 
 const BookInformationGroupNewRoute = BookInformationGroupNewImport.update({
-  id: '/new',
-  path: '/new',
-  getParentRoute: () => BookInformationGroupRoute,
+  id: '/bookInformationGroup/new',
+  path: '/bookInformationGroup/new',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const BookInformationGroupLibrarianRoute =
   BookInformationGroupLibrarianImport.update({
-    id: '/librarian',
-    path: '/librarian',
-    getParentRoute: () => BookInformationGroupRoute,
+    id: '/bookInformationGroup/librarian',
+    path: '/bookInformationGroup/librarian',
+    getParentRoute: () => rootRoute,
   } as any)
 
 const BookInformationGroupDetailRoute = BookInformationGroupDetailImport.update(
   {
-    id: '/detail',
-    path: '/detail',
-    getParentRoute: () => BookInformationGroupRoute,
+    id: '/bookInformationGroup/detail',
+    path: '/bookInformationGroup/detail',
+    getParentRoute: () => rootRoute,
   } as any,
 )
 
 const BookInformationGroupCustomRoute = BookInformationGroupCustomImport.update(
   {
-    id: '/custom',
-    path: '/custom',
-    getParentRoute: () => BookInformationGroupRoute,
+    id: '/bookInformationGroup/custom',
+    path: '/bookInformationGroup/custom',
+    getParentRoute: () => rootRoute,
   } as any,
 )
 
 const BookInformationGroupChartRoute = BookInformationGroupChartImport.update({
-  id: '/chart',
-  path: '/chart',
-  getParentRoute: () => BookInformationGroupRoute,
+  id: '/bookInformationGroup/chart',
+  path: '/bookInformationGroup/chart',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const BookInformationGroupBigdataRoute =
   BookInformationGroupBigdataImport.update({
-    id: '/bigdata',
-    path: '/bigdata',
-    getParentRoute: () => BookInformationGroupRoute,
+    id: '/bookInformationGroup/bigdata',
+    path: '/bookInformationGroup/bigdata',
+    getParentRoute: () => rootRoute,
   } as any)
 
 const BookInformationGroupBestRoute = BookInformationGroupBestImport.update({
-  id: '/best',
-  path: '/best',
-  getParentRoute: () => BookInformationGroupRoute,
+  id: '/bookInformationGroup/best',
+  path: '/bookInformationGroup/best',
+  getParentRoute: () => rootRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
@@ -180,61 +173,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/bookInformationGroup': {
-      id: '/bookInformationGroup'
-      path: '/bookInformationGroup'
-      fullPath: '/bookInformationGroup'
-      preLoaderRoute: typeof BookInformationGroupImport
-      parentRoute: typeof rootRoute
-    }
     '/bookInformationGroup/best': {
       id: '/bookInformationGroup/best'
-      path: '/best'
+      path: '/bookInformationGroup/best'
       fullPath: '/bookInformationGroup/best'
       preLoaderRoute: typeof BookInformationGroupBestImport
-      parentRoute: typeof BookInformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/bookInformationGroup/bigdata': {
       id: '/bookInformationGroup/bigdata'
-      path: '/bigdata'
+      path: '/bookInformationGroup/bigdata'
       fullPath: '/bookInformationGroup/bigdata'
       preLoaderRoute: typeof BookInformationGroupBigdataImport
-      parentRoute: typeof BookInformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/bookInformationGroup/chart': {
       id: '/bookInformationGroup/chart'
-      path: '/chart'
+      path: '/bookInformationGroup/chart'
       fullPath: '/bookInformationGroup/chart'
       preLoaderRoute: typeof BookInformationGroupChartImport
-      parentRoute: typeof BookInformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/bookInformationGroup/custom': {
       id: '/bookInformationGroup/custom'
-      path: '/custom'
+      path: '/bookInformationGroup/custom'
       fullPath: '/bookInformationGroup/custom'
       preLoaderRoute: typeof BookInformationGroupCustomImport
-      parentRoute: typeof BookInformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/bookInformationGroup/detail': {
       id: '/bookInformationGroup/detail'
-      path: '/detail'
+      path: '/bookInformationGroup/detail'
       fullPath: '/bookInformationGroup/detail'
       preLoaderRoute: typeof BookInformationGroupDetailImport
-      parentRoute: typeof BookInformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/bookInformationGroup/librarian': {
       id: '/bookInformationGroup/librarian'
-      path: '/librarian'
+      path: '/bookInformationGroup/librarian'
       fullPath: '/bookInformationGroup/librarian'
       preLoaderRoute: typeof BookInformationGroupLibrarianImport
-      parentRoute: typeof BookInformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/bookInformationGroup/new': {
       id: '/bookInformationGroup/new'
-      path: '/new'
+      path: '/bookInformationGroup/new'
       fullPath: '/bookInformationGroup/new'
       preLoaderRoute: typeof BookInformationGroupNewImport
-      parentRoute: typeof BookInformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/etc/courseList': {
       id: '/etc/courseList'
@@ -325,32 +311,8 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
-interface BookInformationGroupRouteChildren {
-  BookInformationGroupBestRoute: typeof BookInformationGroupBestRoute
-  BookInformationGroupBigdataRoute: typeof BookInformationGroupBigdataRoute
-  BookInformationGroupChartRoute: typeof BookInformationGroupChartRoute
-  BookInformationGroupCustomRoute: typeof BookInformationGroupCustomRoute
-  BookInformationGroupDetailRoute: typeof BookInformationGroupDetailRoute
-  BookInformationGroupLibrarianRoute: typeof BookInformationGroupLibrarianRoute
-  BookInformationGroupNewRoute: typeof BookInformationGroupNewRoute
-}
-
-const BookInformationGroupRouteChildren: BookInformationGroupRouteChildren = {
-  BookInformationGroupBestRoute: BookInformationGroupBestRoute,
-  BookInformationGroupBigdataRoute: BookInformationGroupBigdataRoute,
-  BookInformationGroupChartRoute: BookInformationGroupChartRoute,
-  BookInformationGroupCustomRoute: BookInformationGroupCustomRoute,
-  BookInformationGroupDetailRoute: BookInformationGroupDetailRoute,
-  BookInformationGroupLibrarianRoute: BookInformationGroupLibrarianRoute,
-  BookInformationGroupNewRoute: BookInformationGroupNewRoute,
-}
-
-const BookInformationGroupRouteWithChildren =
-  BookInformationGroupRoute._addFileChildren(BookInformationGroupRouteChildren)
-
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
   '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
   '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
   '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
@@ -374,7 +336,6 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
   '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
   '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
   '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
@@ -399,7 +360,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
   '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
   '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
   '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
@@ -425,7 +385,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/bookInformationGroup'
     | '/bookInformationGroup/best'
     | '/bookInformationGroup/bigdata'
     | '/bookInformationGroup/chart'
@@ -448,7 +407,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/bookInformationGroup'
     | '/bookInformationGroup/best'
     | '/bookInformationGroup/bigdata'
     | '/bookInformationGroup/chart'
@@ -471,7 +429,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/bookInformationGroup'
     | '/bookInformationGroup/best'
     | '/bookInformationGroup/bigdata'
     | '/bookInformationGroup/chart'
@@ -496,7 +453,13 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BookInformationGroupRoute: typeof BookInformationGroupRouteWithChildren
+  BookInformationGroupBestRoute: typeof BookInformationGroupBestRoute
+  BookInformationGroupBigdataRoute: typeof BookInformationGroupBigdataRoute
+  BookInformationGroupChartRoute: typeof BookInformationGroupChartRoute
+  BookInformationGroupCustomRoute: typeof BookInformationGroupCustomRoute
+  BookInformationGroupDetailRoute: typeof BookInformationGroupDetailRoute
+  BookInformationGroupLibrarianRoute: typeof BookInformationGroupLibrarianRoute
+  BookInformationGroupNewRoute: typeof BookInformationGroupNewRoute
   EtcCourseListRoute: typeof EtcCourseListRoute
   EtcCourseRegistrationRoute: typeof EtcCourseRegistrationRoute
   EtcLineRoute: typeof EtcLineRoute
@@ -513,7 +476,13 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BookInformationGroupRoute: BookInformationGroupRouteWithChildren,
+  BookInformationGroupBestRoute: BookInformationGroupBestRoute,
+  BookInformationGroupBigdataRoute: BookInformationGroupBigdataRoute,
+  BookInformationGroupChartRoute: BookInformationGroupChartRoute,
+  BookInformationGroupCustomRoute: BookInformationGroupCustomRoute,
+  BookInformationGroupDetailRoute: BookInformationGroupDetailRoute,
+  BookInformationGroupLibrarianRoute: BookInformationGroupLibrarianRoute,
+  BookInformationGroupNewRoute: BookInformationGroupNewRoute,
   EtcCourseListRoute: EtcCourseListRoute,
   EtcCourseRegistrationRoute: EtcCourseRegistrationRoute,
   EtcLineRoute: EtcLineRoute,
@@ -539,7 +508,13 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/bookInformationGroup",
+        "/bookInformationGroup/best",
+        "/bookInformationGroup/bigdata",
+        "/bookInformationGroup/chart",
+        "/bookInformationGroup/custom",
+        "/bookInformationGroup/detail",
+        "/bookInformationGroup/librarian",
+        "/bookInformationGroup/new",
         "/etc/courseList",
         "/etc/courseRegistration",
         "/etc/line",
@@ -557,45 +532,26 @@ export const routeTree = rootRoute
     "/": {
       "filePath": "index.tsx"
     },
-    "/bookInformationGroup": {
-      "filePath": "bookInformationGroup.tsx",
-      "children": [
-        "/bookInformationGroup/best",
-        "/bookInformationGroup/bigdata",
-        "/bookInformationGroup/chart",
-        "/bookInformationGroup/custom",
-        "/bookInformationGroup/detail",
-        "/bookInformationGroup/librarian",
-        "/bookInformationGroup/new"
-      ]
-    },
     "/bookInformationGroup/best": {
-      "filePath": "bookInformationGroup.best.tsx",
-      "parent": "/bookInformationGroup"
+      "filePath": "bookInformationGroup.best.tsx"
     },
     "/bookInformationGroup/bigdata": {
-      "filePath": "bookInformationGroup.bigdata.tsx",
-      "parent": "/bookInformationGroup"
+      "filePath": "bookInformationGroup.bigdata.tsx"
     },
     "/bookInformationGroup/chart": {
-      "filePath": "bookInformationGroup.chart.tsx",
-      "parent": "/bookInformationGroup"
+      "filePath": "bookInformationGroup.chart.tsx"
     },
     "/bookInformationGroup/custom": {
-      "filePath": "bookInformationGroup.custom.tsx",
-      "parent": "/bookInformationGroup"
+      "filePath": "bookInformationGroup.custom.tsx"
     },
     "/bookInformationGroup/detail": {
-      "filePath": "bookInformationGroup.detail.tsx",
-      "parent": "/bookInformationGroup"
+      "filePath": "bookInformationGroup.detail.tsx"
     },
     "/bookInformationGroup/librarian": {
-      "filePath": "bookInformationGroup.librarian.tsx",
-      "parent": "/bookInformationGroup"
+      "filePath": "bookInformationGroup.librarian.tsx"
     },
     "/bookInformationGroup/new": {
-      "filePath": "bookInformationGroup.new.tsx",
-      "parent": "/bookInformationGroup"
+      "filePath": "bookInformationGroup.new.tsx"
     },
     "/etc/courseList": {
       "filePath": "etc.courseList.tsx"
