@@ -10,7 +10,7 @@ import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 import { news_list } from '../../../../constants/news.constants';
 import { Autoplay } from 'swiper/modules';
 
-const Living = () => {
+const LivingA = () => {
   return (
     <Container>
       <div className={'time_date_wrapper'}>
@@ -40,4 +40,4 @@ const Living = () => {
   );
 };
 
-export default Living;
+export default LivingA;

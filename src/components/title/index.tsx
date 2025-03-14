@@ -3,10 +3,13 @@ import { CustomTitle } from './index.styled';
 import { useLocation } from '@tanstack/react-router';
 import { useSelectedItemStore } from '../../store/selected-item.store';
 import {
-  kiosk_title,
-  library_title,
-  media_title,
-  smart_title,
+  event_title,
+  facility_title,
+  information_title,
+  living_title,
+  notice_title,
+  promotion_title,
+  welcomeMessage_title,
 } from '../../constants/title.constants';
 
 const MenuTitle: React.FC = () => {
@@ -14,10 +17,22 @@ const MenuTitle: React.FC = () => {
   const { selectedItem } = useSelectedItemStore();
 
   const list = useMemo(() => {
-    if (pathname.startsWith('/media')) return media_title;
-    if (pathname.startsWith('/kiosk')) return kiosk_title;
-    if (pathname.startsWith('/smart')) return smart_title;
-    return library_title;
+    if (pathname.split('/').pop() === 'welcomeMessage')
+      return welcomeMessage_title;
+
+    if (pathname.split('/').pop() === 'promotion') return promotion_title;
+
+    if (pathname.split('/').pop() === 'notice') return notice_title;
+
+    if (pathname.split('/').pop() === 'information') return information_title;
+
+    if (pathname.split('/').pop() === 'facility') return facility_title;
+
+    if (pathname.split('/').pop() === 'event') return event_title;
+
+    if (pathname.split('/').pop() === 'living') return living_title;
+
+    return welcomeMessage_title;
   }, [pathname]);
 
   const selectedIndex = selectedItem ?? 0;

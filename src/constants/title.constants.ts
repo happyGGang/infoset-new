@@ -1,46 +1,41 @@
-export const media_title = [
-  '환영메세지',
-  '공지사항',
-  '도서정보',
-  '홍보동영상',
-  '이용시간안내',
-  '대출반납일',
-  '이벤트',
-  '책속한줄',
+export const welcomeMessage_title = [
+  'A타입 환영메세지',
+  'A타입 환영메세지',
+  'B타입 환영메세지',
 ];
 
-export const kiosk_title = [
-  '환영메세지',
-  '공지사항',
-  '이용안내',
-  '시설안내',
-  '신착도서',
-  '대출베스트',
-  '도서정보',
-  '강좌안내',
-  '강좌정보',
-  '강좌신청',
+export const promotion_title = [
+  'A타입 홍보동영상',
+  'B타입 홍보동영상',
+  'C타입 홍보동영상',
 ];
 
-export const smart_title = [
-  '메인',
-  '키워드 추천',
-  '추천결과',
-  '맞춤형도서',
-  '사서추천',
-  '빅데이터추천',
-  '도서정보',
+export const notice_title = [
+  'A타입 공지사항',
+  'B타입 공지사항',
+  'C타입 공지사항',
 ];
 
-export const library_title = [
-  '메인',
-  '공지사항',
-  '이용안내',
-  '시설안내',
-  '행사안내',
-  '생활정보',
-  '대출반납일',
-  '신착도서',
-  '베스트도서',
-  '사서추천도서',
+export const information_title = [
+  'A타입 이용안내',
+  'B타입 이용안내',
+  'C타입 이용안내',
+];
+
+export const facility_title = [
+  'A타입 시설안내',
+  'B타입 시설안내',
+  'C타입 시설안내',
+];
+
+export const event_title = [
+  'A타입 행사안내',
+  'B타입 행사안내',
+  'C타입 행사안내',
+];
+
+export const living_title = [
+  'A타입 생활정보',
+  'B타입 생활정보',
+  'C타입 생활정보',
 ];

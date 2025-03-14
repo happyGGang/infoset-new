@@ -102,7 +102,8 @@ const CustomSwiper = styled(Swiper)(() => ({
   width: '61.71875rem',
   height: '30.34375rem',
   paddingTop: '3rem',
-  margin: '4.81rem 0 0 10.5rem',
+  marginTop: '7.81rem',
+  marginLeft: '10.5rem !important',
   '.swiper-pagination': {
     bottom: '0.88rem',
   },

@@ -22,7 +22,7 @@ import {
 } from '../../../../util/date-time';
 import useClock from '../../../../hook/useClock';
 
-const Promotion = () => {
+const PromotionA = () => {
   const { hourDeg, minuteDeg, secondDeg } = useClock();
 
   return (
@@ -62,4 +62,4 @@ const Promotion = () => {
   );
 };
 
-export default Promotion;
+export default PromotionA;

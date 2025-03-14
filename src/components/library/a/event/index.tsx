@@ -10,7 +10,7 @@ import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 import { event_list } from '../../../../constants/event.constants';
 import { Autoplay, Pagination } from 'swiper/modules';
 
-const Event = () => {
+const EventA = () => {
   return (
     <Container>
       <div className={'time_date_wrapper'}>
@@ -44,4 +44,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default EventA;

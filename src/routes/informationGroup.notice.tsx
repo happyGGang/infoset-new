@@ -1,13 +1,9 @@
 import * as React from 'react';
 import { createFileRoute } from '@tanstack/react-router';
 import { useSelectedItemStore } from '../store/selected-item.store';
-import Main from '../components/smart/b/main';
-import Chart from '../components/smart/b/chart';
-import Result from '../components/smart/b/result';
-import Custom from '../components/smart/b/custom';
-import Librarian from '../components/smart/b/librarian';
-import Bigdata from '../components/smart/b/bigdata';
-import Detail from '../components/smart/b/detail';
+import NoticeC from '../components/kiosk/c/notice';
+import NoticeB from '../components/kiosk/b/notice';
+import NoticeA from '../components/kiosk/a/notice';
 
 export const Route = createFileRoute('/informationGroup/notice')({
   component: RouteComponent,
@@ -15,7 +11,7 @@ export const Route = createFileRoute('/informationGroup/notice')({
 
 function RouteComponent() {
   const { selectedItem } = useSelectedItemStore();
-  const smart_b = [Main, Chart, Result, Custom, Librarian, Bigdata, Detail];
+  const smart_b = [NoticeA, NoticeB, NoticeC];
   const SelectedComponent = smart_b[selectedItem || 0];
 
   return <SelectedComponent />;

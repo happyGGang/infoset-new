@@ -16,7 +16,7 @@ import 'swiper/css/navigation';
 import { notice_list } from '../../../../constants/notice.constants';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const Notice = () => {
+const NoticeC = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
   const { isLandscape } = useOrientationStore();
@@ -97,4 +97,4 @@ const Notice = () => {
   );
 };
 
-export default Notice;
+export default NoticeC;

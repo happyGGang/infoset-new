@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Time, Date, Message, Caption } from './index.styled';
 import { getCurrentTime, getFullCurrentDate } from '../../../../util/date-time';
 
-const Main = () => {
+const LibraryWelcomeMessageC = () => {
   return (
     <Container>
       <Time>{getCurrentTime()}</Time>
@@ -17,4 +17,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default LibraryWelcomeMessageC;

@@ -3,7 +3,7 @@ import { Container, CustomSwiper, CustomSwiperSlide } from './index.styled';
 import { news_list } from '../../../../constants/news.constants';
 import { Autoplay } from 'swiper/modules';
 
-const Living = () => {
+const LivingC = () => {
   return (
     <Container>
       <CustomSwiper
@@ -28,4 +28,4 @@ const Living = () => {
   );
 };
 
-export default Living;
+export default LivingC;

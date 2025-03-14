@@ -15,8 +15,15 @@ import {
   ArrowRight,
   ArrowLeft,
   Navigation,
+  Zoom,
+  Tilt,
+  Wrapper,
 } from './index.styled';
-import { indexMapping, media_a } from '../../constants/index.constants';
+import {
+  indexMapping,
+  media_a,
+  welcomeMessage,
+} from '../../constants/index.constants';
 import arrowRight from '../../assets/img/navigation_arrow_right.svg';
 import arrowLeft from '../../assets/img/navigation_arrow_left.svg';
 import { useSelectedItemStore } from '../../store/selected-item.store';
@@ -35,7 +42,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const index = useMemo(
-    () => indexMapping[pathname as keyof typeof indexMapping] || media_a,
+    () => indexMapping[pathname as keyof typeof indexMapping] || welcomeMessage,
     [pathname]
   );
 
@@ -172,6 +179,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           }}
         />
         {children}
+        <Wrapper>
+          <Tilt onClick={() => toggleLandscape()} />
+        </Wrapper>
         <ArrowRight
           src={arrowRight}
           alt="Next"

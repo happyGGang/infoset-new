@@ -11,9 +11,6 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as InformationGroupImport } from './routes/informationGroup'
-import { Route as GalleryImport } from './routes/gallery'
-import { Route as EtcImport } from './routes/etc'
 import { Route as BookInformationGroupImport } from './routes/bookInformationGroup'
 import { Route as IndexImport } from './routes/index'
 import { Route as InformationGroupWelcomeMessageImport } from './routes/informationGroup.welcomeMessage'
@@ -38,24 +35,6 @@ import { Route as BookInformationGroupBestImport } from './routes/bookInformatio
 
 // Create/Update Routes
 
-const InformationGroupRoute = InformationGroupImport.update({
-  id: '/informationGroup',
-  path: '/informationGroup',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const GalleryRoute = GalleryImport.update({
-  id: '/gallery',
-  path: '/gallery',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const EtcRoute = EtcImport.update({
-  id: '/etc',
-  path: '/etc',
-  getParentRoute: () => rootRoute,
-} as any)
-
 const BookInformationGroupRoute = BookInformationGroupImport.update({
   id: '/bookInformationGroup',
   path: '/bookInformationGroup',
@@ -70,76 +49,76 @@ const IndexRoute = IndexImport.update({
 
 const InformationGroupWelcomeMessageRoute =
   InformationGroupWelcomeMessageImport.update({
-    id: '/welcomeMessage',
-    path: '/welcomeMessage',
-    getParentRoute: () => InformationGroupRoute,
+    id: '/informationGroup/welcomeMessage',
+    path: '/informationGroup/welcomeMessage',
+    getParentRoute: () => rootRoute,
   } as any)
 
 const InformationGroupPromotionRoute = InformationGroupPromotionImport.update({
-  id: '/promotion',
-  path: '/promotion',
-  getParentRoute: () => InformationGroupRoute,
+  id: '/informationGroup/promotion',
+  path: '/informationGroup/promotion',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const InformationGroupNoticeRoute = InformationGroupNoticeImport.update({
-  id: '/notice',
-  path: '/notice',
-  getParentRoute: () => InformationGroupRoute,
+  id: '/informationGroup/notice',
+  path: '/informationGroup/notice',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const InformationGroupLivingRoute = InformationGroupLivingImport.update({
-  id: '/living',
-  path: '/living',
-  getParentRoute: () => InformationGroupRoute,
+  id: '/informationGroup/living',
+  path: '/informationGroup/living',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const InformationGroupInformationRoute =
   InformationGroupInformationImport.update({
-    id: '/information',
-    path: '/information',
-    getParentRoute: () => InformationGroupRoute,
+    id: '/informationGroup/information',
+    path: '/informationGroup/information',
+    getParentRoute: () => rootRoute,
   } as any)
 
 const InformationGroupFacilityRoute = InformationGroupFacilityImport.update({
-  id: '/facility',
-  path: '/facility',
-  getParentRoute: () => InformationGroupRoute,
+  id: '/informationGroup/facility',
+  path: '/informationGroup/facility',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const InformationGroupEventRoute = InformationGroupEventImport.update({
-  id: '/event',
-  path: '/event',
-  getParentRoute: () => InformationGroupRoute,
+  id: '/informationGroup/event',
+  path: '/informationGroup/event',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const GalleryDigitalGalleryRoute = GalleryDigitalGalleryImport.update({
-  id: '/digitalGallery',
-  path: '/digitalGallery',
-  getParentRoute: () => GalleryRoute,
+  id: '/gallery/digitalGallery',
+  path: '/gallery/digitalGallery',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const EtcReturnRoute = EtcReturnImport.update({
-  id: '/return',
-  path: '/return',
-  getParentRoute: () => EtcRoute,
+  id: '/etc/return',
+  path: '/etc/return',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const EtcLineRoute = EtcLineImport.update({
-  id: '/line',
-  path: '/line',
-  getParentRoute: () => EtcRoute,
+  id: '/etc/line',
+  path: '/etc/line',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const EtcCourseRegistrationRoute = EtcCourseRegistrationImport.update({
-  id: '/courseRegistration',
-  path: '/courseRegistration',
-  getParentRoute: () => EtcRoute,
+  id: '/etc/courseRegistration',
+  path: '/etc/courseRegistration',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const EtcCourseListRoute = EtcCourseListImport.update({
-  id: '/courseList',
-  path: '/courseList',
-  getParentRoute: () => EtcRoute,
+  id: '/etc/courseList',
+  path: '/etc/courseList',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const BookInformationGroupNewRoute = BookInformationGroupNewImport.update({
@@ -208,27 +187,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookInformationGroupImport
       parentRoute: typeof rootRoute
     }
-    '/etc': {
-      id: '/etc'
-      path: '/etc'
-      fullPath: '/etc'
-      preLoaderRoute: typeof EtcImport
-      parentRoute: typeof rootRoute
-    }
-    '/gallery': {
-      id: '/gallery'
-      path: '/gallery'
-      fullPath: '/gallery'
-      preLoaderRoute: typeof GalleryImport
-      parentRoute: typeof rootRoute
-    }
-    '/informationGroup': {
-      id: '/informationGroup'
-      path: '/informationGroup'
-      fullPath: '/informationGroup'
-      preLoaderRoute: typeof InformationGroupImport
-      parentRoute: typeof rootRoute
-    }
     '/bookInformationGroup/best': {
       id: '/bookInformationGroup/best'
       path: '/best'
@@ -280,87 +238,87 @@ declare module '@tanstack/react-router' {
     }
     '/etc/courseList': {
       id: '/etc/courseList'
-      path: '/courseList'
+      path: '/etc/courseList'
       fullPath: '/etc/courseList'
       preLoaderRoute: typeof EtcCourseListImport
-      parentRoute: typeof EtcImport
+      parentRoute: typeof rootRoute
     }
     '/etc/courseRegistration': {
       id: '/etc/courseRegistration'
-      path: '/courseRegistration'
+      path: '/etc/courseRegistration'
       fullPath: '/etc/courseRegistration'
       preLoaderRoute: typeof EtcCourseRegistrationImport
-      parentRoute: typeof EtcImport
+      parentRoute: typeof rootRoute
     }
     '/etc/line': {
       id: '/etc/line'
-      path: '/line'
+      path: '/etc/line'
       fullPath: '/etc/line'
       preLoaderRoute: typeof EtcLineImport
-      parentRoute: typeof EtcImport
+      parentRoute: typeof rootRoute
     }
     '/etc/return': {
       id: '/etc/return'
-      path: '/return'
+      path: '/etc/return'
       fullPath: '/etc/return'
       preLoaderRoute: typeof EtcReturnImport
-      parentRoute: typeof EtcImport
+      parentRoute: typeof rootRoute
     }
     '/gallery/digitalGallery': {
       id: '/gallery/digitalGallery'
-      path: '/digitalGallery'
+      path: '/gallery/digitalGallery'
       fullPath: '/gallery/digitalGallery'
       preLoaderRoute: typeof GalleryDigitalGalleryImport
-      parentRoute: typeof GalleryImport
+      parentRoute: typeof rootRoute
     }
     '/informationGroup/event': {
       id: '/informationGroup/event'
-      path: '/event'
+      path: '/informationGroup/event'
       fullPath: '/informationGroup/event'
       preLoaderRoute: typeof InformationGroupEventImport
-      parentRoute: typeof InformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/informationGroup/facility': {
       id: '/informationGroup/facility'
-      path: '/facility'
+      path: '/informationGroup/facility'
       fullPath: '/informationGroup/facility'
       preLoaderRoute: typeof InformationGroupFacilityImport
-      parentRoute: typeof InformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/informationGroup/information': {
       id: '/informationGroup/information'
-      path: '/information'
+      path: '/informationGroup/information'
       fullPath: '/informationGroup/information'
       preLoaderRoute: typeof InformationGroupInformationImport
-      parentRoute: typeof InformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/informationGroup/living': {
       id: '/informationGroup/living'
-      path: '/living'
+      path: '/informationGroup/living'
       fullPath: '/informationGroup/living'
       preLoaderRoute: typeof InformationGroupLivingImport
-      parentRoute: typeof InformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/informationGroup/notice': {
       id: '/informationGroup/notice'
-      path: '/notice'
+      path: '/informationGroup/notice'
       fullPath: '/informationGroup/notice'
       preLoaderRoute: typeof InformationGroupNoticeImport
-      parentRoute: typeof InformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/informationGroup/promotion': {
       id: '/informationGroup/promotion'
-      path: '/promotion'
+      path: '/informationGroup/promotion'
       fullPath: '/informationGroup/promotion'
       preLoaderRoute: typeof InformationGroupPromotionImport
-      parentRoute: typeof InformationGroupImport
+      parentRoute: typeof rootRoute
     }
     '/informationGroup/welcomeMessage': {
       id: '/informationGroup/welcomeMessage'
-      path: '/welcomeMessage'
+      path: '/informationGroup/welcomeMessage'
       fullPath: '/informationGroup/welcomeMessage'
       preLoaderRoute: typeof InformationGroupWelcomeMessageImport
-      parentRoute: typeof InformationGroupImport
+      parentRoute: typeof rootRoute
     }
   }
 }
@@ -390,62 +348,9 @@ const BookInformationGroupRouteChildren: BookInformationGroupRouteChildren = {
 const BookInformationGroupRouteWithChildren =
   BookInformationGroupRoute._addFileChildren(BookInformationGroupRouteChildren)
 
-interface EtcRouteChildren {
-  EtcCourseListRoute: typeof EtcCourseListRoute
-  EtcCourseRegistrationRoute: typeof EtcCourseRegistrationRoute
-  EtcLineRoute: typeof EtcLineRoute
-  EtcReturnRoute: typeof EtcReturnRoute
-}
-
-const EtcRouteChildren: EtcRouteChildren = {
-  EtcCourseListRoute: EtcCourseListRoute,
-  EtcCourseRegistrationRoute: EtcCourseRegistrationRoute,
-  EtcLineRoute: EtcLineRoute,
-  EtcReturnRoute: EtcReturnRoute,
-}
-
-const EtcRouteWithChildren = EtcRoute._addFileChildren(EtcRouteChildren)
-
-interface GalleryRouteChildren {
-  GalleryDigitalGalleryRoute: typeof GalleryDigitalGalleryRoute
-}
-
-const GalleryRouteChildren: GalleryRouteChildren = {
-  GalleryDigitalGalleryRoute: GalleryDigitalGalleryRoute,
-}
-
-const GalleryRouteWithChildren =
-  GalleryRoute._addFileChildren(GalleryRouteChildren)
-
-interface InformationGroupRouteChildren {
-  InformationGroupEventRoute: typeof InformationGroupEventRoute
-  InformationGroupFacilityRoute: typeof InformationGroupFacilityRoute
-  InformationGroupInformationRoute: typeof InformationGroupInformationRoute
-  InformationGroupLivingRoute: typeof InformationGroupLivingRoute
-  InformationGroupNoticeRoute: typeof InformationGroupNoticeRoute
-  InformationGroupPromotionRoute: typeof InformationGroupPromotionRoute
-  InformationGroupWelcomeMessageRoute: typeof InformationGroupWelcomeMessageRoute
-}
-
-const InformationGroupRouteChildren: InformationGroupRouteChildren = {
-  InformationGroupEventRoute: InformationGroupEventRoute,
-  InformationGroupFacilityRoute: InformationGroupFacilityRoute,
-  InformationGroupInformationRoute: InformationGroupInformationRoute,
-  InformationGroupLivingRoute: InformationGroupLivingRoute,
-  InformationGroupNoticeRoute: InformationGroupNoticeRoute,
-  InformationGroupPromotionRoute: InformationGroupPromotionRoute,
-  InformationGroupWelcomeMessageRoute: InformationGroupWelcomeMessageRoute,
-}
-
-const InformationGroupRouteWithChildren =
-  InformationGroupRoute._addFileChildren(InformationGroupRouteChildren)
-
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
-  '/etc': typeof EtcRouteWithChildren
-  '/gallery': typeof GalleryRouteWithChildren
-  '/informationGroup': typeof InformationGroupRouteWithChildren
   '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
   '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
   '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
@@ -470,9 +375,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
-  '/etc': typeof EtcRouteWithChildren
-  '/gallery': typeof GalleryRouteWithChildren
-  '/informationGroup': typeof InformationGroupRouteWithChildren
   '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
   '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
   '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
@@ -498,9 +400,6 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/bookInformationGroup': typeof BookInformationGroupRouteWithChildren
-  '/etc': typeof EtcRouteWithChildren
-  '/gallery': typeof GalleryRouteWithChildren
-  '/informationGroup': typeof InformationGroupRouteWithChildren
   '/bookInformationGroup/best': typeof BookInformationGroupBestRoute
   '/bookInformationGroup/bigdata': typeof BookInformationGroupBigdataRoute
   '/bookInformationGroup/chart': typeof BookInformationGroupChartRoute
@@ -527,9 +426,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/bookInformationGroup'
-    | '/etc'
-    | '/gallery'
-    | '/informationGroup'
     | '/bookInformationGroup/best'
     | '/bookInformationGroup/bigdata'
     | '/bookInformationGroup/chart'
@@ -553,9 +449,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/bookInformationGroup'
-    | '/etc'
-    | '/gallery'
-    | '/informationGroup'
     | '/bookInformationGroup/best'
     | '/bookInformationGroup/bigdata'
     | '/bookInformationGroup/chart'
@@ -579,9 +472,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/bookInformationGroup'
-    | '/etc'
-    | '/gallery'
-    | '/informationGroup'
     | '/bookInformationGroup/best'
     | '/bookInformationGroup/bigdata'
     | '/bookInformationGroup/chart'
@@ -607,17 +497,35 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BookInformationGroupRoute: typeof BookInformationGroupRouteWithChildren
-  EtcRoute: typeof EtcRouteWithChildren
-  GalleryRoute: typeof GalleryRouteWithChildren
-  InformationGroupRoute: typeof InformationGroupRouteWithChildren
+  EtcCourseListRoute: typeof EtcCourseListRoute
+  EtcCourseRegistrationRoute: typeof EtcCourseRegistrationRoute
+  EtcLineRoute: typeof EtcLineRoute
+  EtcReturnRoute: typeof EtcReturnRoute
+  GalleryDigitalGalleryRoute: typeof GalleryDigitalGalleryRoute
+  InformationGroupEventRoute: typeof InformationGroupEventRoute
+  InformationGroupFacilityRoute: typeof InformationGroupFacilityRoute
+  InformationGroupInformationRoute: typeof InformationGroupInformationRoute
+  InformationGroupLivingRoute: typeof InformationGroupLivingRoute
+  InformationGroupNoticeRoute: typeof InformationGroupNoticeRoute
+  InformationGroupPromotionRoute: typeof InformationGroupPromotionRoute
+  InformationGroupWelcomeMessageRoute: typeof InformationGroupWelcomeMessageRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BookInformationGroupRoute: BookInformationGroupRouteWithChildren,
-  EtcRoute: EtcRouteWithChildren,
-  GalleryRoute: GalleryRouteWithChildren,
-  InformationGroupRoute: InformationGroupRouteWithChildren,
+  EtcCourseListRoute: EtcCourseListRoute,
+  EtcCourseRegistrationRoute: EtcCourseRegistrationRoute,
+  EtcLineRoute: EtcLineRoute,
+  EtcReturnRoute: EtcReturnRoute,
+  GalleryDigitalGalleryRoute: GalleryDigitalGalleryRoute,
+  InformationGroupEventRoute: InformationGroupEventRoute,
+  InformationGroupFacilityRoute: InformationGroupFacilityRoute,
+  InformationGroupInformationRoute: InformationGroupInformationRoute,
+  InformationGroupLivingRoute: InformationGroupLivingRoute,
+  InformationGroupNoticeRoute: InformationGroupNoticeRoute,
+  InformationGroupPromotionRoute: InformationGroupPromotionRoute,
+  InformationGroupWelcomeMessageRoute: InformationGroupWelcomeMessageRoute,
 }
 
 export const routeTree = rootRoute
@@ -632,9 +540,18 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/bookInformationGroup",
-        "/etc",
-        "/gallery",
-        "/informationGroup"
+        "/etc/courseList",
+        "/etc/courseRegistration",
+        "/etc/line",
+        "/etc/return",
+        "/gallery/digitalGallery",
+        "/informationGroup/event",
+        "/informationGroup/facility",
+        "/informationGroup/information",
+        "/informationGroup/living",
+        "/informationGroup/notice",
+        "/informationGroup/promotion",
+        "/informationGroup/welcomeMessage"
       ]
     },
     "/": {
@@ -650,33 +567,6 @@ export const routeTree = rootRoute
         "/bookInformationGroup/detail",
         "/bookInformationGroup/librarian",
         "/bookInformationGroup/new"
-      ]
-    },
-    "/etc": {
-      "filePath": "etc.tsx",
-      "children": [
-        "/etc/courseList",
-        "/etc/courseRegistration",
-        "/etc/line",
-        "/etc/return"
-      ]
-    },
-    "/gallery": {
-      "filePath": "gallery.tsx",
-      "children": [
-        "/gallery/digitalGallery"
-      ]
-    },
-    "/informationGroup": {
-      "filePath": "informationGroup.tsx",
-      "children": [
-        "/informationGroup/event",
-        "/informationGroup/facility",
-        "/informationGroup/information",
-        "/informationGroup/living",
-        "/informationGroup/notice",
-        "/informationGroup/promotion",
-        "/informationGroup/welcomeMessage"
       ]
     },
     "/bookInformationGroup/best": {
@@ -708,52 +598,40 @@ export const routeTree = rootRoute
       "parent": "/bookInformationGroup"
     },
     "/etc/courseList": {
-      "filePath": "etc.courseList.tsx",
-      "parent": "/etc"
+      "filePath": "etc.courseList.tsx"
     },
     "/etc/courseRegistration": {
-      "filePath": "etc.courseRegistration.tsx",
-      "parent": "/etc"
+      "filePath": "etc.courseRegistration.tsx"
     },
     "/etc/line": {
-      "filePath": "etc.line.tsx",
-      "parent": "/etc"
+      "filePath": "etc.line.tsx"
     },
     "/etc/return": {
-      "filePath": "etc.return.tsx",
-      "parent": "/etc"
+      "filePath": "etc.return.tsx"
     },
     "/gallery/digitalGallery": {
-      "filePath": "gallery.digitalGallery.tsx",
-      "parent": "/gallery"
+      "filePath": "gallery.digitalGallery.tsx"
     },
     "/informationGroup/event": {
-      "filePath": "informationGroup.event.tsx",
-      "parent": "/informationGroup"
+      "filePath": "informationGroup.event.tsx"
     },
     "/informationGroup/facility": {
-      "filePath": "informationGroup.facility.tsx",
-      "parent": "/informationGroup"
+      "filePath": "informationGroup.facility.tsx"
     },
     "/informationGroup/information": {
-      "filePath": "informationGroup.information.tsx",
-      "parent": "/informationGroup"
+      "filePath": "informationGroup.information.tsx"
     },
     "/informationGroup/living": {
-      "filePath": "informationGroup.living.tsx",
-      "parent": "/informationGroup"
+      "filePath": "informationGroup.living.tsx"
     },
     "/informationGroup/notice": {
-      "filePath": "informationGroup.notice.tsx",
-      "parent": "/informationGroup"
+      "filePath": "informationGroup.notice.tsx"
     },
     "/informationGroup/promotion": {
-      "filePath": "informationGroup.promotion.tsx",
-      "parent": "/informationGroup"
+      "filePath": "informationGroup.promotion.tsx"
     },
     "/informationGroup/welcomeMessage": {
-      "filePath": "informationGroup.welcomeMessage.tsx",
-      "parent": "/informationGroup"
+      "filePath": "informationGroup.welcomeMessage.tsx"
     }
   }
 }

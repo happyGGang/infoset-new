@@ -3,7 +3,7 @@ import { Container, ContainerX, Content, Scroll } from './index.styled';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 import dummy from '../../../../assets/img/kiosk_c_x_content.svg';
 
-const Information = () => {
+const InformationC = () => {
   const { isLandscape } = useOrientationStore();
 
   return (
@@ -23,4 +23,4 @@ const Information = () => {
   );
 };
 
-export default Information;
+export default InformationC;

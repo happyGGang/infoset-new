@@ -104,7 +104,7 @@ const ContainerX = styled('div')(() => ({
   '.swiper_container': {
     width: '68.75rem',
     position: 'relative',
-    margin: '5.84rem 0 0 6.25rem',
+    margin: '8rem 0 0 6.25rem',
     '.swiper-button-prev': {
       background: `url(${arrow}) center center no-repeat`,
       backgroundSize: 'cover',

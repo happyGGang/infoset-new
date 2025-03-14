@@ -10,7 +10,7 @@ import { getCurrentDate, getCurrentTime } from '../../../../util/date-time';
 import { news_list } from '../../../../constants/news.constants';
 import { Autoplay } from 'swiper/modules';
 
-const Living = () => {
+const LivingB = () => {
   return (
     <Container>
       <Time>{getCurrentTime()}</Time>
@@ -35,4 +35,4 @@ const Living = () => {
   );
 };
 
-export default Living;
+export default LivingB;

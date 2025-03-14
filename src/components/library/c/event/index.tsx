@@ -3,7 +3,7 @@ import { Container, CustomSwiper, CustomSwiperSlide } from './index.styled';
 import { event_list } from '../../../../constants/event.constants';
 import { Autoplay, Pagination } from 'swiper/modules';
 
-const Event = () => {
+const EventC = () => {
   return (
     <Container>
       <CustomSwiper
@@ -33,4 +33,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default EventC;

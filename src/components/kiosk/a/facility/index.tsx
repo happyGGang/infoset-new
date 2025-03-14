@@ -30,7 +30,7 @@ import { SwiperSlide } from 'swiper/react';
 import FacilityPopup from '../../../facility-popup';
 import { useOrientationStore } from '../../../../store/landscape-mode.store';
 
-const Facility = () => {
+const FacilityA = () => {
   const { isLandscape } = useOrientationStore();
   const [selectedFloor, setSelectedFloor] = useState<1 | 2 | 3>(2);
   const [isOpen, setIsOpen] = useState(false);
@@ -202,4 +202,4 @@ const Facility = () => {
   );
 };
 
-export default Facility;
+export default FacilityA;
