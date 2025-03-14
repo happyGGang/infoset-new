@@ -110,7 +110,7 @@ const TickerMessage = styled('div')(() => ({
 
 const Time = styled('div')(() => ({
   color: '#191F28',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'Montserrat',
   fontSize: '0.83506rem',
   fontWeight: 400,
   lineHeight: 'normal',

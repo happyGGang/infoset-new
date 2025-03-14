@@ -10,7 +10,7 @@ function HomeComponent() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate({ to: '/informationGroup' });
+    navigate({ to: '/informationGroup/welcomeMessage' });
   }, []);
 
   return <div>media wall page</div>;

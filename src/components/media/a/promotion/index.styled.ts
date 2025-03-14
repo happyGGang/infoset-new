@@ -135,7 +135,7 @@ const Time = styled('div')(() => ({
   letterSpacing: '0.13675rem',
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'Montserrat',
 }));
 
 const VideoWrapper = styled('video')(() => ({
@@ -187,7 +187,7 @@ const Temperature = styled('div')(() => ({
   fontWeight: 400,
   lineHeight: '100%',
   textAlign: 'center',
-  fontFamily: 'Century Gothic',
+  fontFamily: 'Montserrat',
 }));
 
 export {
